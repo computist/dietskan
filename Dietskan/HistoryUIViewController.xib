@@ -15,19 +15,13 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="History" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjD-6V-zJJ">
-                    <rect key="frame" x="478" y="80" width="70" height="33"/>
-                    <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="22"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LYW-bx-vz0">
                     <rect key="frame" x="0.0" y="22" width="1024" height="44"/>
                     <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     <items>
                         <navigationItem id="dn7-Z3-qpq">
-                            <barButtonItem key="leftBarButtonItem" style="plain" id="50K-CQ-ci4">
+                            <barButtonItem key="leftBarButtonItem" style="done" id="50K-CQ-ci4">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="RW9-6f-zyI">
                                     <rect key="frame" x="20" y="0.0" width="50" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -57,21 +51,98 @@
                         <constraint firstAttribute="width" constant="200" id="le3-TA-9LI"/>
                     </constraints>
                 </imageView>
-                <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search                                              " translatesAutoresizingMaskIntoConstraints="NO" id="yff-GR-VyJ">
+                <searchBar contentMode="redraw" placeholder="Search                                              " translatesAutoresizingMaskIntoConstraints="NO" id="yff-GR-VyJ">
                     <rect key="frame" x="718" y="80" width="270" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="270" id="5Rb-iC-SWt"/>
+                    </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="WhiteProfileBar.png" translatesAutoresizingMaskIntoConstraints="NO" id="pQf-nq-EpG">
+                    <rect key="frame" x="162" y="236" width="700" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="21c-oG-qsl"/>
+                        <constraint firstAttribute="width" constant="700" id="pga-Gz-agV"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kjD-6V-zJJ">
+                    <rect key="frame" x="477" y="80" width="70" height="33"/>
+                    <attributedString key="attributedText">
+                        <fragment content="History">
+                            <attributes>
+                                <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <font key="NSFont" size="22" name="SinhalaSangamMN"/>
+                                <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                            </attributes>
+                        </fragment>
+                    </attributedString>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RedProfile.png" translatesAutoresizingMaskIntoConstraints="NO" id="R3S-5P-jiI">
+                    <rect key="frame" x="164" y="239" width="31" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="31" id="ESU-sH-wtH"/>
+                        <constraint firstAttribute="width" constant="31" id="g21-u3-159"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UK4-rT-1Nf">
+                    <rect key="frame" x="831" y="242" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="2EO-rs-SOZ"/>
+                        <constraint firstAttribute="width" constant="25" id="JvL-uZ-Sbf"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="CheckMark.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Nf-hY-reZ">
+                    <rect key="frame" x="412" y="700" width="200" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Ald-Gc-Sg6"/>
+                    </constraints>
+                    <state key="normal" title="Remove" backgroundImage="GreenButton.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WCV-xH-jqq">
+                    <rect key="frame" x="662" y="700" width="200" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="UMU-PF-SRO"/>
+                    </constraints>
+                    <state key="normal" title="Edit" backgroundImage="GreenButton.png"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rzi-4n-nKO">
+                    <rect key="frame" x="162" y="700" width="200" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="yOD-bX-w4p"/>
+                    </constraints>
+                    <state key="normal" title="Send" backgroundImage="GreenButton.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="0.9418806676" green="0.93553325389999997" blue="0.96846391860000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="qIR-yi-jMc" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="143" id="3DQ-US-BAJ"/>
+                <constraint firstItem="2Nf-hY-reZ" firstAttribute="leading" secondItem="fmw-0q-MOI" secondAttribute="leading" id="4N7-ac-PHg"/>
+                <constraint firstItem="R3S-5P-jiI" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="164" id="5cs-PQ-xYe"/>
+                <constraint firstItem="WCV-xH-jqq" firstAttribute="trailing" secondItem="pQf-nq-EpG" secondAttribute="trailing" id="7Ae-Vp-TBf"/>
+                <constraint firstItem="2Nf-hY-reZ" firstAttribute="trailing" secondItem="fmw-0q-MOI" secondAttribute="trailing" id="7Ae-pW-inw"/>
                 <constraint firstItem="qIR-yi-jMc" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="ALH-3K-Ss7"/>
+                <constraint firstAttribute="trailing" secondItem="yff-GR-VyJ" secondAttribute="trailing" constant="36" id="ISc-8B-Fcg"/>
+                <constraint firstItem="Rzi-4n-nKO" firstAttribute="baseline" secondItem="2Nf-hY-reZ" secondAttribute="baseline" id="KJe-kG-vTS"/>
+                <constraint firstAttribute="bottom" secondItem="2Nf-hY-reZ" secondAttribute="bottom" constant="33" id="Odr-co-z7f"/>
+                <constraint firstItem="Rzi-4n-nKO" firstAttribute="leading" secondItem="pQf-nq-EpG" secondAttribute="leading" id="OvS-WN-mza"/>
+                <constraint firstItem="R3S-5P-jiI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="239" id="P8t-vz-7aj"/>
+                <constraint firstItem="pQf-nq-EpG" firstAttribute="centerX" secondItem="qIR-yi-jMc" secondAttribute="centerX" id="PTO-5z-Of1"/>
                 <constraint firstItem="fmw-0q-MOI" firstAttribute="centerX" secondItem="LYW-bx-vz0" secondAttribute="centerX" id="WIW-Gs-jMT"/>
+                <constraint firstAttribute="trailing" secondItem="UK4-rT-1Nf" secondAttribute="trailing" constant="168" id="YO6-hk-hVq"/>
                 <constraint firstItem="fmw-0q-MOI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="22" id="YTY-ch-e0x"/>
                 <constraint firstItem="fmw-0q-MOI" firstAttribute="top" secondItem="LYW-bx-vz0" secondAttribute="top" id="clv-eA-wqg"/>
+                <constraint firstItem="pQf-nq-EpG" firstAttribute="top" secondItem="qIR-yi-jMc" secondAttribute="bottom" constant="63" id="deW-Er-o4Z"/>
+                <constraint firstItem="WCV-xH-jqq" firstAttribute="baseline" secondItem="2Nf-hY-reZ" secondAttribute="baseline" id="gc9-bP-KZQ"/>
+                <constraint firstItem="R3S-5P-jiI" firstAttribute="centerY" secondItem="UK4-rT-1Nf" secondAttribute="centerY" id="iFI-r3-oUR"/>
+                <constraint firstItem="2Nf-hY-reZ" firstAttribute="leading" secondItem="Rzi-4n-nKO" secondAttribute="trailing" constant="50" id="jK0-4G-d0m"/>
                 <constraint firstItem="LYW-bx-vz0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="jz4-sT-gdS"/>
+                <constraint firstItem="kjD-6V-zJJ" firstAttribute="top" secondItem="yff-GR-VyJ" secondAttribute="top" id="qAW-9s-OlB"/>
                 <constraint firstItem="qIR-yi-jMc" firstAttribute="centerX" secondItem="LYW-bx-vz0" secondAttribute="centerX" id="rik-kl-TDu"/>
+                <constraint firstItem="WCV-xH-jqq" firstAttribute="leading" secondItem="2Nf-hY-reZ" secondAttribute="trailing" constant="50" id="txw-Fw-ngv"/>
                 <constraint firstItem="kjD-6V-zJJ" firstAttribute="top" secondItem="fmw-0q-MOI" secondAttribute="bottom" constant="14" id="uhu-Vp-nna"/>
+                <constraint firstItem="kjD-6V-zJJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="477" id="wjZ-v8-ED6"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
@@ -79,6 +150,10 @@
     </objects>
     <resources>
         <image name="BackButton.png" width="103" height="92"/>
-        <image name="FinalLogo-DietSkan.png" width="700" height="148"/>
+        <image name="CheckMark.png" width="55" height="55"/>
+        <image name="FinalLogo-DietSkan.png" width="700" height="158"/>
+        <image name="GreenButton.png" width="532" height="102"/>
+        <image name="RedProfile.png" width="90" height="90"/>
+        <image name="WhiteProfileBar.png" width="700" height="35"/>
     </resources>
 </document>

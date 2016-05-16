@@ -54,12 +54,10 @@
 		6F8BE660199EED0C00E10C10 /* CalibrationOverlay.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BE65F199EED0C00E10C10 /* CalibrationOverlay.mm */; };
 		7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */; };
 		7EAD26B3198B47DA00638C9C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD26B2198B47DA00638C9C /* libz.dylib */; };
+		933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */; };
 		9348BD5C1CE95639003CD5C4 /* SettingsUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9348BD5A1CE95639003CD5C4 /* SettingsUIViewController.m */; };
 		9348BD5D1CE95639003CD5C4 /* SettingsUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9348BD5B1CE95639003CD5C4 /* SettingsUIViewController.xib */; };
-		938DD0371CE980170065DDD6 /* TempLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 938DD0361CE980170065DDD6 /* TempLogo.png */; };
 		938DD03B1CE983620065DDD6 /* HistoryUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938DD0391CE983620065DDD6 /* HistoryUIViewController.m */; };
-		938DD03C1CE983620065DDD6 /* HistoryUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03A1CE983620065DDD6 /* HistoryUIViewController.xib */; };
-		938DD03E1CE986150065DDD6 /* FinalLogo-DietSkan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03D1CE986150065DDD6 /* FinalLogo-DietSkan.jpg */; };
 		938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */; };
 		93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB41CE58AF900461B5A /* BackButton.png */; };
 		93C5CBD41CE58AF900461B5A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB51CE58AF900461B5A /* bg.png */; };
@@ -160,14 +158,12 @@
 		7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomUIKitStyles.mm; sourceTree = "<group>"; };
 		7EAD26B2198B47DA00638C9C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7EAD26B4198C07F600638C9C /* CustomUIKitStyles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUIKitStyles.h; sourceTree = "<group>"; };
+		933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryUIViewController.xib; sourceTree = "<group>"; };
 		9348BD591CE95639003CD5C4 /* SettingsUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsUIViewController.h; sourceTree = "<group>"; };
 		9348BD5A1CE95639003CD5C4 /* SettingsUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsUIViewController.m; sourceTree = "<group>"; };
 		9348BD5B1CE95639003CD5C4 /* SettingsUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsUIViewController.xib; sourceTree = "<group>"; };
-		938DD0361CE980170065DDD6 /* TempLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TempLogo.png; sourceTree = "<group>"; };
 		938DD0381CE983620065DDD6 /* HistoryUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryUIViewController.h; sourceTree = "<group>"; };
 		938DD0391CE983620065DDD6 /* HistoryUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryUIViewController.m; sourceTree = "<group>"; };
-		938DD03A1CE983620065DDD6 /* HistoryUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryUIViewController.xib; sourceTree = "<group>"; };
-		938DD03D1CE986150065DDD6 /* FinalLogo-DietSkan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "FinalLogo-DietSkan.jpg"; sourceTree = "<group>"; };
 		938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FinalLogo-DietSkan.png"; sourceTree = "<group>"; };
 		93C5CBB41CE58AF900461B5A /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		93C5CBB51CE58AF900461B5A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
@@ -333,7 +329,7 @@
 				3CA5238D1CE1939100D75D8F /* MainUIView.m */,
 				938DD0381CE983620065DDD6 /* HistoryUIViewController.h */,
 				938DD0391CE983620065DDD6 /* HistoryUIViewController.m */,
-				938DD03A1CE983620065DDD6 /* HistoryUIViewController.xib */,
+				933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -378,14 +374,12 @@
 				93C5CBCB1CE58AF900461B5A /* SearchIcon.png */,
 				93C5CBCC1CE58AF900461B5A /* SearchTextBar.png */,
 				93C5CBCD1CE58AF900461B5A /* SettingsButton.png */,
-				938DD0361CE980170065DDD6 /* TempLogo.png */,
 				93C5CBCE1CE58AF900461B5A /* TimeSelectButton.png */,
 				93C5CBCF1CE58AF900461B5A /* WhiteBar_TextEntry.png */,
 				93C5CBD01CE58AF900461B5A /* WhiteBar2.png */,
 				93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */,
 				93C5CBD21CE58AF900461B5A /* YellowProfile.png */,
 				43BB38C8199D2A51009D7AB2 /* calibration.png */,
-				938DD03D1CE986150065DDD6 /* FinalLogo-DietSkan.jpg */,
 				938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */,
 				435307C31872825B00B04481 /* Default-568h@2x.png */,
 				435307C41872825B00B04481 /* Default-Landscape@2x~ipad.png */,
@@ -467,7 +461,7 @@
 				93C5CBDD1CE58AF900461B5A /* GrayProfile.png in Resources */,
 				93C5CBE41CE58AF900461B5A /* LogIn_Frame.png in Resources */,
 				93C5CBF11CE58AF900461B5A /* YellowProfile.png in Resources */,
-				938DD03C1CE983620065DDD6 /* HistoryUIViewController.xib in Resources */,
+				933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */,
 				93C5CBE71CE58AF900461B5A /* ProfileButton.png in Resources */,
 				93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */,
 				93C5CBE21CE58AF900461B5A /* HistoryButton.png in Resources */,
@@ -495,14 +489,12 @@
 				2D23E7D11A37B78E006E1F98 /* resetScanButton@2x.png in Resources */,
 				93C5CBDF1CE58AF900461B5A /* GreenButton2.png in Resources */,
 				93C5CBE91CE58AF900461B5A /* RedProfile.png in Resources */,
-				938DD03E1CE986150065DDD6 /* FinalLogo-DietSkan.jpg in Resources */,
 				2D23E7CD1A37B77D006E1F98 /* startScanButton@2x.png in Resources */,
 				93C5CBF01CE58AF900461B5A /* WhiteProfileBar.png in Resources */,
 				93C5CBEF1CE58AF900461B5A /* WhiteBar2.png in Resources */,
 				438C049C18723EB10062E958 /* ViewController_iPad.xib in Resources */,
 				435307C91872825B00B04481 /* Default@2x.png in Resources */,
 				6F03CB911862832600518C22 /* Splash.png in Resources */,
-				938DD0371CE980170065DDD6 /* TempLogo.png in Resources */,
 				93C5CBDC1CE58AF900461B5A /* DropBox_button.png in Resources */,
 				938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */,
 				435307C71872825B00B04481 /* Default-568h@2x.png in Resources */,
