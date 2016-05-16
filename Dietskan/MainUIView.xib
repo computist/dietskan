@@ -29,7 +29,7 @@
                     </connections>
                 </button>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.9418806676" green="0.93553325389999997" blue="0.96846391860000003" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstAttribute="bottom" secondItem="F4T-sX-eLE" secondAttribute="bottom" constant="225" id="7Ga-xk-acb"/>
                 <constraint firstItem="Xb5-LI-Afm" firstAttribute="centerX" secondItem="F4T-sX-eLE" secondAttribute="centerX" id="Eca-hw-zFV"/>
