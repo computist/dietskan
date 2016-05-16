@@ -15,13 +15,13 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Welcome to Dietskan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-LI-Afm">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Dietskan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xb5-LI-Afm">
                     <rect key="frame" x="431" y="242" width="162" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4T-sX-eLE">
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4T-sX-eLE">
                     <rect key="frame" x="495" y="513" width="35" height="30"/>
                     <state key="normal" title="Scan"/>
                     <connections>
@@ -31,7 +31,10 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstAttribute="bottom" secondItem="F4T-sX-eLE" secondAttribute="bottom" constant="225" id="7Ga-xk-acb"/>
                 <constraint firstItem="Xb5-LI-Afm" firstAttribute="centerX" secondItem="F4T-sX-eLE" secondAttribute="centerX" id="Eca-hw-zFV"/>
+                <constraint firstItem="Xb5-LI-Afm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="242" id="WOQ-9l-uv3"/>
+                <constraint firstItem="Xb5-LI-Afm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="eq8-f0-EpB"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>

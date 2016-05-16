@@ -54,6 +54,8 @@
 		6F8BE660199EED0C00E10C10 /* CalibrationOverlay.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BE65F199EED0C00E10C10 /* CalibrationOverlay.mm */; };
 		7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */; };
 		7EAD26B3198B47DA00638C9C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD26B2198B47DA00638C9C /* libz.dylib */; };
+		9348BD5C1CE95639003CD5C4 /* SettingsUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9348BD5A1CE95639003CD5C4 /* SettingsUIViewController.m */; };
+		9348BD5D1CE95639003CD5C4 /* SettingsUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9348BD5B1CE95639003CD5C4 /* SettingsUIViewController.xib */; };
 		93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB41CE58AF900461B5A /* BackButton.png */; };
 		93C5CBD41CE58AF900461B5A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB51CE58AF900461B5A /* bg.png */; };
 		93C5CBD51CE58AF900461B5A /* BlueProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB61CE58AF900461B5A /* BlueProfile.png */; };
@@ -153,6 +155,9 @@
 		7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomUIKitStyles.mm; sourceTree = "<group>"; };
 		7EAD26B2198B47DA00638C9C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7EAD26B4198C07F600638C9C /* CustomUIKitStyles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUIKitStyles.h; sourceTree = "<group>"; };
+		9348BD591CE95639003CD5C4 /* SettingsUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsUIViewController.h; sourceTree = "<group>"; };
+		9348BD5A1CE95639003CD5C4 /* SettingsUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsUIViewController.m; sourceTree = "<group>"; };
+		9348BD5B1CE95639003CD5C4 /* SettingsUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingsUIViewController.xib; sourceTree = "<group>"; };
 		93C5CBB41CE58AF900461B5A /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		93C5CBB51CE58AF900461B5A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		93C5CBB61CE58AF900461B5A /* BlueProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueProfile.png; sourceTree = "<group>"; };
@@ -310,6 +315,9 @@
 				3CA523871CE17A5D00D75D8F /* MainViewController.h */,
 				3CA523881CE17A5D00D75D8F /* MainViewController.mm */,
 				3CA523891CE17A5D00D75D8F /* MainUIView.xib */,
+				9348BD591CE95639003CD5C4 /* SettingsUIViewController.h */,
+				9348BD5A1CE95639003CD5C4 /* SettingsUIViewController.m */,
+				9348BD5B1CE95639003CD5C4 /* SettingsUIViewController.xib */,
 				3CA5238C1CE1939100D75D8F /* MainUIView.h */,
 				3CA5238D1CE1939100D75D8F /* MainUIView.m */,
 			);
@@ -452,6 +460,7 @@
 				93C5CBEA1CE58AF900461B5A /* SearchIcon.png in Resources */,
 				93C5CBDE1CE58AF900461B5A /* GreenButton.png in Resources */,
 				93C5CBD81CE58AF900461B5A /* CyanProfile.png in Resources */,
+				9348BD5D1CE95639003CD5C4 /* SettingsUIViewController.xib in Resources */,
 				93C5CBE11CE58AF900461B5A /* GreenProfile.png in Resources */,
 				435307C81872825B00B04481 /* Default-Landscape@2x~ipad.png in Resources */,
 				93C5CBEB1CE58AF900461B5A /* SearchTextBar.png in Resources */,
@@ -500,6 +509,7 @@
 				6F03CB961862832600518C22 /* main.m in Sources */,
 				7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */,
 				2AEF46231A1288B600CAF953 /* ViewController+Camera.mm in Sources */,
+				9348BD5C1CE95639003CD5C4 /* SettingsUIViewController.m in Sources */,
 				3CA5238A1CE17A5D00D75D8F /* MainViewController.mm in Sources */,
 				6F8BE660199EED0C00E10C10 /* CalibrationOverlay.mm in Sources */,
 			);
