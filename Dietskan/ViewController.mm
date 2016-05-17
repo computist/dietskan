@@ -427,7 +427,7 @@ namespace { // anonymous namespace for utility function.
     [self.appStatusMessageLabel setHidden:NO];
     
     // Progressively show the message label.
-    [self.view setUserInteractionEnabled:false];
+//    [self.view setUserInteractionEnabled:false];
     [UIView animateWithDuration:0.5f animations:^{
         self.appStatusMessageLabel.alpha = 1.0f;
     }completion:nil];
