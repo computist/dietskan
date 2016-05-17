@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropBoxLoginViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="n2p-S8-UQh">
+                    <rect key="frame" x="0.0" y="25" width="1024" height="749"/>
+                </imageView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5d-dP-Tcp">
+                    <rect key="frame" x="0.0" y="25" width="1024" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <items>
+                        <navigationItem id="mLb-R2-0q4">
+                            <barButtonItem key="leftBarButtonItem" style="done" id="EtW-ia-yL9">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Vb0-fy-Oki">
+                                    <rect key="frame" x="20" y="0.0" width="50" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" backgroundImage="BackButton.png"/>
+                                </button>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalLogo-DietSkan.png" translatesAutoresizingMaskIntoConstraints="NO" id="SrO-YD-GRo">
+                    <rect key="frame" x="412" y="25" width="200" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="6Yi-iO-JYc"/>
+                        <constraint firstAttribute="width" constant="200" id="dVf-CF-GfP"/>
+                    </constraints>
+                </imageView>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Name (optional)" clearsOnBeginEditing="YES" minimumFontSize="18" background="WhiteBar_TextEntry.png" disabledBackground="WhiteBar_TextEntry.png" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Wk-STz">
+                    <rect key="frame" x="287" y="400" width="450" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="450" id="ELI-Eb-izz"/>
+                        <constraint firstAttribute="height" constant="47" id="Ey0-fu-sSw"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Email" clearsOnBeginEditing="YES" minimumFontSize="18" background="WhiteBar_TextEntry.png" disabledBackground="WhiteBar_TextEntry.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wdf-7e-CLC">
+                    <rect key="frame" x="287" y="470" width="450" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="gx8-5b-sLa"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" clearsOnBeginEditing="YES" minimumFontSize="18" background="WhiteBar_TextEntry.png" disabledBackground="WhiteBar_TextEntry.png" translatesAutoresizingMaskIntoConstraints="NO" id="dae-qA-N6t">
+                    <rect key="frame" x="287" y="540" width="450" height="47"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="47" id="X50-ed-emQ"/>
+                    </constraints>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-oV-K3g">
+                    <rect key="frame" x="400" y="640" width="225" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="225" id="9yU-KI-1Wo"/>
+                    </constraints>
+                    <state key="normal" title="Link" backgroundImage="GreenButton2.png"/>
+                    <state key="highlighted" backgroundImage="LogIn_Frame.png">
+                        <color key="titleColor" red="0.40784313729999999" green="0.67843137249999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropBox_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="O4k-OE-HfG">
+                    <rect key="frame" x="388" y="227" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="bI0-sN-zhQ"/>
+                        <constraint firstAttribute="width" constant="60" id="hos-Qy-NpI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Link to DropBox" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aSN-dF-Yu7">
+                    <rect key="frame" x="456" y="227" width="180" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="180" id="1kW-tq-UiZ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="24"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym1-tq-MzW">
+                    <rect key="frame" x="865" y="100" width="125" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="MYF-zQ-rdA"/>
+                        <constraint firstAttribute="width" constant="125" id="Xip-ca-Zsn"/>
+                    </constraints>
+                    <state key="normal" title="Admin" backgroundImage="LogIn_Frame.png">
+                        <color key="titleColor" red="0.40000000000000002" green="0.68235294117647061" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="5QS-oV-K3g" secondAttribute="bottom" constant="83" id="56a-gE-iZ8"/>
+                <constraint firstItem="Wdf-7e-CLC" firstAttribute="leading" secondItem="dae-qA-N6t" secondAttribute="leading" id="5dG-71-qbc"/>
+                <constraint firstItem="O4k-OE-HfG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="388" id="7VR-Hv-Pk6"/>
+                <constraint firstAttribute="bottom" secondItem="dae-qA-N6t" secondAttribute="bottom" constant="181" id="9BI-kt-GlF"/>
+                <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DXk-Uo-Fec"/>
+                <constraint firstItem="5QS-oV-K3g" firstAttribute="top" secondItem="dae-qA-N6t" secondAttribute="bottom" constant="53" id="Fol-b6-dKw"/>
+                <constraint firstItem="l6s-Wk-STz" firstAttribute="leading" secondItem="Wdf-7e-CLC" secondAttribute="leading" id="Gex-xk-fIv"/>
+                <constraint firstItem="5QS-oV-K3g" firstAttribute="centerX" secondItem="dae-qA-N6t" secondAttribute="centerX" id="JSf-Sz-hxl"/>
+                <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="n2p-S8-UQh" secondAttribute="centerX" id="L0P-yt-YtK"/>
+                <constraint firstItem="SrO-YD-GRo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="ML0-cM-FGa"/>
+                <constraint firstItem="Wdf-7e-CLC" firstAttribute="trailing" secondItem="dae-qA-N6t" secondAttribute="trailing" id="Mhf-LV-toZ"/>
+                <constraint firstItem="ym1-tq-MzW" firstAttribute="top" secondItem="P5d-dP-Tcp" secondAttribute="bottom" constant="31" id="NFT-C0-BsB"/>
+                <constraint firstItem="SrO-YD-GRo" firstAttribute="top" secondItem="P5d-dP-Tcp" secondAttribute="top" id="O9E-pa-Lon"/>
+                <constraint firstItem="dae-qA-N6t" firstAttribute="top" secondItem="Wdf-7e-CLC" secondAttribute="bottom" constant="23" id="OdQ-qm-llZ"/>
+                <constraint firstItem="Wdf-7e-CLC" firstAttribute="top" secondItem="l6s-Wk-STz" secondAttribute="bottom" constant="23" id="Vkj-ER-6C3"/>
+                <constraint firstItem="l6s-Wk-STz" firstAttribute="centerX" secondItem="SrO-YD-GRo" secondAttribute="centerX" id="VvA-fh-LKg"/>
+                <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="P5d-dP-Tcp" secondAttribute="centerX" id="W5l-Ki-Joa"/>
+                <constraint firstItem="O4k-OE-HfG" firstAttribute="top" secondItem="aSN-dF-Yu7" secondAttribute="top" id="YLd-Ja-ir5"/>
+                <constraint firstItem="O4k-OE-HfG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="227" id="a4U-ze-KFC"/>
+                <constraint firstItem="l6s-Wk-STz" firstAttribute="trailing" secondItem="Wdf-7e-CLC" secondAttribute="trailing" id="aHc-2H-qXP"/>
+                <constraint firstItem="O4k-OE-HfG" firstAttribute="bottom" secondItem="aSN-dF-Yu7" secondAttribute="bottom" id="ayY-ML-2rK"/>
+                <constraint firstAttribute="bottom" secondItem="n2p-S8-UQh" secondAttribute="bottom" constant="-6" id="cSK-7m-cr2"/>
+                <constraint firstItem="n2p-S8-UQh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="pXx-07-04g"/>
+                <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="P5d-dP-Tcp" secondAttribute="centerX" id="t76-Lq-Bq8"/>
+                <constraint firstAttribute="trailing" secondItem="ym1-tq-MzW" secondAttribute="trailing" constant="34" id="vlQ-LW-pxK"/>
+                <constraint firstItem="P5d-dP-Tcp" firstAttribute="leading" secondItem="n2p-S8-UQh" secondAttribute="leading" id="ycC-9u-ZNE"/>
+                <constraint firstItem="aSN-dF-Yu7" firstAttribute="leading" secondItem="O4k-OE-HfG" secondAttribute="trailing" constant="8" symbolic="YES" id="z1W-Z0-NXj"/>
+                <constraint firstItem="P5d-dP-Tcp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zCd-Ot-Dhs"/>
+            </constraints>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="BackButton.png" width="103" height="92"/>
+        <image name="DropBox_button.png" width="109" height="105"/>
+        <image name="FinalLogo-DietSkan.png" width="700" height="158"/>
+        <image name="GreenButton2.png" width="608" height="118"/>
+        <image name="LogIn_Frame.png" width="608" height="118"/>
+        <image name="WhiteBar_TextEntry.png" width="1156" height="118"/>
+        <image name="bg.png" width="2048" height="2732"/>
+    </resources>
+</document>

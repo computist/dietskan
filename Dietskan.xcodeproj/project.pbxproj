@@ -54,6 +54,8 @@
 		6F8BE660199EED0C00E10C10 /* CalibrationOverlay.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BE65F199EED0C00E10C10 /* CalibrationOverlay.mm */; };
 		7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */; };
 		7EAD26B3198B47DA00638C9C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD26B2198B47DA00638C9C /* libz.dylib */; };
+		930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */; };
+		930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */; };
 		933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */; };
 		938DD03B1CE983620065DDD6 /* HistoryUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938DD0391CE983620065DDD6 /* HistoryUIViewController.m */; };
 		938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */; };
@@ -156,6 +158,9 @@
 		7E2288CD198FE67D00F6E3B2 /* CustomUIKitStyles.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CustomUIKitStyles.mm; sourceTree = "<group>"; };
 		7EAD26B2198B47DA00638C9C /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		7EAD26B4198C07F600638C9C /* CustomUIKitStyles.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomUIKitStyles.h; sourceTree = "<group>"; };
+		930D49FE1CEAC6CC00556D09 /* DropBoxLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxLoginViewController.h; sourceTree = "<group>"; };
+		930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxLoginViewController.m; sourceTree = "<group>"; };
+		930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropBoxLoginViewController.xib; sourceTree = "<group>"; };
 		933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryUIViewController.xib; sourceTree = "<group>"; };
 		938DD0381CE983620065DDD6 /* HistoryUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryUIViewController.h; sourceTree = "<group>"; };
 		938DD0391CE983620065DDD6 /* HistoryUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryUIViewController.m; sourceTree = "<group>"; };
@@ -312,6 +317,9 @@
 		3CA523821CE1735E00D75D8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				930D49FE1CEAC6CC00556D09 /* DropBoxLoginViewController.h */,
+				930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */,
+				930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */,
 				2AB955C1184E573A003DA089 /* MeshView_iPad.xib */,
 				438C049818723EB10062E958 /* ViewController_iPad.xib */,
 				3CA523871CE17A5D00D75D8F /* MainViewController.h */,
@@ -447,6 +455,7 @@
 				93C5CBEC1CE58AF900461B5A /* SettingsButton.png in Resources */,
 				93C5CBDB1CE58AF900461B5A /* DesignLogo.png in Resources */,
 				93C5CBE51CE58AF900461B5A /* MealSelectButton.png in Resources */,
+				930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */,
 				93C5CBEE1CE58AF900461B5A /* WhiteBar_TextEntry.png in Resources */,
 				93C5CBD41CE58AF900461B5A /* bg.png in Resources */,
 				93C5CBED1CE58AF900461B5A /* TimeSelectButton.png in Resources */,
@@ -510,6 +519,7 @@
 				2AEF46201A127B4900CAF953 /* ViewController+SLAM.mm in Sources */,
 				2AEF461B1A1278D300CAF953 /* ViewController+Sensor.mm in Sources */,
 				2D1295B0184370FE00E8C685 /* ViewController.mm in Sources */,
+				930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */,
 				2D4DE5AC199BB90400F69F56 /* CustomShaders.mm in Sources */,
 				6F03CB961862832600518C22 /* main.m in Sources */,
 				7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */,

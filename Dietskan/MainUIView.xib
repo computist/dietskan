@@ -15,30 +15,22 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvv-3W-ALf">
-                    <rect key="frame" x="449" y="122" width="127" height="41"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="41" id="9MR-m0-zyj"/>
-                        <constraint firstAttribute="width" constant="127" id="ZjT-Fp-U68"/>
-                    </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="2zB-ap-qzM">
+                    <rect key="frame" x="0.0" y="25" width="1024" height="745"/>
+                </imageView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Svt-RL-eJe">
+                    <rect key="frame" x="0.0" y="25" width="1024" height="44"/>
+                    <items>
+                        <navigationItem id="CvP-5F-FPX"/>
+                    </items>
+                </navigationBar>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalLogo-DietSkan.png" translatesAutoresizingMaskIntoConstraints="NO" id="PpV-UF-cqm">
-                    <rect key="frame" x="412" y="24" width="200" height="46"/>
+                    <rect key="frame" x="412" y="25" width="200" height="46"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="200" id="FB1-iB-9r7"/>
                         <constraint firstAttribute="height" constant="46" id="HaX-ZE-3rZ"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r09-TR-dA3">
-                    <rect key="frame" x="8" y="27" width="40" height="40"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="40" id="Rcv-FL-kMz"/>
-                    </constraints>
-                    <state key="normal" backgroundImage="BackButton.png"/>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DesignLogo.png" translatesAutoresizingMaskIntoConstraints="NO" id="9Tc-gC-tco">
                     <rect key="frame" x="362" y="368" width="300" height="300"/>
                     <constraints>
@@ -87,6 +79,16 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uvv-3W-ALf">
+                    <rect key="frame" x="449" y="122" width="127" height="41"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="9MR-m0-zyj"/>
+                        <constraint firstAttribute="width" constant="127" id="ZjT-Fp-U68"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="28"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i6m-3F-w4E">
                     <rect key="frame" x="442" y="691" width="140" height="40"/>
                     <constraints>
@@ -100,18 +102,27 @@
                         <action selector="scanClick:" destination="-1" eventType="touchUpInside" id="sZ0-Ld-dZ7"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r09-TR-dA3">
+                    <rect key="frame" x="8" y="25" width="40" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="40" id="Rcv-FL-kMz"/>
+                    </constraints>
+                    <state key="normal" backgroundImage="BackButton.png"/>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="0.9418806676" green="0.93553325389999997" blue="0.96846391860000003" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="OUa-Nd-PNj" firstAttribute="top" secondItem="tZz-A0-3EL" secondAttribute="top" id="1DB-0A-9u9"/>
                 <constraint firstItem="HVq-Gh-0XM" firstAttribute="centerX" secondItem="tZz-A0-3EL" secondAttribute="centerX" id="1Vi-V1-SbG"/>
+                <constraint firstItem="2zB-ap-qzM" firstAttribute="top" secondItem="r09-TR-dA3" secondAttribute="top" id="2uf-OL-Ipj"/>
                 <constraint firstAttribute="bottom" secondItem="i6m-3F-w4E" secondAttribute="bottom" constant="37" id="3BZ-u0-3QA"/>
                 <constraint firstItem="6o3-XB-N0K" firstAttribute="baseline" secondItem="HVq-Gh-0XM" secondAttribute="baseline" id="4aa-Io-tti"/>
-                <constraint firstItem="uvv-3W-ALf" firstAttribute="top" secondItem="PpV-UF-cqm" secondAttribute="bottom" constant="52" id="9mC-fU-CCR"/>
+                <constraint firstItem="2zB-ap-qzM" firstAttribute="centerX" secondItem="i6m-3F-w4E" secondAttribute="centerX" id="5mw-aE-eLY"/>
+                <constraint firstItem="uvv-3W-ALf" firstAttribute="top" secondItem="PpV-UF-cqm" secondAttribute="bottom" constant="51" id="9mC-fU-CCR"/>
                 <constraint firstItem="i6m-3F-w4E" firstAttribute="top" secondItem="9Tc-gC-tco" secondAttribute="bottom" constant="23" id="Dnq-jf-Sts"/>
                 <constraint firstItem="9Tc-gC-tco" firstAttribute="top" secondItem="tZz-A0-3EL" secondAttribute="bottom" constant="84" id="Fup-Je-sSP"/>
                 <constraint firstItem="EaK-Fh-3E4" firstAttribute="top" secondItem="tZz-A0-3EL" secondAttribute="top" id="GoP-WE-mhc"/>
-                <constraint firstItem="PpV-UF-cqm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="24" id="HKo-xc-1A3"/>
+                <constraint firstItem="PpV-UF-cqm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="HKo-xc-1A3"/>
                 <constraint firstItem="uvv-3W-ALf" firstAttribute="centerX" secondItem="tZz-A0-3EL" secondAttribute="centerX" id="IUK-fc-xjK"/>
                 <constraint firstItem="OUa-Nd-PNj" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="162" id="LBV-Xn-GZ8"/>
                 <constraint firstItem="i6m-3F-w4E" firstAttribute="centerX" secondItem="9Tc-gC-tco" secondAttribute="centerX" id="NHZ-3r-LeR"/>
@@ -124,16 +135,38 @@
                 <constraint firstAttribute="trailing" secondItem="EaK-Fh-3E4" secondAttribute="trailing" constant="162" id="ceB-MU-pbe"/>
                 <constraint firstItem="mYM-4P-TMe" firstAttribute="centerX" secondItem="OUa-Nd-PNj" secondAttribute="centerX" id="e4U-kJ-aj6"/>
                 <constraint firstItem="r09-TR-dA3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="jSa-Kg-oVp"/>
-                <constraint firstItem="r09-TR-dA3" firstAttribute="centerY" secondItem="PpV-UF-cqm" secondAttribute="centerY" id="keL-Um-vvX"/>
+                <constraint firstItem="r09-TR-dA3" firstAttribute="centerY" secondItem="PpV-UF-cqm" secondAttribute="centerY" constant="-3" id="keL-Um-vvX"/>
+                <constraint firstItem="2zB-ap-qzM" firstAttribute="trailing" secondItem="Svt-RL-eJe" secondAttribute="trailing" id="kyS-We-6Lu"/>
                 <constraint firstItem="mYM-4P-TMe" firstAttribute="baseline" secondItem="HVq-Gh-0XM" secondAttribute="baseline" id="lPZ-Hx-UAw"/>
-                <constraint firstItem="r09-TR-dA3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="27" id="lQY-jd-rm9"/>
+                <constraint firstItem="r09-TR-dA3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="lQY-jd-rm9"/>
                 <constraint firstItem="OUa-Nd-PNj" firstAttribute="bottom" secondItem="tZz-A0-3EL" secondAttribute="bottom" id="qUd-Vh-Xu1"/>
+                <constraint firstItem="2zB-ap-qzM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tHC-lE-cz5"/>
                 <constraint firstItem="6o3-XB-N0K" firstAttribute="centerX" secondItem="EaK-Fh-3E4" secondAttribute="centerX" constant="0.5" id="uZd-un-tUw"/>
+                <constraint firstAttribute="bottom" secondItem="2zB-ap-qzM" secondAttribute="bottom" constant="-2" id="wEs-4E-qYd"/>
+                <constraint firstItem="2zB-ap-qzM" firstAttribute="leading" secondItem="Svt-RL-eJe" secondAttribute="leading" id="xzy-zq-Qqq"/>
+                <constraint firstItem="Svt-RL-eJe" firstAttribute="centerY" secondItem="r09-TR-dA3" secondAttribute="centerY" constant="2" id="zcD-X6-EcE"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
             <point key="canvasLocation" x="474" y="451"/>
         </view>
+        <navigationBar contentMode="scaleToFill" id="TnW-t7-ofj">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <items>
+                <navigationItem id="nNa-81-PQf">
+                    <barButtonItem key="leftBarButtonItem" width="2" style="done" id="kxp-uU-iqM">
+                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nu6-mz-E2L">
+                            <rect key="frame" x="20" y="0.0" width="50" height="44"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" backgroundImage="BackButton.png"/>
+                        </button>
+                    </barButtonItem>
+                </navigationItem>
+            </items>
+        </navigationBar>
     </objects>
     <resources>
         <image name="BackButton.png" width="103" height="92"/>
@@ -144,5 +177,6 @@
         <image name="HistoryButton.png" width="283" height="291"/>
         <image name="ProfileButton.png" width="283" height="291"/>
         <image name="SettingsButton.png" width="283" height="291"/>
+        <image name="bg.png" width="2048" height="2732"/>
     </resources>
 </document>

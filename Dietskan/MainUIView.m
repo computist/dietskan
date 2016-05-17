@@ -2,7 +2,7 @@
 //  MainUIView.m
 //  Dietskan
 //
-//  Created by Yingkai Wang on 5/9/16.
+//  Created by Yingkai Wang and Zachary Feingold on 5/9/16.
 //  Copyright © 2016 Occipital. All rights reserved.
 //
 
