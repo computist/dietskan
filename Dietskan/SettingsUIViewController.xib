@@ -127,7 +127,7 @@
     <resources>
         <image name="BackButton.png" width="103" height="92"/>
         <image name="DesignLogo.png" width="850" height="848"/>
-        <image name="FinalLogo-DietSkan.png" width="700" height="148"/>
+        <image name="FinalLogo-DietSkan.png" width="700" height="158"/>
         <image name="HistoryButton.png" width="283" height="291"/>
         <image name="ProfileButton.png" width="283" height="291"/>
         <image name="SettingsButton.png" width="283" height="291"/>
