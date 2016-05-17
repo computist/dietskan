@@ -53,6 +53,7 @@
                         <constraint firstAttribute="width" constant="100" id="qvJ-39-ys0"/>
                     </constraints>
                     <state key="normal" backgroundImage="HistoryButton.png"/>
+                    <state key="selected" backgroundImage="BlueProfile.png"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HVq-Gh-0XM">
                     <rect key="frame" x="485" y="292" width="55" height="21"/>
@@ -78,7 +79,7 @@
                     <constraints>
                         <constraint firstAttribute="width" constant="100" id="6nX-Qn-auN"/>
                     </constraints>
-                    <state key="normal" backgroundImage="SettingsButton.png"/>
+                    <state key="normal" title="" backgroundImage="SettingsButton.png"/>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mYM-4P-TMe">
                     <rect key="frame" x="180" y="292" width="64" height="21"/>
@@ -136,6 +137,7 @@
     </objects>
     <resources>
         <image name="BackButton.png" width="103" height="92"/>
+        <image name="BlueProfile.png" width="90" height="90"/>
         <image name="DesignLogo.png" width="850" height="848"/>
         <image name="FinalLogo-DietSkan.png" width="700" height="158"/>
         <image name="GreenButton.png" width="532" height="102"/>
