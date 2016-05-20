@@ -23,14 +23,6 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="itZ-Tk-aHu">
-                    <rect key="frame" x="923" y="599" width="34" height="30"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Back"/>
-                    <connections>
-                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="ucX-po-L8Z"/>
-                    </connections>
-                </button>
                 <label hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Connect Structure Sensor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6ly-If-uZh" userLabel="Label - App Status Message">
                     <rect key="frame" x="0.0" y="206" width="1024" height="374"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -47,19 +39,14 @@
                     <rect key="frame" x="728" y="14" width="312" height="82"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="8Hr-EK-u5K" userLabel="Switch old - new tracker">
-                            <rect key="frame" x="48" y="6" width="51" height="31"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="onTintColor" red="0.0" green="0.40308487114935754" blue="0.52710288203753353" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
-                            <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            <connections>
-                                <action selector="enableNewTrackerSwitchChanged:" destination="-1" eventType="valueChanged" id="w8M-jU-FVe"/>
-                            </connections>
-                        </switch>
+                        <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="GreenButton.png" id="6tS-oR-i3r">
+                            <rect key="frame" x="0.0" y="0.0" width="296" height="82"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </imageView>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="PXZ-ry-cCx" userLabel="Switch low - high resolution">
                             <rect key="frame" x="48" y="43" width="51" height="31"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <color key="onTintColor" red="0.0" green="0.40308487110000002" blue="0.52710288199999999" alpha="0.51000000000000001" colorSpace="calibratedRGB"/>
+                            <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="enableHighResolutionColorSwitchChanged:" destination="-1" eventType="valueChanged" id="LUl-40-aRW"/>
@@ -93,8 +80,16 @@
                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" id="8Hr-EK-u5K" userLabel="Switch old - new tracker">
+                            <rect key="frame" x="48" y="6" width="51" height="31"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="onTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            <color key="thumbTintColor" red="0.9418806676" green="0.93553325389999997" blue="0.96846391860000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="enableNewTrackerSwitchChanged:" destination="-1" eventType="valueChanged" id="w8M-jU-FVe"/>
+                            </connections>
+                        </switch>
                     </subviews>
-                    <color key="backgroundColor" red="0.0" green="0.76471763839999995" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                             <integer key="value" value="10"/>
@@ -105,7 +100,7 @@
                 <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8b4-Zl-yJD" userLabel="Label - Tracking Lost">
                     <rect key="frame" x="0.0" y="637" width="1024" height="111"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.76471763839999995" blue="1" alpha="0.75" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" red="0.59540050719159821" green="1" blue="0.39422894366054351" alpha="0.75" colorSpace="calibratedRGB"/>
                     <string key="text">Tracking lost!
 Try to re-align or press reset.</string>
                     <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="36"/>
@@ -143,6 +138,14 @@ Try to re-align or press reset.</string>
                         <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="suT-EL-8hh"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="itZ-Tk-aHu">
+                    <rect key="frame" x="883" y="539" width="100" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Back" backgroundImage="GreenButton.png"/>
+                    <connections>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="ucX-po-L8Z"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>
@@ -151,6 +154,7 @@ Try to re-align or press reset.</string>
         </view>
     </objects>
     <resources>
+        <image name="GreenButton.png" width="532" height="102"/>
         <image name="doneButton.png" width="100" height="100"/>
         <image name="resetScanButton.png" width="53" height="50"/>
         <image name="startScanButton.png" width="100" height="100"/>
