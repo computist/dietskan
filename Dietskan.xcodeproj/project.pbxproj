@@ -57,6 +57,10 @@
 		930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */; };
 		930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */; };
 		933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */; };
+		937783BB1CEF752300FAEBD5 /* InitLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937783B91CEF752300FAEBD5 /* InitLoginViewController.m */; };
+		937783BC1CEF752300FAEBD5 /* InitLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937783BA1CEF752300FAEBD5 /* InitLoginViewController.xib */; };
+		937783C01CEF763400FAEBD5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937783BE1CEF763400FAEBD5 /* ProfileViewController.m */; };
+		937783C11CEF763400FAEBD5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937783BF1CEF763400FAEBD5 /* ProfileViewController.xib */; };
 		938DD03B1CE983620065DDD6 /* HistoryUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938DD0391CE983620065DDD6 /* HistoryUIViewController.m */; };
 		938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */; };
 		93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB41CE58AF900461B5A /* BackButton.png */; };
@@ -164,6 +168,12 @@
 		930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxLoginViewController.m; sourceTree = "<group>"; };
 		930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropBoxLoginViewController.xib; sourceTree = "<group>"; };
 		933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryUIViewController.xib; sourceTree = "<group>"; };
+		937783B81CEF752300FAEBD5 /* InitLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitLoginViewController.h; sourceTree = "<group>"; };
+		937783B91CEF752300FAEBD5 /* InitLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitLoginViewController.m; sourceTree = "<group>"; };
+		937783BA1CEF752300FAEBD5 /* InitLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitLoginViewController.xib; sourceTree = "<group>"; };
+		937783BD1CEF763400FAEBD5 /* ProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		937783BE1CEF763400FAEBD5 /* ProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
+		937783BF1CEF763400FAEBD5 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		938DD0381CE983620065DDD6 /* HistoryUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryUIViewController.h; sourceTree = "<group>"; };
 		938DD0391CE983620065DDD6 /* HistoryUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryUIViewController.m; sourceTree = "<group>"; };
 		938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FinalLogo-DietSkan.png"; sourceTree = "<group>"; };
@@ -334,7 +344,13 @@
 				938DD0381CE983620065DDD6 /* HistoryUIViewController.h */,
 				938DD0391CE983620065DDD6 /* HistoryUIViewController.m */,
 				933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */,
+				937783B81CEF752300FAEBD5 /* InitLoginViewController.h */,
+				937783B91CEF752300FAEBD5 /* InitLoginViewController.m */,
+				937783BA1CEF752300FAEBD5 /* InitLoginViewController.xib */,
 				C679E1471CEDAFA400DFA456 /* ProfileEditViewController.xib */,
+				937783BD1CEF763400FAEBD5 /* ProfileViewController.h */,
+				937783BE1CEF763400FAEBD5 /* ProfileViewController.m */,
+				937783BF1CEF763400FAEBD5 /* ProfileViewController.xib */,
 				C679E1451CEDAA5100DFA456 /* LoginViewController.xib */,
 			);
 			name = UI;
@@ -493,10 +509,12 @@
 				C679E1461CEDAA5100DFA456 /* LoginViewController.xib in Resources */,
 				93C5CBD71CE58AF900461B5A /* CheckMark.png in Resources */,
 				93C5CBE01CE58AF900461B5A /* GreenButton3.png in Resources */,
+				937783BC1CEF752300FAEBD5 /* InitLoginViewController.xib in Resources */,
 				93C5CBE31CE58AF900461B5A /* LimeProfile.png in Resources */,
 				2D23E7D11A37B78E006E1F98 /* resetScanButton@2x.png in Resources */,
 				93C5CBDF1CE58AF900461B5A /* GreenButton2.png in Resources */,
 				93C5CBE91CE58AF900461B5A /* RedProfile.png in Resources */,
+				937783C11CEF763400FAEBD5 /* ProfileViewController.xib in Resources */,
 				2D23E7CD1A37B77D006E1F98 /* startScanButton@2x.png in Resources */,
 				93C5CBF01CE58AF900461B5A /* WhiteProfileBar.png in Resources */,
 				93C5CBEF1CE58AF900461B5A /* WhiteBar2.png in Resources */,
@@ -528,7 +546,9 @@
 				2AEF461B1A1278D300CAF953 /* ViewController+Sensor.mm in Sources */,
 				2D1295B0184370FE00E8C685 /* ViewController.mm in Sources */,
 				930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */,
+				937783BB1CEF752300FAEBD5 /* InitLoginViewController.m in Sources */,
 				2D4DE5AC199BB90400F69F56 /* CustomShaders.mm in Sources */,
+				937783C01CEF763400FAEBD5 /* ProfileViewController.m in Sources */,
 				6F03CB961862832600518C22 /* main.m in Sources */,
 				7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */,
 				2AEF46231A1288B600CAF953 /* ViewController+Camera.mm in Sources */,
