@@ -21,23 +21,19 @@
 
 
 - (IBAction)profileClick:(UIButton *)sender {
-   AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
    ProfileViewController *v = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
    [self presentViewController:v animated:YES completion:nil];
 }
 - (IBAction)historyClick:(UIButton *)sender {
-   AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
    HistoryUIViewController *v = [[HistoryUIViewController alloc] initWithNibName:@"HistoryUIViewController" bundle:nil];
    [self presentViewController:v animated:YES completion:nil];
 }
 - (IBAction)settingsClick:(UIButton *)sender {
-   AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
    DropBoxLoginViewController *v = [[DropBoxLoginViewController alloc] initWithNibName:@"DropBoxLoginViewController" bundle:nil];
    [self presentViewController:v animated:YES completion:nil];
 }
 
 - (IBAction)scanClick:(UIButton *)sender {
-    AppDelegate *appdelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     ViewController *v = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
     [self presentViewController:v animated:YES completion:nil];
 }
