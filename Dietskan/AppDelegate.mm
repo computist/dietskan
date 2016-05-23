@@ -7,6 +7,8 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "MainViewController.h"
+#import "InitLoginViewController.h"
+
 
 @implementation AppDelegate
 
@@ -45,9 +47,9 @@
     // Override point for customization after application launch.
 //    self.viewController = [[ViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
     
-    MainViewController *mainView = [[MainViewController alloc] init];
-    self.mainViewController = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
-    self.window.rootViewController = self.mainViewController;
+    //InitLoginViewController *mainView = [[InitLoginViewController] alloc] init];
+    InitLoginViewController *mainView = [[InitLoginViewController alloc] initWithNibName:@"InitLoginViewController" bundle:nil];
+    self.window.rootViewController = mainView;
     [self.window makeKeyAndVisible];
     
     return YES;

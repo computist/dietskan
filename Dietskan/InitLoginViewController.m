@@ -5,14 +5,24 @@
 //  Created by Zach Feingold on 5/20/16.
 //  Copyright © 2016 DietSkan. All rights reserved.
 //
+#import "MainViewController.h"
 
 #import "InitLoginViewController.h"
+
+NSString *passcode = @"123456";
 
 @interface InitLoginViewController ()
 
 @end
 
 @implementation InitLoginViewController
+
+- (IBAction)loginButton:(UIButton *)sender {
+    if ([_passcodeTextField.text isEqualToString:passcode]){ //1{
+           MainViewController *v = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
+            [self presentViewController:v animated:YES completion:nil];
+    }
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
