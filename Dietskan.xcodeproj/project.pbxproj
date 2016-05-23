@@ -94,8 +94,6 @@
 		93C5CBEF1CE58AF900461B5A /* WhiteBar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD01CE58AF900461B5A /* WhiteBar2.png */; };
 		93C5CBF01CE58AF900461B5A /* WhiteProfileBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */; };
 		93C5CBF11CE58AF900461B5A /* YellowProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD21CE58AF900461B5A /* YellowProfile.png */; };
-		C679E1461CEDAA5100DFA456 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C679E1451CEDAA5100DFA456 /* LoginViewController.xib */; };
-		C679E1481CEDAFA400DFA456 /* ProfileEditViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C679E1471CEDAFA400DFA456 /* ProfileEditViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -209,8 +207,6 @@
 		93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteProfileBar.png; sourceTree = "<group>"; };
 		93C5CBD21CE58AF900461B5A /* YellowProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowProfile.png; sourceTree = "<group>"; };
 		93C5CBF21CE5910700461B5A /* Dietskan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dietskan.entitlements; sourceTree = "<group>"; };
-		C679E1451CEDAA5100DFA456 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
-		C679E1471CEDAFA400DFA456 /* ProfileEditViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileEditViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -347,11 +343,9 @@
 				937783B81CEF752300FAEBD5 /* InitLoginViewController.h */,
 				937783B91CEF752300FAEBD5 /* InitLoginViewController.m */,
 				937783BA1CEF752300FAEBD5 /* InitLoginViewController.xib */,
-				C679E1471CEDAFA400DFA456 /* ProfileEditViewController.xib */,
 				937783BD1CEF763400FAEBD5 /* ProfileViewController.h */,
 				937783BE1CEF763400FAEBD5 /* ProfileViewController.m */,
 				937783BF1CEF763400FAEBD5 /* ProfileViewController.xib */,
-				C679E1451CEDAA5100DFA456 /* LoginViewController.xib */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -476,7 +470,6 @@
 				43BB38C9199D2A51009D7AB2 /* calibration.png in Resources */,
 				93C5CBEC1CE58AF900461B5A /* SettingsButton.png in Resources */,
 				93C5CBDB1CE58AF900461B5A /* DesignLogo.png in Resources */,
-				C679E1481CEDAFA400DFA456 /* ProfileEditViewController.xib in Resources */,
 				93C5CBE51CE58AF900461B5A /* MealSelectButton.png in Resources */,
 				930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */,
 				93C5CBEE1CE58AF900461B5A /* WhiteBar_TextEntry.png in Resources */,
@@ -506,7 +499,6 @@
 				2D23E7CF1A37B785006E1F98 /* doneButton@2x.png in Resources */,
 				93C5CBE61CE58AF900461B5A /* OrangeProfile.png in Resources */,
 				93C5CBD51CE58AF900461B5A /* BlueProfile.png in Resources */,
-				C679E1461CEDAA5100DFA456 /* LoginViewController.xib in Resources */,
 				93C5CBD71CE58AF900461B5A /* CheckMark.png in Resources */,
 				93C5CBE01CE58AF900461B5A /* GreenButton3.png in Resources */,
 				937783BC1CEF752300FAEBD5 /* InitLoginViewController.xib in Resources */,
