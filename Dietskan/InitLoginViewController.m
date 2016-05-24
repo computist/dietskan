@@ -21,6 +21,13 @@ NSString *passcode = @"123456";
     if ([_passcodeTextField.text isEqualToString:passcode]){ //1{
            MainViewController *v = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
             [self presentViewController:v animated:YES completion:nil];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"Incorrect password"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil,nil];
+        [alert show];
     }
 }
 
