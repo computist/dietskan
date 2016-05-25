@@ -5,6 +5,7 @@
 
 target 'Dietskan' do
    pod 'QRCodeReaderViewController', '~> 4.0'
+   pod 'Dropbox-iOS-SDK'
 end
 
 
