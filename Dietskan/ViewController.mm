@@ -16,6 +16,8 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
+
+
 #pragma mark - Utilities
 
 namespace // anonymous namespace for local functions.
@@ -94,6 +96,8 @@ namespace // anonymous namespace for local functions.
                                                object:nil];
     if ([self currentStateNeedsSensor])
         [self connectToStructureSensorAndStartStreaming];
+    
+    _scanForLabel.text = [NSString stringWithFormat:@"Scan for %@", scan_id];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -180,7 +184,7 @@ namespace // anonymous namespace for local functions.
     
     GLKVector3 volumeCenter = GLKVector3MultiplyScalar([_slamState.mapper volumeSizeInMeters], 0.5);
     [_meshViewController resetMeshCenter:volumeCenter];
-    
+    _meshViewController->scan_id = self->scan_id;
     [self presentViewController:_meshViewNavigationController animated:YES completion:^{}];
 }
 

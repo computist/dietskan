@@ -94,10 +94,6 @@ namespace
     self.navigationItem.rightBarButtonItem = emailButton;
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.title = @"Structure Sensor Scanner";
-    }
     
     return self;
 }
@@ -181,6 +177,8 @@ namespace
     
     self.displayControl.selectedSegmentIndex = 1;
     _renderer->setRenderingMode( MeshRenderer::RenderingModeLightedGray );
+    
+    self.title = [NSString stringWithFormat:@"Scan for %@", scan_id];
 }
 
 - (void)didReceiveMemoryWarning

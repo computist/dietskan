@@ -82,6 +82,7 @@
 //        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
 //        [alert show];
         ViewController *v = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+        v->scan_id = result;
         [self presentViewController:v animated:YES completion:nil];
     }];
 }

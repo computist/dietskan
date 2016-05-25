@@ -18,7 +18,10 @@
            enhancedCompletionHandler:(void(^)(void))enhancedCompletionHandler;
 @end
 
-@interface MeshViewController : UIViewController <UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate>
+@interface MeshViewController : UIViewController <UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate> {
+@public
+    NSString *scan_id;
+}
 
 @property (nonatomic, assign) id<MeshViewDelegate> delegate;
 
