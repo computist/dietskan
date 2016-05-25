@@ -7,12 +7,22 @@
 //
 
 #import "DropBoxLoginViewController.h"
+#import <DropboxSDK/DropboxSDK.h>
 
 @interface DropBoxLoginViewController ()
 
 @end
 
 @implementation DropBoxLoginViewController
+
+//Link to DropBox account
+- (IBAction)didPressLink:(UIButton *)sender {
+   //if (![[DBSession sharedSession] isLinked]) {
+        [[DBSession sharedSession] linkFromController:self];
+   //}
+}
+
+//Go back to the MainViewUI
 - (IBAction)backClick:(UIButton *)sender {
    [self dismissViewControllerAnimated:YES completion:nil];
 }
