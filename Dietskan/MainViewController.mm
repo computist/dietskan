@@ -16,6 +16,8 @@
 #import "QRCodeReaderViewController.h"
 #import "QRCodeReader.h"
 
+#import <DropboxSDK/DropboxSDK.h>
+
 @interface MainViewController ()
 
 @end
@@ -37,31 +39,34 @@
 }
 
 - (IBAction)scanClick:(UIButton *)sender {
-    if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
-        static QRCodeReaderViewController *vc = nil;
-        static dispatch_once_t onceToken;
-        
-        dispatch_once(&onceToken, ^{
-            QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
-            vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
-            vc.modalPresentationStyle = UIModalPresentationFormSheet;
-        });
-        vc.delegate = self;
-        
-        [vc setCompletionWithBlock:^(NSString *resultAsString) {
-            NSLog(@"Completion with result: %@", resultAsString);
-        }];
-        
-        [self presentViewController:vc animated:YES completion:NULL];
-    }
-    else {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Reader not supported by the current device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    if ([[DBSession sharedSession] isLinked]) {
+        if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
+            static QRCodeReaderViewController *vc = nil;
+            static dispatch_once_t onceToken;
+            
+            dispatch_once(&onceToken, ^{
+                QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+                vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+                vc.modalPresentationStyle = UIModalPresentationFormSheet;
+            });
+            vc.delegate = self;
+            
+            [vc setCompletionWithBlock:^(NSString *resultAsString) {
+                NSLog(@"Completion with result: %@", resultAsString);
+            }];
+            
+            [self presentViewController:vc animated:YES completion:NULL];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Reader not supported by the current device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alert show];
+        }
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Link your dropbox account in setting before scanning." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [alert show];
     }
-//    
-//    ViewController *v = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-//    [self presentViewController:v animated:YES completion:nil];
 }
 
 - (void)viewDidLoad {

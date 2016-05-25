@@ -9,6 +9,7 @@
 #import <MessageUI/MFMailComposeViewController.h>
 #import <Structure/StructureSLAM.h>
 #import "EAGLView.h"
+#import <DropboxSDK/DropboxSDK.h>
 
 @protocol MeshViewDelegate <NSObject>
 - (void)meshViewWillDismiss;
@@ -18,10 +19,12 @@
            enhancedCompletionHandler:(void(^)(void))enhancedCompletionHandler;
 @end
 
-@interface MeshViewController : UIViewController <UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate> {
+@interface MeshViewController : UIViewController <UIGestureRecognizerDelegate, MFMailComposeViewControllerDelegate, DBRestClientDelegate> {
 @public
     NSString *scan_id;
+    int upload_count;
 }
+@property (nonatomic, strong) DBRestClient *restClient;
 
 @property (nonatomic, assign) id<MeshViewDelegate> delegate;
 

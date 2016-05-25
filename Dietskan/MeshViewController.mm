@@ -88,9 +88,10 @@ namespace
     self.navigationItem.leftBarButtonItem = backButton;
     
     UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
-                                                                   style:UIBarButtonItemStylePlain
-                                                                  target:self
-                                                                  action:@selector(emailMesh)];
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(saveMesh)];
+    
     self.navigationItem.rightBarButtonItem = saveButton;
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -145,6 +146,9 @@ namespace
                                     forState:UIControlStateNormal];
     
     [self setupGestureRecognizer];
+    
+    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+    self.restClient.delegate = self;
 }
 
 - (void)setLabel:(UILabel*)label enabled:(BOOL)enabled {
@@ -363,12 +367,12 @@ namespace
     if (!self.mailViewController)
     {
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The email could not be sent."
-            message:@"Please make sure an email account is properly setup on this device."
-            preferredStyle:UIAlertControllerStyleAlert];
+                                                                       message:@"Please make sure an email account is properly setup on this device."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-            style:UIAlertActionStyleDefault
-            handler:^(UIAlertAction * action) { }];
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) { }];
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -420,12 +424,12 @@ namespace
         self.mailViewController = nil;
         
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The email could not be sent."
-            message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
-            preferredStyle:UIAlertControllerStyleAlert];
-
+                                                                       message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-            style:UIAlertActionStyleDefault
-            handler:^(UIAlertAction * action) { }];
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) { }];
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -440,6 +444,73 @@ namespace
     [self.mailViewController addAttachmentData:[NSData dataWithContentsOfFile:zipPath] mimeType:@"application/zip" fileName:zipFilename];
     
     [self presentViewController:self.mailViewController animated:YES completion:^(){}];
+}
+
+- (void)saveMesh
+{
+    // Setup paths and filenames.
+    NSString* cacheDirectory = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES ) objectAtIndex:0];
+    
+    NSDateFormatter *formatter;
+    NSString        *dateString;
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy_MM_dd_HH_mm"];
+    dateString = [formatter stringFromDate:[NSDate date]];
+    
+    NSString* zipFilename = [NSString stringWithFormat:@"Scan%@_%@.zip", scan_id, dateString];
+    NSString* screenshotFilename = [NSString stringWithFormat:@"Preview%@_%@.zip", scan_id, dateString];
+    
+    NSString *zipPath = [cacheDirectory stringByAppendingPathComponent:zipFilename];
+    NSString *screenshotPath =[cacheDirectory stringByAppendingPathComponent:screenshotFilename];
+    
+    // Take a screenshot and save it to disk.
+    [self prepareScreenShot:screenshotPath];
+    
+    // Request a zipped OBJ file, potentially with embedded MTL and texture.
+    NSDictionary* options = @{ kSTMeshWriteOptionFileFormatKey: @(STMeshWriteOptionFileFormatObjFileZip) };
+    
+    NSError* error;
+    STMesh* meshToSend = _mesh;
+    BOOL success = [meshToSend writeToFile:zipPath options:options error:&error];
+    if (!success)
+    {
+        self.mailViewController = nil;
+        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The mesh could not be saved."
+            message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
+            preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+            style:UIAlertActionStyleDefault
+            handler:^(UIAlertAction * action) { }];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        return;
+    }
+
+    // Upload file to Dropbox
+    NSString *destDir = @"/Scan";
+    upload_count = 0;
+    [self.restClient uploadFile:zipFilename toPath:destDir withParentRev:nil fromPath:zipPath];
+    [self.restClient uploadFile:screenshotFilename toPath:destDir withParentRev:nil fromPath:screenshotPath];
+}
+
+- (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath
+              from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
+    upload_count++;
+    if (upload_count == 2) {
+        NSLog(@"File uploaded successfully to path: %@", metadata.path);
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Success" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+    }
+}
+
+- (void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:[NSString stringWithFormat:@"File upload failed with error: %@", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - Rendering
