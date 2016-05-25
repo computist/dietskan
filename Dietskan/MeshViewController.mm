@@ -87,11 +87,11 @@ namespace
                                                                   action:@selector(dismissView)];
     self.navigationItem.leftBarButtonItem = backButton;
     
-    UIBarButtonItem *emailButton = [[UIBarButtonItem alloc] initWithTitle:@"Email"
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
                                                                    style:UIBarButtonItemStylePlain
                                                                   target:self
                                                                   action:@selector(emailMesh)];
-    self.navigationItem.rightBarButtonItem = emailButton;
+    self.navigationItem.rightBarButtonItem = saveButton;
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     
@@ -377,14 +377,25 @@ namespace
     }
     
     self.mailViewController.mailComposeDelegate = self;
-    
+   
+   //Add date and time to file names
+   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+   [formatter setDateFormat:@"MM-dd-yyyy_hh:mm:ss"];
+   NSDate *currDate = [NSDate date];
+   NSString *stringFromDate = [formatter stringFromDate:currDate];
+   
+   
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         self.mailViewController.modalPresentationStyle = UIModalPresentationFormSheet;
     
     // Setup paths and filenames.
     NSString* cacheDirectory = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES ) objectAtIndex:0];
-    NSString* zipFilename = @"Model.zip";
-    NSString* screenshotFilename = @"Preview.jpg";
+    //NSString* zipFilename = @"Model.zip";
+    //NSString* screenshotFilename = @"Preview.jpg";
+   NSString *zipTemp = [@"Model-" stringByAppendingString: stringFromDate];
+   NSString *zipFilename = [zipTemp stringByAppendingString:@".zip"];
+   NSString *screenshotTemp = [@"Preview-" stringByAppendingString: stringFromDate];
+   NSString *screenshotFilename = [screenshotTemp stringByAppendingString:@".jpg"];
     
     NSString *zipPath = [cacheDirectory stringByAppendingPathComponent:zipFilename];
     NSString *screenshotPath =[cacheDirectory stringByAppendingPathComponent:screenshotFilename];
@@ -392,9 +403,9 @@ namespace
     // Take a screenshot and save it to disk.
     [self prepareScreenShot:screenshotPath];
     
-    [self.mailViewController setSubject:@"3D Model"];
+    [self.mailViewController setSubject:[@"DietSkan food item captured at " stringByAppendingString: stringFromDate]];
     
-    NSString *messageBody = @"This model was captured with the open source Scanner sample app in the Structure SDK.\n\nCheck it out!\n\nMore info about the Structure SDK: http://structure.io/developers";
+    NSString *messageBody = @"Here is your model captured using the DietSkan app. \n\nMore info at http://www.dietskan.com\n\n-The DietSkan team\ninfo@dietskan.com";
     
     [self.mailViewController setMessageBody:messageBody isHTML:NO];
     
