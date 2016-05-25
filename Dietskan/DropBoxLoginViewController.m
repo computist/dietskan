@@ -8,6 +8,9 @@
 
 #import "DropBoxLoginViewController.h"
 #import <DropboxSDK/DropboxSDK.h>
+#import "AppDelegate.h"
+
+extern DropBoxLoginViewController *dropBoxLoginViewController;
 
 @interface DropBoxLoginViewController ()
 
@@ -17,9 +20,12 @@
 
 //Link to DropBox account
 - (IBAction)didPressLink:(UIButton *)sender {
-   //if (![[DBSession sharedSession] isLinked]) {
+   if (![[DBSession sharedSession] isLinked]) {
         [[DBSession sharedSession] linkFromController:self];
-   //}
+   } else {
+       [[DBSession sharedSession] unlinkAll];
+       [_linkButton setTitle: @"Link" forState:normal];
+   }
 }
 
 //Go back to the MainViewUI
@@ -30,6 +36,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    dropBoxLoginViewController = self;
+}
+
+- (void) viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    if ([[DBSession sharedSession] isLinked]) {
+        [_linkButton setTitle: @"Unlink" forState:normal];
+    } else {
+        [_linkButton setTitle: @"Link" forState:normal];
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -9,7 +9,9 @@
 #import "MainViewController.h"
 #import "InitLoginViewController.h"
 #import <DropboxSDK/DropboxSDK.h>
+#import "DropBoxLoginViewController.h"
 
+DropBoxLoginViewController *dropBoxLoginViewController;
 
 @implementation AppDelegate
 
@@ -68,9 +70,15 @@
       if ([[DBSession sharedSession] isLinked]) {
          NSLog(@"App linked successfully!");
          // At this point you can start making API calls
+          if (dropBoxLoginViewController != nil) {
+              [dropBoxLoginViewController.linkButton setTitle:@"Unlink" forState:normal];
+          }
       }
       return YES;
    }
+    if (dropBoxLoginViewController != nil) {
+        [dropBoxLoginViewController.linkButton setTitle:@"Link" forState:normal];
+    }
    // Add whatever other url handling code your app requires here
    return NO;
 }
