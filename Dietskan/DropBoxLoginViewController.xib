@@ -98,16 +98,6 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym1-tq-MzW">
-                    <rect key="frame" x="865" y="100" width="125" height="35"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="35" id="MYF-zQ-rdA"/>
-                        <constraint firstAttribute="width" constant="125" id="Xip-ca-Zsn"/>
-                    </constraints>
-                    <state key="normal" title="Admin" backgroundImage="LogIn_Frame.png">
-                        <color key="titleColor" red="0.40000000000000002" green="0.68235294117647061" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -122,7 +112,6 @@
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="n2p-S8-UQh" secondAttribute="centerX" id="L0P-yt-YtK"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="ML0-cM-FGa"/>
                 <constraint firstItem="Wdf-7e-CLC" firstAttribute="trailing" secondItem="dae-qA-N6t" secondAttribute="trailing" id="Mhf-LV-toZ"/>
-                <constraint firstItem="ym1-tq-MzW" firstAttribute="top" secondItem="P5d-dP-Tcp" secondAttribute="bottom" constant="31" id="NFT-C0-BsB"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="top" secondItem="P5d-dP-Tcp" secondAttribute="top" id="O9E-pa-Lon"/>
                 <constraint firstItem="dae-qA-N6t" firstAttribute="top" secondItem="Wdf-7e-CLC" secondAttribute="bottom" constant="23" id="OdQ-qm-llZ"/>
                 <constraint firstItem="Wdf-7e-CLC" firstAttribute="top" secondItem="l6s-Wk-STz" secondAttribute="bottom" constant="23" id="Vkj-ER-6C3"/>
@@ -135,7 +124,6 @@
                 <constraint firstAttribute="bottom" secondItem="n2p-S8-UQh" secondAttribute="bottom" constant="-7" id="cSK-7m-cr2"/>
                 <constraint firstItem="n2p-S8-UQh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="pXx-07-04g"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="P5d-dP-Tcp" secondAttribute="centerX" id="t76-Lq-Bq8"/>
-                <constraint firstAttribute="trailing" secondItem="ym1-tq-MzW" secondAttribute="trailing" constant="34" id="vlQ-LW-pxK"/>
                 <constraint firstItem="P5d-dP-Tcp" firstAttribute="leading" secondItem="n2p-S8-UQh" secondAttribute="leading" id="ycC-9u-ZNE"/>
                 <constraint firstItem="aSN-dF-Yu7" firstAttribute="leading" secondItem="O4k-OE-HfG" secondAttribute="trailing" constant="8" symbolic="YES" id="z1W-Z0-NXj"/>
                 <constraint firstItem="P5d-dP-Tcp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zCd-Ot-Dhs"/>
