@@ -14,6 +14,10 @@
 #include <vector>
 #include <cmath>
 
+#import "ViewController.h"
+
+extern ViewController *scannerViewController;
+
 // Local Helper Functions
 namespace
 {
@@ -149,6 +153,7 @@ namespace
     
     self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
     self.restClient.delegate = self;
+    
 }
 
 - (void)setLabel:(UILabel*)label enabled:(BOOL)enabled {
@@ -234,6 +239,7 @@ namespace
     [self dismissViewControllerAnimated:YES completion:^{
         if([self.delegate respondsToSelector:@selector(meshViewDidDismiss)])
             [self.delegate meshViewDidDismiss];
+        
     }];
 }
 
@@ -448,6 +454,9 @@ namespace
 
 - (void)saveMesh
 {
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:true];
+    HUD.labelText = @"Saving to dropbox";
+    
     // Setup paths and filenames.
     NSString* cacheDirectory = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES ) objectAtIndex:0];
     
@@ -457,8 +466,8 @@ namespace
     [formatter setDateFormat:@"yyyy_MM_dd_HH_mm"];
     dateString = [formatter stringFromDate:[NSDate date]];
     
-    NSString* zipFilename = [NSString stringWithFormat:@"Scan%@_%@.zip", scan_id, dateString];
-    NSString* screenshotFilename = [NSString stringWithFormat:@"Preview%@_%@.zip", scan_id, dateString];
+    NSString* zipFilename = [NSString stringWithFormat:@"Scan_%@_%@.zip", scan_id, dateString];
+    NSString* screenshotFilename = [NSString stringWithFormat:@"Preview_%@_%@.jpg", scan_id, dateString];
     
     NSString *zipPath = [cacheDirectory stringByAppendingPathComponent:zipFilename];
     NSString *screenshotPath =[cacheDirectory stringByAppendingPathComponent:screenshotFilename];
@@ -474,7 +483,7 @@ namespace
     BOOL success = [meshToSend writeToFile:zipPath options:options error:&error];
     if (!success)
     {
-        self.mailViewController = nil;
+        [HUD hide:true];
         
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The mesh could not be saved."
             message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
@@ -501,14 +510,18 @@ namespace
               from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
     upload_count++;
     if (upload_count == 2) {
-        NSLog(@"File uploaded successfully to path: %@", metadata.path);
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Success" message:@"Success" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-        
-        [alert show];
+        HUD.mode = MBProgressHUDModeText;
+        HUD.labelText = @"Success";
+        [HUD hide:true afterDelay:1];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self dismissView];
+            [scannerViewController dismissViewControllerAnimated:false completion:nil];
+        });
     }
 }
 
 - (void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error {
+    [HUD hide:true];
     UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:[NSString stringWithFormat:@"File upload failed with error: %@", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }

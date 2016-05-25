@@ -12,6 +12,7 @@
 #import "DropBoxLoginViewController.h"
 
 DropBoxLoginViewController *dropBoxLoginViewController;
+ViewController *scannerViewController;
 
 @implementation AppDelegate
 
@@ -73,6 +74,7 @@ DropBoxLoginViewController *dropBoxLoginViewController;
           if (dropBoxLoginViewController != nil) {
               [dropBoxLoginViewController.linkButton setTitle:@"Unlink" forState:normal];
           }
+          [dropBoxLoginViewController dismissViewControllerAnimated:false completion:nil];
       }
       return YES;
    }

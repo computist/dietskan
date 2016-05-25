@@ -10,6 +10,7 @@
 #import <Structure/StructureSLAM.h>
 #import "EAGLView.h"
 #import <DropboxSDK/DropboxSDK.h>
+#import <MBProgressHUD/MBProgressHUD.h>
 
 @protocol MeshViewDelegate <NSObject>
 - (void)meshViewWillDismiss;
@@ -23,6 +24,7 @@
 @public
     NSString *scan_id;
     int upload_count;
+    MBProgressHUD *HUD;
 }
 @property (nonatomic, strong) DBRestClient *restClient;
 

@@ -39,6 +39,7 @@
 		2DC7D69818438E1D005BEE8B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC7D69618438E1D005BEE8B /* CoreMotion.framework */; };
 		2DC7D69A18438E42005BEE8B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC7D69918438E42005BEE8B /* Accelerate.framework */; };
 		2DE057BD199E58E100137F8F /* ViewpointController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2DE057BC199E58E100137F8F /* ViewpointController.mm */; };
+		3C47ED171CF64736007F641B /* HistoryData.m in Sources */ = {isa = PBXBuildFile; fileRef = 3C47ED161CF64736007F641B /* HistoryData.m */; };
 		3CA5238A1CE17A5D00D75D8F /* MainViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CA523881CE17A5D00D75D8F /* MainViewController.mm */; };
 		3CA5238B1CE17A5D00D75D8F /* MainUIView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CA523891CE17A5D00D75D8F /* MainUIView.xib */; };
 		3CA5238E1CE1939100D75D8F /* MainUIView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CA5238D1CE1939100D75D8F /* MainUIView.m */; };
@@ -141,6 +142,8 @@
 		2DC7D69618438E1D005BEE8B /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		2DC7D69918438E42005BEE8B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
 		2DE057BC199E58E100137F8F /* ViewpointController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewpointController.mm; sourceTree = "<group>"; };
+		3C47ED151CF64736007F641B /* HistoryData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryData.h; sourceTree = "<group>"; };
+		3C47ED161CF64736007F641B /* HistoryData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryData.m; sourceTree = "<group>"; };
 		3CA523871CE17A5D00D75D8F /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		3CA523881CE17A5D00D75D8F /* MainViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MainViewController.mm; sourceTree = "<group>"; };
 		3CA523891CE17A5D00D75D8F /* MainUIView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainUIView.xib; sourceTree = "<group>"; };
@@ -346,6 +349,8 @@
 				3CA5238D1CE1939100D75D8F /* MainUIView.m */,
 				938DD0381CE983620065DDD6 /* HistoryUIViewController.h */,
 				938DD0391CE983620065DDD6 /* HistoryUIViewController.m */,
+				3C47ED151CF64736007F641B /* HistoryData.h */,
+				3C47ED161CF64736007F641B /* HistoryData.m */,
 				933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */,
 				937783B81CEF752300FAEBD5 /* InitLoginViewController.h */,
 				937783B91CEF752300FAEBD5 /* InitLoginViewController.m */,
@@ -608,6 +613,7 @@
 				937783BB1CEF752300FAEBD5 /* InitLoginViewController.m in Sources */,
 				2D4DE5AC199BB90400F69F56 /* CustomShaders.mm in Sources */,
 				937783C01CEF763400FAEBD5 /* ProfileViewController.m in Sources */,
+				3C47ED171CF64736007F641B /* HistoryData.m in Sources */,
 				6F03CB961862832600518C22 /* main.m in Sources */,
 				7E2288CE198FE67D00F6E3B2 /* CustomUIKitStyles.mm in Sources */,
 				2AEF46231A1288B600CAF953 /* ViewController+Camera.mm in Sources */,

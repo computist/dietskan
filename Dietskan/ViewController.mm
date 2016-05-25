@@ -16,7 +16,7 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
-
+extern ViewController *scannerViewController;
 
 #pragma mark - Utilities
 
@@ -98,6 +98,8 @@ namespace // anonymous namespace for local functions.
         [self connectToStructureSensorAndStartStreaming];
     
     _scanForLabel.text = [NSString stringWithFormat:@"Scan for %@", scan_id];
+    
+    scannerViewController = self;
 }
 
 - (void)viewDidAppear:(BOOL)animated
