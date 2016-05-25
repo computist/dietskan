@@ -7,123 +7,205 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1BEEC7D649AE30BA917736554B5B0BDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
-		44DE7E79854A87B0DCD5C787293780A3 /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = A3470A04FA28D8762460E19E2F934307 /* QRCodeReader.m */; };
-		591A17FB6B8FAE1E99A2B614B8C1C89B /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BBDFA4BCB86B1DEA9E1FD2F2E2A649F /* QRCameraSwitchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		74CF26198891DD3204708B19A3E49ACF /* QRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 125D6EBD65F80C4D799594D60FC53AC9 /* QRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8695334847B1FEAF5B813A3C2634AA0F /* QRToggleTorchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 082F379F1C44E6093B13D4ACDEEF1A8A /* QRToggleTorchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8AB635D850166108AF0EEFDBEAE55C56 /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = DCDAAF13C8916A90827D9DD7CAD9FD97 /* QRCodeReaderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8B95E2D792D17EB095301B80A20C4FAA /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 153AE88FD50BAA5C45EE2DA11CBFC39A /* QRToggleTorchButton.m */; };
-		A84916711A19CC7D3E8DEA3E0AE6F630 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */; };
-		AE565644125C6B4DB6EEECCF03A28BA8 /* Pods-Dietskan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0CFE0D3BF890FFC04BBF16190B481B /* Pods-Dietskan-dummy.m */; };
-		DE3032426E10E61D5AD2A6937140D31E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */; };
-		E00A14F49388678DA0C4B93173A53F1E /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DA6A76FBF11855176EE8053B0649014 /* QRCodeReaderViewController.m */; };
-		E4B4FC559DAEEBF1201BA6AD5C28DA25 /* QRCodeReaderViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D67B443A921E2D72A0E4FADA9AB75BD6 /* QRCodeReaderViewController-dummy.m */; };
-		E9ED0266327C7C5B776926AEE01218BF /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 9D71CD80FF807E8F3CDD296F4F560197 /* QRCodeReaderView.m */; };
-		F2288697ABBDACC7F2CDFD6AD7C59063 /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A64EBD1C7CCA6436FBBB173F97EFB2C /* QRCodeReaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FB6077553A560642443423EBA212F40E /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 31D09A7408732454113B89BF739DFF3D /* QRCameraSwitchButton.m */; };
-		FFA23F0B6D980C0E0BDAB1583B1A8442 /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 66E7403BEEE2BFB11637A75FE7F79E21 /* QRCodeReaderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		036F7115B35B6B551AEA1317EE345250 /* QRCameraSwitchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 424B02C424B8846A50432C788F384FE0 /* QRCameraSwitchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		260C63ADEC6B043A50224AFDA5B2B04F /* QRCodeReader.m in Sources */ = {isa = PBXBuildFile; fileRef = 579C356F3E4F99433D8B7FB954171535 /* QRCodeReader.m */; };
+		330A4B9406471A0004E8F359D8C8F659 /* QRCodeReaderViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DE3FFE1DE4A19B191C72E559949C318 /* QRCodeReaderViewController-dummy.m */; };
+		5EB4F27B76513AE918BA5AE0868E87C8 /* MBProgressHUD.h in Headers */ = {isa = PBXBuildFile; fileRef = 3C147C3671A0915FD04A498568F53438 /* MBProgressHUD.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		67BA513374B3C3DD218FC3524692FDD5 /* QRCodeReaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = A0ACF6FD52979051C8DF85E0DFE9F0E7 /* QRCodeReaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77BAEADA255556859C7736F1B67C4B57 /* QRToggleTorchButton.h in Headers */ = {isa = PBXBuildFile; fileRef = C66C4746B91061C118B0628A539B47BD /* QRToggleTorchButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		781A8941E94306502D5B2AD16A8549A4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FDDCBD607A072C17967078CABE2843 /* Foundation.framework */; };
+		82FC12F67E83874B93592218E9FB4CA0 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 8FC45BE653634F50C23188CCB02D87E6 /* MBProgressHUD.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		94FC4AE35C0F90BD510E491C20A2F830 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FDDCBD607A072C17967078CABE2843 /* Foundation.framework */; };
+		978ECA3A9DC81AC00C02FCF2A6667E10 /* QRCodeReaderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3360E62C365571ED1810A858BB043292 /* QRCodeReaderViewController.m */; };
+		A134B95777219F1925DCF397C4CFAB9B /* QRCodeReaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F60B755761AE20E474F1CB4318B3256 /* QRCodeReaderView.m */; };
+		A13FB711B62D03B574E68091088A6879 /* QRToggleTorchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D4515F8E8CE3C28A8FBA5EBD6192C57 /* QRToggleTorchButton.m */; };
+		A2776A3EAD7BD4746157FDC03AE422E9 /* Pods-Dietskan-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0CFE0D3BF890FFC04BBF16190B481B /* Pods-Dietskan-dummy.m */; };
+		A61AFEB22C9A93449637E57B31C4ECBD /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E08E858F03931D5DC361A5C6B294B47 /* AVFoundation.framework */; };
+		B5048FDCF004649B22007D4675BE8981 /* QRCodeReaderDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 30634410F3B2697D1B6D87BA202E34EF /* QRCodeReaderDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B79D1B6F33E6229F2C9C4E039A2C3D4A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC7938518E2493B4E45FFE9AA9959436 /* CoreGraphics.framework */; };
+		C96EFD0B7E464C538B94EDB9D50F5C16 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 48FDDCBD607A072C17967078CABE2843 /* Foundation.framework */; };
+		DBD601E178803B7C40739BEF510B750D /* QRCodeReaderViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0302E403BF3A63E010136212ECA4C471 /* QRCodeReaderViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E87670E7FB8D38FCF56C5347CEB222FD /* QRCodeReader.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FE705052B0091821F98B0EBFABF8B7 /* QRCodeReader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB42FC2AF3C88E84092E70F9ACC2C739 /* QRCameraSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 645310E316EC1851BD056C1B7DD16B80 /* QRCameraSwitchButton.m */; };
+		FC214077677D4F02E03C6C85F774E028 /* MBProgressHUD-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 67F3DA1E961A14CE3CFAF930E0423FD6 /* MBProgressHUD-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		80A3A880DA1F0E9791B76D5EF27D6309 /* PBXContainerItemProxy */ = {
+		C148780CDBFC466469838F8E90BD4D05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 585EF507963F8CBA8DD49A82096D29D0;
+			remoteGlobalIDString = FE2F1D7B9D9FCEA148517E4657B243F4;
+			remoteInfo = MBProgressHUD;
+		};
+		D8C4A25CC477A87741AF361EC7A90114 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBF52350ADDE3655DB43208A9F290EE6;
 			remoteInfo = QRCodeReaderViewController;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00DFFBAA0B01580633A9085F52B77990 /* DBMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBMetadata.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBMetadata.h"; sourceTree = "<group>"; };
-		082F379F1C44E6093B13D4ACDEEF1A8A /* QRToggleTorchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRToggleTorchButton.h; path = QRCodeReaderViewController/QRToggleTorchButton.h; sourceTree = "<group>"; };
-		125D6EBD65F80C4D799594D60FC53AC9 /* QRCodeReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReader.h; path = QRCodeReaderViewController/QRCodeReader.h; sourceTree = "<group>"; };
-		1379F3AA07312861BAB0F7ACF2388AF2 /* MPOAuthParameterFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthParameterFactory.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthParameterFactory.h"; sourceTree = "<group>"; };
-		153AE88FD50BAA5C45EE2DA11CBFC39A /* QRToggleTorchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRToggleTorchButton.m; path = QRCodeReaderViewController/QRToggleTorchButton.m; sourceTree = "<group>"; };
-		1E7C279C06E182A6259253C63A9DD694 /* DBJsonWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonWriter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonWriter.h"; sourceTree = "<group>"; };
-		1F11C5DFCE59570CDE70A08D2148AC05 /* NSString+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+DBJSON.h"; sourceTree = "<group>"; };
-		2412CEA044D788D2BEBDD1A846C18B70 /* libPods-Dietskan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dietskan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		24A265D2B7B08A98AAFC218137474E99 /* NSDictionary+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSDictionary+Dropbox.h"; sourceTree = "<group>"; };
-		25A9907DBB9B81CB2AECCA38740C57AA /* MPOAuthSignatureParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthSignatureParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthSignatureParameter.h"; sourceTree = "<group>"; };
-		283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		29C60DA93C24902DC08E30F8AC19B0C8 /* DBRestClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRestClient.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRestClient.h"; sourceTree = "<group>"; };
-		31D09A7408732454113B89BF739DFF3D /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCameraSwitchButton.m; path = QRCodeReaderViewController/QRCameraSwitchButton.m; sourceTree = "<group>"; };
-		33E8601C9ACDB32DA436C0B158593A48 /* MPDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPDebug.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPDebug.h"; sourceTree = "<group>"; };
-		3780EE4441094DECA201621CDCCE421E /* MPURLRequestParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPURLRequestParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPURLRequestParameter.h"; sourceTree = "<group>"; };
-		3940761A1881FD1FC0BB6ABB0357F7D1 /* MPOAuthURLResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLResponse.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLResponse.h"; sourceTree = "<group>"; };
+		0302E403BF3A63E010136212ECA4C471 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderViewController.h; path = QRCodeReaderViewController/QRCodeReaderViewController.h; sourceTree = "<group>"; };
+		081EB744CA0A556986F9840AAE9C25EF /* DBDeltaEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBDeltaEntry.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBDeltaEntry.h"; sourceTree = "<group>"; };
+		0B2C6A10DAFE179DE1E2F85D255F95C3 /* DBMetadata.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBMetadata.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBMetadata.h"; sourceTree = "<group>"; };
+		1B7A5B719A9817D9F670B1D3459BB00B /* MPURLRequestParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPURLRequestParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPURLRequestParameter.h"; sourceTree = "<group>"; };
+		1DA6A4EBA9FB34B30B1915B6E8D2A040 /* DBRestClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRestClient.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRestClient.h"; sourceTree = "<group>"; };
+		2DE3FFE1DE4A19B191C72E559949C318 /* QRCodeReaderViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReaderViewController-dummy.m"; sourceTree = "<group>"; };
+		2EA080E69629DD91BF9EE5A238AFA561 /* MPOAuthAuthenticationMethodOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethodOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethodOAuth.h"; sourceTree = "<group>"; };
+		30634410F3B2697D1B6D87BA202E34EF /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderDelegate.h; path = QRCodeReaderViewController/QRCodeReaderDelegate.h; sourceTree = "<group>"; };
+		30EC1CC61846DCCCAD91DBC6CCE5547D /* DBSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBSession.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession.h"; sourceTree = "<group>"; };
+		329AE7A3F6488C80D9C4C2F7D9D34CEC /* JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/JSON.h"; sourceTree = "<group>"; };
+		335DA19E2D1A95A83304BFBD54BEBEC1 /* QRCodeReaderViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReaderViewController.xcconfig; sourceTree = "<group>"; };
+		3360E62C365571ED1810A858BB043292 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderViewController.m; path = QRCodeReaderViewController/QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		39C03DB39A25B45FA98443C1960E2BF9 /* MPOAuthAuthenticationMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethod.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethod.h"; sourceTree = "<group>"; };
+		3C147C3671A0915FD04A498568F53438 /* MBProgressHUD.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		3E08E858F03931D5DC361A5C6B294B47 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AVFoundation.framework; sourceTree = DEVELOPER_DIR; };
 		42328736FEF896C4C8D32352C105EF72 /* Pods-Dietskan-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Dietskan-acknowledgements.markdown"; sourceTree = "<group>"; };
-		47C42D9B68C2F55BF946D8A176C8AA60 /* MPOAuthCredentialConcreteStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialConcreteStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore.h"; sourceTree = "<group>"; };
-		485838CB1B15C84FFA99523FFBA2923B /* DBJsonBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonBase.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonBase.h"; sourceTree = "<group>"; };
-		4A64EBD1C7CCA6436FBBB173F97EFB2C /* QRCodeReaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderView.h; path = QRCodeReaderViewController/QRCodeReaderView.h; sourceTree = "<group>"; };
-		4ACA18728900EE1E9D5D27F76AD850A5 /* NSString+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+Dropbox.h"; sourceTree = "<group>"; };
-		4BABE2B22776CFB548793ED22E289D48 /* DBAccountInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBAccountInfo.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBAccountInfo.h"; sourceTree = "<group>"; };
-		51C89C2DF2AE27200728FFA03AE2EB4C /* JSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/JSON.h"; sourceTree = "<group>"; };
-		5280771066E1DC4C9EA8C27C543C40A1 /* NSURLResponse+Encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLResponse+Encoding.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURLResponse+Encoding.h"; sourceTree = "<group>"; };
+		424B02C424B8846A50432C788F384FE0 /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCameraSwitchButton.h; path = QRCodeReaderViewController/QRCameraSwitchButton.h; sourceTree = "<group>"; };
+		44979DBFF47758AD636FC050A7490C02 /* libQRCodeReaderViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQRCodeReaderViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FDDCBD607A072C17967078CABE2843 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		4C913C59040002267FA67825E956CD85 /* QRCodeReaderViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReaderViewController-prefix.pch"; sourceTree = "<group>"; };
+		4F8C669CEFE96EBFCF085AEC946D4736 /* MPOAuthConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthConnection.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthConnection.h"; sourceTree = "<group>"; };
 		5604C5F337ABAAD4D57CD104746449DD /* Pods-Dietskan-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dietskan-frameworks.sh"; sourceTree = "<group>"; };
-		5A9CABDFC34431D9B0B58C28986FEA4E /* NSURL+MPURLParameterAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+MPURLParameterAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURL+MPURLParameterAdditions.h"; sourceTree = "<group>"; };
+		579C356F3E4F99433D8B7FB954171535 /* QRCodeReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReader.m; path = QRCodeReaderViewController/QRCodeReader.m; sourceTree = "<group>"; };
+		5A102507E229FC899E5EE1F3ED3FA238 /* MBProgressHUD-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD-prefix.pch"; sourceTree = "<group>"; };
 		5BA89A770FDEAB8D925EA79030DEFB7C /* Pods-Dietskan-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Dietskan-resources.sh"; sourceTree = "<group>"; };
-		5ED3CDEDCCB6392ADB9104230762CCEB /* MPOAuthAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPI.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPI.h"; sourceTree = "<group>"; };
-		5F395C88D3E6520B4EB99F0453F6D358 /* DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJSON.h"; sourceTree = "<group>"; };
-		64D0560FF938EA51A058AD5586484EEC /* MPOAuthAuthenticationMethod.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethod.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethod.h"; sourceTree = "<group>"; };
-		66E7403BEEE2BFB11637A75FE7F79E21 /* QRCodeReaderViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderViewController.h; path = QRCodeReaderViewController/QRCodeReaderViewController.h; sourceTree = "<group>"; };
-		6B8D94D73BFF2152BB856EF4B80426A8 /* DBLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBLog.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBLog.h"; sourceTree = "<group>"; };
-		6BBDFA4BCB86B1DEA9E1FD2F2E2A649F /* QRCameraSwitchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCameraSwitchButton.h; path = QRCodeReaderViewController/QRCameraSwitchButton.h; sourceTree = "<group>"; };
-		6DA6A76FBF11855176EE8053B0649014 /* QRCodeReaderViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderViewController.m; path = QRCodeReaderViewController/QRCodeReaderViewController.m; sourceTree = "<group>"; };
+		5D4515F8E8CE3C28A8FBA5EBD6192C57 /* QRToggleTorchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRToggleTorchButton.m; path = QRCodeReaderViewController/QRToggleTorchButton.m; sourceTree = "<group>"; };
+		624D263FE22B0FFA215F45B01C14F6EF /* MPDebug.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPDebug.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPDebug.h"; sourceTree = "<group>"; };
+		627AF68F74DC39E6F3BE3D5058D76F50 /* MPOAuthAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPI.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPI.h"; sourceTree = "<group>"; };
+		631704AC8F3677FC542D211823B15074 /* MBProgressHUD.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = MBProgressHUD.xcconfig; sourceTree = "<group>"; };
+		645310E316EC1851BD056C1B7DD16B80 /* QRCameraSwitchButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCameraSwitchButton.m; path = QRCodeReaderViewController/QRCameraSwitchButton.m; sourceTree = "<group>"; };
+		67F3DA1E961A14CE3CFAF930E0423FD6 /* MBProgressHUD-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD-dummy.m"; sourceTree = "<group>"; };
+		6A22F359FB87D1609BD1BB81317C3752 /* NSString+URLEscapingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEscapingAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+URLEscapingAdditions.h"; sourceTree = "<group>"; };
+		6E2B2F0B8F8EF622CD088B8F5E25855C /* MPOAuthURLResponse.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLResponse.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLResponse.h"; sourceTree = "<group>"; };
 		747E2410861410C26FA26316E34360BE /* Pods-Dietskan-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Dietskan-acknowledgements.plist"; sourceTree = "<group>"; };
-		781711D00D1E6C51EC0D49F34E26B0FC /* libQRCodeReaderViewController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libQRCodeReaderViewController.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D3856B421105B03E3B3E7B2D72D06BC /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MPOAuthCredentialConcreteStore+KeychainAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore+KeychainAdditions.h"; sourceTree = "<group>"; };
-		822C04A835A9372195A47D40C2D4674E /* DBSession.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBSession.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession.h"; sourceTree = "<group>"; };
-		8F12340C2FB37B8C7B55C7FC6A5E0D9D /* DBBase64Transcoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBBase64Transcoder.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBBase64Transcoder.h"; sourceTree = "<group>"; };
-		8FF311FC1F38C92D4AE0799B1CD0364F /* MPOAuthURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLRequest.h"; sourceTree = "<group>"; };
-		92ED38AF25406775D83086E4ECB2C7D9 /* QRCodeReaderViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QRCodeReaderViewController.xcconfig; sourceTree = "<group>"; };
+		7F60B755761AE20E474F1CB4318B3256 /* QRCodeReaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderView.m; path = QRCodeReaderViewController/QRCodeReaderView.m; sourceTree = "<group>"; };
+		81B9A3D0ABD0BD16C81C2FC0C2652260 /* MPOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuth.h"; sourceTree = "<group>"; };
+		83FE705052B0091821F98B0EBFABF8B7 /* QRCodeReader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReader.h; path = QRCodeReaderViewController/QRCodeReader.h; sourceTree = "<group>"; };
+		85F474E64E63FDDFC42AA57034FD5EDC /* NSString+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+DBJSON.h"; sourceTree = "<group>"; };
+		8845BC68E57742C39D40881ED02CCA40 /* NSDictionary+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDictionary+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSDictionary+Dropbox.h"; sourceTree = "<group>"; };
+		8DC4695F40E5B5FC040BC05077C37A42 /* DBLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBLog.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBLog.h"; sourceTree = "<group>"; };
+		8FC45BE653634F50C23188CCB02D87E6 /* MBProgressHUD.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9521C9C110628B896F194EE8647FF549 /* DBRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRequest.h"; sourceTree = "<group>"; };
-		95AA665B49662F58C3B2FF596D3020FF /* NSObject+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSObject+DBJSON.h"; sourceTree = "<group>"; };
-		95DA58EFB10F529C9526A1F42A90B1C6 /* DBJsonParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonParser.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonParser.h"; sourceTree = "<group>"; };
-		96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		9ADDC37274A7E143E6041FCC6DD75051 /* MPOAuthConnection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthConnection.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthConnection.h"; sourceTree = "<group>"; };
-		9D71CD80FF807E8F3CDD296F4F560197 /* QRCodeReaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReaderView.m; path = QRCodeReaderViewController/QRCodeReaderView.m; sourceTree = "<group>"; };
-		A0124BCC7937CB5D30BD70AEFA7AE8EE /* MPOAuthAPIRequestLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPIRequestLoader.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPIRequestLoader.h"; sourceTree = "<group>"; };
-		A3470A04FA28D8762460E19E2F934307 /* QRCodeReader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = QRCodeReader.m; path = QRCodeReaderViewController/QRCodeReader.m; sourceTree = "<group>"; };
-		B3151993B7957CAF8E60FD5BDE5600B5 /* QRCodeReaderViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QRCodeReaderViewController-prefix.pch"; sourceTree = "<group>"; };
-		B7445D7EAD4FB09A743970CE76166704 /* DBError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBError.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBError.h"; sourceTree = "<group>"; };
+		9A3E867745572F1003F739C03B4FAAEE /* MPOAuthSignatureParameter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthSignatureParameter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthSignatureParameter.h"; sourceTree = "<group>"; };
+		9D28BCAE4551E8386E9AEA701562BA7E /* NSURL+MPURLParameterAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+MPURLParameterAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURL+MPURLParameterAdditions.h"; sourceTree = "<group>"; };
+		9EF72353648CA946463CFDBAF6317DE4 /* DBRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBRequest.h"; sourceTree = "<group>"; };
+		A0ACF6FD52979051C8DF85E0DFE9F0E7 /* QRCodeReaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderView.h; path = QRCodeReaderViewController/QRCodeReaderView.h; sourceTree = "<group>"; };
+		A5F248FD34527CFCBB9AD56952D5D9C0 /* DBJsonParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonParser.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonParser.h"; sourceTree = "<group>"; };
+		A65BE61669635D92F05E51987AC59CF9 /* NSString+Dropbox.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+Dropbox.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+Dropbox.h"; sourceTree = "<group>"; };
+		AF3F9C5600B67D134C110BB94D7C216B /* MPOAuthURLRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthURLRequest.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthURLRequest.h"; sourceTree = "<group>"; };
+		AFA6022F2892E7CAD33AA4BBBB2E0429 /* NSURLResponse+Encoding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLResponse+Encoding.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSURLResponse+Encoding.h"; sourceTree = "<group>"; };
+		B7461432D25D05A90FD8B224C620E2C3 /* DBQuota.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBQuota.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBQuota.h"; sourceTree = "<group>"; };
 		B7E5A1293AFAE5920CE83E366D5BBC1F /* Pods-Dietskan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dietskan.release.xcconfig"; sourceTree = "<group>"; };
-		C2FD90C5A2F379AEFC7D5B499DC89BE2 /* MPOAuthCredentialStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialStore.h"; sourceTree = "<group>"; };
+		C0BC99155C57755D228FABDC11C3A36E /* MPOAuthParameterFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthParameterFactory.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthParameterFactory.h"; sourceTree = "<group>"; };
+		C66C4746B91061C118B0628A539B47BD /* QRToggleTorchButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRToggleTorchButton.h; path = QRCodeReaderViewController/QRToggleTorchButton.h; sourceTree = "<group>"; };
+		CBD818729400AB5323B38927C570CE57 /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "MPOAuthCredentialConcreteStore+KeychainAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore+KeychainAdditions.h"; sourceTree = "<group>"; };
+		CC7938518E2493B4E45FFE9AA9959436 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
 		CF0CFE0D3BF890FFC04BBF16190B481B /* Pods-Dietskan-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Dietskan-dummy.m"; sourceTree = "<group>"; };
+		D1AD98F768EEF5BCB11C744A55AB0E4A /* DropboxSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DropboxSDK.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DropboxSDK.h"; sourceTree = "<group>"; };
 		D34A404AE472E808A1FB9D8428C52298 /* Pods-Dietskan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Dietskan.debug.xcconfig"; sourceTree = "<group>"; };
-		D67B443A921E2D72A0E4FADA9AB75BD6 /* QRCodeReaderViewController-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QRCodeReaderViewController-dummy.m"; sourceTree = "<group>"; };
-		D9F6953ED3E344A07142658DBB37C9AC /* MPOAuthAuthenticationMethodOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAuthenticationMethodOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAuthenticationMethodOAuth.h"; sourceTree = "<group>"; };
-		DCDAAF13C8916A90827D9DD7CAD9FD97 /* QRCodeReaderDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = QRCodeReaderDelegate.h; path = QRCodeReaderViewController/QRCodeReaderDelegate.h; sourceTree = "<group>"; };
-		E674BC69D5E61C8A6466473F249A4F27 /* DropboxSDK.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DropboxSDK.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DropboxSDK.h"; sourceTree = "<group>"; };
-		E80171E3BAFFF3D9F20B80A44852EE69 /* NSString+URLEscapingAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+URLEscapingAdditions.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSString+URLEscapingAdditions.h"; sourceTree = "<group>"; };
-		EB118E43A557CD69E1AE5D93DC780940 /* DBQuota.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBQuota.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBQuota.h"; sourceTree = "<group>"; };
-		EC787A5F023093FEE4DC524832AF07C3 /* MPOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuth.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuth.h"; sourceTree = "<group>"; };
-		F1899EB022DF1CA0B9421738E447C273 /* DBSession+iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DBSession+iOS.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession+iOS.h"; sourceTree = "<group>"; };
-		F7818C9DCD89A7C57ADA0FED4FE23BBA /* DBDeltaEntry.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBDeltaEntry.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBDeltaEntry.h"; sourceTree = "<group>"; };
+		D5D4FD895AEF1F5025B6116713847570 /* MPOAuthCredentialConcreteStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialConcreteStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialConcreteStore.h"; sourceTree = "<group>"; };
+		DDD4D76E33BE84392D86938EAAA042EE /* libPods-Dietskan.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Dietskan.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DE4AE312DC10DE1D854A02F8772BA918 /* DBJsonWriter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonWriter.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonWriter.h"; sourceTree = "<group>"; };
+		E42BB24F3A1B00463CBC9BA4BD0026DD /* DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJSON.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJSON.h"; sourceTree = "<group>"; };
+		E481F3ADBC6213C28C0848C61BEA2A25 /* DBSession+iOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "DBSession+iOS.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBSession+iOS.h"; sourceTree = "<group>"; };
+		ED7854D61E35A4C968DC99DDBA44E42B /* DBAccountInfo.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBAccountInfo.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBAccountInfo.h"; sourceTree = "<group>"; };
+		F226F72D615E73C98BAC92E28BE074BF /* MPOAuthCredentialStore.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthCredentialStore.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthCredentialStore.h"; sourceTree = "<group>"; };
+		F259E4778653BE2AAF2BF8D75C4F4D29 /* DBBase64Transcoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBBase64Transcoder.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBBase64Transcoder.h"; sourceTree = "<group>"; };
+		F371A8189D6E40469E900610B1E6C9BC /* NSObject+DBJSON.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+DBJSON.h"; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/NSObject+DBJSON.h"; sourceTree = "<group>"; };
+		F4824A13886ED011FE5D6755DF7FC740 /* libMBProgressHUD.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMBProgressHUD.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		F49A6D69F7D97822C45513E912DD016A /* DBJsonBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBJsonBase.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBJsonBase.h"; sourceTree = "<group>"; };
+		F9EE1EA951E621AA7F31A09DF45B5C17 /* MPOAuthAPIRequestLoader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = MPOAuthAPIRequestLoader.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/MPOAuthAPIRequestLoader.h"; sourceTree = "<group>"; };
+		FA0CCE2AD3E658590D3CB93B18A9EDC1 /* DBError.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DBError.h; path = "dropbox-ios-sdk-1.3.13/DropboxSDK.framework/Headers/DBError.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2479A6842B1A43961386BB1253A6DC13 /* Frameworks */ = {
+		2BE044C1AB1834CCC15AF4003A826DB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1BEEC7D649AE30BA917736554B5B0BDE /* Foundation.framework in Frameworks */,
+				A61AFEB22C9A93449637E57B31C4ECBD /* AVFoundation.framework in Frameworks */,
+				C96EFD0B7E464C538B94EDB9D50F5C16 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		89CC1C67315EB765ED39D61E6A100BFA /* Frameworks */ = {
+		5086FF6F80B1E3FFF53D7D1AE295251D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A84916711A19CC7D3E8DEA3E0AE6F630 /* AVFoundation.framework in Frameworks */,
-				DE3032426E10E61D5AD2A6937140D31E /* Foundation.framework in Frameworks */,
+				781A8941E94306502D5B2AD16A8549A4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E81C08F5CCC0A5FBFF4559E2173164C7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B79D1B6F33E6229F2C9C4E039A2C3D4A /* CoreGraphics.framework in Frameworks */,
+				94FC4AE35C0F90BD510E491C20A2F830 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08CA0FF54464E5DEA2066A31ED8721DD /* Dropbox-iOS-SDK */ = {
+			isa = PBXGroup;
+			children = (
+				ED7854D61E35A4C968DC99DDBA44E42B /* DBAccountInfo.h */,
+				F259E4778653BE2AAF2BF8D75C4F4D29 /* DBBase64Transcoder.h */,
+				081EB744CA0A556986F9840AAE9C25EF /* DBDeltaEntry.h */,
+				FA0CCE2AD3E658590D3CB93B18A9EDC1 /* DBError.h */,
+				E42BB24F3A1B00463CBC9BA4BD0026DD /* DBJSON.h */,
+				F49A6D69F7D97822C45513E912DD016A /* DBJsonBase.h */,
+				A5F248FD34527CFCBB9AD56952D5D9C0 /* DBJsonParser.h */,
+				DE4AE312DC10DE1D854A02F8772BA918 /* DBJsonWriter.h */,
+				8DC4695F40E5B5FC040BC05077C37A42 /* DBLog.h */,
+				0B2C6A10DAFE179DE1E2F85D255F95C3 /* DBMetadata.h */,
+				B7461432D25D05A90FD8B224C620E2C3 /* DBQuota.h */,
+				9EF72353648CA946463CFDBAF6317DE4 /* DBRequest.h */,
+				1DA6A4EBA9FB34B30B1915B6E8D2A040 /* DBRestClient.h */,
+				30EC1CC61846DCCCAD91DBC6CCE5547D /* DBSession.h */,
+				E481F3ADBC6213C28C0848C61BEA2A25 /* DBSession+iOS.h */,
+				D1AD98F768EEF5BCB11C744A55AB0E4A /* DropboxSDK.h */,
+				329AE7A3F6488C80D9C4C2F7D9D34CEC /* JSON.h */,
+				624D263FE22B0FFA215F45B01C14F6EF /* MPDebug.h */,
+				81B9A3D0ABD0BD16C81C2FC0C2652260 /* MPOAuth.h */,
+				627AF68F74DC39E6F3BE3D5058D76F50 /* MPOAuthAPI.h */,
+				F9EE1EA951E621AA7F31A09DF45B5C17 /* MPOAuthAPIRequestLoader.h */,
+				39C03DB39A25B45FA98443C1960E2BF9 /* MPOAuthAuthenticationMethod.h */,
+				2EA080E69629DD91BF9EE5A238AFA561 /* MPOAuthAuthenticationMethodOAuth.h */,
+				4F8C669CEFE96EBFCF085AEC946D4736 /* MPOAuthConnection.h */,
+				D5D4FD895AEF1F5025B6116713847570 /* MPOAuthCredentialConcreteStore.h */,
+				CBD818729400AB5323B38927C570CE57 /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */,
+				F226F72D615E73C98BAC92E28BE074BF /* MPOAuthCredentialStore.h */,
+				C0BC99155C57755D228FABDC11C3A36E /* MPOAuthParameterFactory.h */,
+				9A3E867745572F1003F739C03B4FAAEE /* MPOAuthSignatureParameter.h */,
+				AF3F9C5600B67D134C110BB94D7C216B /* MPOAuthURLRequest.h */,
+				6E2B2F0B8F8EF622CD088B8F5E25855C /* MPOAuthURLResponse.h */,
+				1B7A5B719A9817D9F670B1D3459BB00B /* MPURLRequestParameter.h */,
+				8845BC68E57742C39D40881ED02CCA40 /* NSDictionary+Dropbox.h */,
+				F371A8189D6E40469E900610B1E6C9BC /* NSObject+DBJSON.h */,
+				85F474E64E63FDDFC42AA57034FD5EDC /* NSString+DBJSON.h */,
+				A65BE61669635D92F05E51987AC59CF9 /* NSString+Dropbox.h */,
+				6A22F359FB87D1609BD1BB81317C3752 /* NSString+URLEscapingAdditions.h */,
+				9D28BCAE4551E8386E9AEA701562BA7E /* NSURL+MPURLParameterAdditions.h */,
+				AFA6022F2892E7CAD33AA4BBBB2E0429 /* NSURLResponse+Encoding.h */,
+			);
+			path = "Dropbox-iOS-SDK";
+			sourceTree = "<group>";
+		};
+		122DA2E5084A4393C29BE363C764795C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FAB749CBA59C8D08CE2B9020E1D0BFF0 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		1E1598A7C0943F66E462B624BAA07563 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -132,52 +214,56 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		4105AF9C84A49DB06E2EEF4E32DF83CB /* Products */ = {
+		4A8AFC4D92D491771817611F6A66281B /* QRCodeReaderViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2412CEA044D788D2BEBDD1A846C18B70 /* libPods-Dietskan.a */,
-				781711D00D1E6C51EC0D49F34E26B0FC /* libQRCodeReaderViewController.a */,
+				424B02C424B8846A50432C788F384FE0 /* QRCameraSwitchButton.h */,
+				645310E316EC1851BD056C1B7DD16B80 /* QRCameraSwitchButton.m */,
+				83FE705052B0091821F98B0EBFABF8B7 /* QRCodeReader.h */,
+				579C356F3E4F99433D8B7FB954171535 /* QRCodeReader.m */,
+				30634410F3B2697D1B6D87BA202E34EF /* QRCodeReaderDelegate.h */,
+				A0ACF6FD52979051C8DF85E0DFE9F0E7 /* QRCodeReaderView.h */,
+				7F60B755761AE20E474F1CB4318B3256 /* QRCodeReaderView.m */,
+				0302E403BF3A63E010136212ECA4C471 /* QRCodeReaderViewController.h */,
+				3360E62C365571ED1810A858BB043292 /* QRCodeReaderViewController.m */,
+				C66C4746B91061C118B0628A539B47BD /* QRToggleTorchButton.h */,
+				5D4515F8E8CE3C28A8FBA5EBD6192C57 /* QRToggleTorchButton.m */,
+				A7DDD77E53D4F50EA11683D220BFFDCC /* Support Files */,
 			);
-			name = Products;
+			path = QRCodeReaderViewController;
 			sourceTree = "<group>";
 		};
-		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+		4EA87D353722F134FE6314214A8E8A29 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A40AF8D79D4382828A0EEAD80AB26358 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6E2F4ED6BEA30233771D318DCE2B1574 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				92ED38AF25406775D83086E4ECB2C7D9 /* QRCodeReaderViewController.xcconfig */,
-				D67B443A921E2D72A0E4FADA9AB75BD6 /* QRCodeReaderViewController-dummy.m */,
-				B3151993B7957CAF8E60FD5BDE5600B5 /* QRCodeReaderViewController-prefix.pch */,
+				631704AC8F3677FC542D211823B15074 /* MBProgressHUD.xcconfig */,
+				67F3DA1E961A14CE3CFAF930E0423FD6 /* MBProgressHUD-dummy.m */,
+				5A102507E229FC899E5EE1F3ED3FA238 /* MBProgressHUD-prefix.pch */,
 			);
 			name = "Support Files";
-			path = "../Target Support Files/QRCodeReaderViewController";
+			path = "../Target Support Files/MBProgressHUD";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
-				D82EFA6F6FAD62C6DD475CB1D43039C6 /* Pods */,
-				4105AF9C84A49DB06E2EEF4E32DF83CB /* Products */,
+				122DA2E5084A4393C29BE363C764795C /* Frameworks */,
+				DA408C0191BF317CF071631F374A6ED4 /* Pods */,
+				F9BA8E7229749277CE5BE1252E9A8A23 /* Products */,
 				1E1598A7C0943F66E462B624BAA07563 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		A40AF8D79D4382828A0EEAD80AB26358 /* iOS */ = {
+		A7DDD77E53D4F50EA11683D220BFFDCC /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				283836EF5A0AA5CDF757AD35B494F1FA /* AVFoundation.framework */,
-				96A99E1ED6492F91E6807B16994861C5 /* Foundation.framework */,
+				335DA19E2D1A95A83304BFBD54BEBEC1 /* QRCodeReaderViewController.xcconfig */,
+				2DE3FFE1DE4A19B191C72E559949C318 /* QRCodeReaderViewController-dummy.m */,
+				4C913C59040002267FA67825E956CD85 /* QRCodeReaderViewController-prefix.pch */,
 			);
-			name = iOS;
+			name = "Support Files";
+			path = "../Target Support Files/QRCodeReaderViewController";
 			sourceTree = "<group>";
 		};
 		B5BD9C1D8B17E84E6E5C039B8EBE0439 /* Pods-Dietskan */ = {
@@ -195,106 +281,98 @@
 			path = "Target Support Files/Pods-Dietskan";
 			sourceTree = "<group>";
 		};
-		C31D5D44D0E279854EFC16D68201F6D3 /* QRCodeReaderViewController */ = {
+		BF4867CF1363031494DD8E95A27A4129 /* MBProgressHUD */ = {
 			isa = PBXGroup;
 			children = (
-				6BBDFA4BCB86B1DEA9E1FD2F2E2A649F /* QRCameraSwitchButton.h */,
-				31D09A7408732454113B89BF739DFF3D /* QRCameraSwitchButton.m */,
-				125D6EBD65F80C4D799594D60FC53AC9 /* QRCodeReader.h */,
-				A3470A04FA28D8762460E19E2F934307 /* QRCodeReader.m */,
-				DCDAAF13C8916A90827D9DD7CAD9FD97 /* QRCodeReaderDelegate.h */,
-				4A64EBD1C7CCA6436FBBB173F97EFB2C /* QRCodeReaderView.h */,
-				9D71CD80FF807E8F3CDD296F4F560197 /* QRCodeReaderView.m */,
-				66E7403BEEE2BFB11637A75FE7F79E21 /* QRCodeReaderViewController.h */,
-				6DA6A76FBF11855176EE8053B0649014 /* QRCodeReaderViewController.m */,
-				082F379F1C44E6093B13D4ACDEEF1A8A /* QRToggleTorchButton.h */,
-				153AE88FD50BAA5C45EE2DA11CBFC39A /* QRToggleTorchButton.m */,
-				6E2F4ED6BEA30233771D318DCE2B1574 /* Support Files */,
+				3C147C3671A0915FD04A498568F53438 /* MBProgressHUD.h */,
+				8FC45BE653634F50C23188CCB02D87E6 /* MBProgressHUD.m */,
+				4EA87D353722F134FE6314214A8E8A29 /* Support Files */,
 			);
-			path = QRCodeReaderViewController;
+			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
-		D82EFA6F6FAD62C6DD475CB1D43039C6 /* Pods */ = {
+		DA408C0191BF317CF071631F374A6ED4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F97832692E0CB62F12F2FBA2833082D9 /* Dropbox-iOS-SDK */,
-				C31D5D44D0E279854EFC16D68201F6D3 /* QRCodeReaderViewController */,
+				08CA0FF54464E5DEA2066A31ED8721DD /* Dropbox-iOS-SDK */,
+				BF4867CF1363031494DD8E95A27A4129 /* MBProgressHUD */,
+				4A8AFC4D92D491771817611F6A66281B /* QRCodeReaderViewController */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		F97832692E0CB62F12F2FBA2833082D9 /* Dropbox-iOS-SDK */ = {
+		F9BA8E7229749277CE5BE1252E9A8A23 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4BABE2B22776CFB548793ED22E289D48 /* DBAccountInfo.h */,
-				8F12340C2FB37B8C7B55C7FC6A5E0D9D /* DBBase64Transcoder.h */,
-				F7818C9DCD89A7C57ADA0FED4FE23BBA /* DBDeltaEntry.h */,
-				B7445D7EAD4FB09A743970CE76166704 /* DBError.h */,
-				5F395C88D3E6520B4EB99F0453F6D358 /* DBJSON.h */,
-				485838CB1B15C84FFA99523FFBA2923B /* DBJsonBase.h */,
-				95DA58EFB10F529C9526A1F42A90B1C6 /* DBJsonParser.h */,
-				1E7C279C06E182A6259253C63A9DD694 /* DBJsonWriter.h */,
-				6B8D94D73BFF2152BB856EF4B80426A8 /* DBLog.h */,
-				00DFFBAA0B01580633A9085F52B77990 /* DBMetadata.h */,
-				EB118E43A557CD69E1AE5D93DC780940 /* DBQuota.h */,
-				9521C9C110628B896F194EE8647FF549 /* DBRequest.h */,
-				29C60DA93C24902DC08E30F8AC19B0C8 /* DBRestClient.h */,
-				822C04A835A9372195A47D40C2D4674E /* DBSession.h */,
-				F1899EB022DF1CA0B9421738E447C273 /* DBSession+iOS.h */,
-				E674BC69D5E61C8A6466473F249A4F27 /* DropboxSDK.h */,
-				51C89C2DF2AE27200728FFA03AE2EB4C /* JSON.h */,
-				33E8601C9ACDB32DA436C0B158593A48 /* MPDebug.h */,
-				EC787A5F023093FEE4DC524832AF07C3 /* MPOAuth.h */,
-				5ED3CDEDCCB6392ADB9104230762CCEB /* MPOAuthAPI.h */,
-				A0124BCC7937CB5D30BD70AEFA7AE8EE /* MPOAuthAPIRequestLoader.h */,
-				64D0560FF938EA51A058AD5586484EEC /* MPOAuthAuthenticationMethod.h */,
-				D9F6953ED3E344A07142658DBB37C9AC /* MPOAuthAuthenticationMethodOAuth.h */,
-				9ADDC37274A7E143E6041FCC6DD75051 /* MPOAuthConnection.h */,
-				47C42D9B68C2F55BF946D8A176C8AA60 /* MPOAuthCredentialConcreteStore.h */,
-				7D3856B421105B03E3B3E7B2D72D06BC /* MPOAuthCredentialConcreteStore+KeychainAdditions.h */,
-				C2FD90C5A2F379AEFC7D5B499DC89BE2 /* MPOAuthCredentialStore.h */,
-				1379F3AA07312861BAB0F7ACF2388AF2 /* MPOAuthParameterFactory.h */,
-				25A9907DBB9B81CB2AECCA38740C57AA /* MPOAuthSignatureParameter.h */,
-				8FF311FC1F38C92D4AE0799B1CD0364F /* MPOAuthURLRequest.h */,
-				3940761A1881FD1FC0BB6ABB0357F7D1 /* MPOAuthURLResponse.h */,
-				3780EE4441094DECA201621CDCCE421E /* MPURLRequestParameter.h */,
-				24A265D2B7B08A98AAFC218137474E99 /* NSDictionary+Dropbox.h */,
-				95AA665B49662F58C3B2FF596D3020FF /* NSObject+DBJSON.h */,
-				1F11C5DFCE59570CDE70A08D2148AC05 /* NSString+DBJSON.h */,
-				4ACA18728900EE1E9D5D27F76AD850A5 /* NSString+Dropbox.h */,
-				E80171E3BAFFF3D9F20B80A44852EE69 /* NSString+URLEscapingAdditions.h */,
-				5A9CABDFC34431D9B0B58C28986FEA4E /* NSURL+MPURLParameterAdditions.h */,
-				5280771066E1DC4C9EA8C27C543C40A1 /* NSURLResponse+Encoding.h */,
+				F4824A13886ED011FE5D6755DF7FC740 /* libMBProgressHUD.a */,
+				DDD4D76E33BE84392D86938EAAA042EE /* libPods-Dietskan.a */,
+				44979DBFF47758AD636FC050A7490C02 /* libQRCodeReaderViewController.a */,
 			);
-			path = "Dropbox-iOS-SDK";
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAB749CBA59C8D08CE2B9020E1D0BFF0 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E08E858F03931D5DC361A5C6B294B47 /* AVFoundation.framework */,
+				CC7938518E2493B4E45FFE9AA9959436 /* CoreGraphics.framework */,
+				48FDDCBD607A072C17967078CABE2843 /* Foundation.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		B7B3828D40D00318E26E263E80301C09 /* Headers */ = {
+		4333CDDC5364D0CF313B7E62AD73BFF3 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				591A17FB6B8FAE1E99A2B614B8C1C89B /* QRCameraSwitchButton.h in Headers */,
-				74CF26198891DD3204708B19A3E49ACF /* QRCodeReader.h in Headers */,
-				8AB635D850166108AF0EEFDBEAE55C56 /* QRCodeReaderDelegate.h in Headers */,
-				F2288697ABBDACC7F2CDFD6AD7C59063 /* QRCodeReaderView.h in Headers */,
-				FFA23F0B6D980C0E0BDAB1583B1A8442 /* QRCodeReaderViewController.h in Headers */,
-				8695334847B1FEAF5B813A3C2634AA0F /* QRToggleTorchButton.h in Headers */,
+				036F7115B35B6B551AEA1317EE345250 /* QRCameraSwitchButton.h in Headers */,
+				E87670E7FB8D38FCF56C5347CEB222FD /* QRCodeReader.h in Headers */,
+				B5048FDCF004649B22007D4675BE8981 /* QRCodeReaderDelegate.h in Headers */,
+				67BA513374B3C3DD218FC3524692FDD5 /* QRCodeReaderView.h in Headers */,
+				DBD601E178803B7C40739BEF510B750D /* QRCodeReaderViewController.h in Headers */,
+				77BAEADA255556859C7736F1B67C4B57 /* QRToggleTorchButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF1C003613925663F17E023C73AF519C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5EB4F27B76513AE918BA5AE0868E87C8 /* MBProgressHUD.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		585EF507963F8CBA8DD49A82096D29D0 /* QRCodeReaderViewController */ = {
+		AFC75A519B1EED93A3F0EAC641E6637E /* Pods-Dietskan */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 69BC2E25699FAF27763EF36BC5AA8B67 /* Build configuration list for PBXNativeTarget "QRCodeReaderViewController" */;
+			buildConfigurationList = 47D8137AF0208D694A7DA61B8BDC0587 /* Build configuration list for PBXNativeTarget "Pods-Dietskan" */;
 			buildPhases = (
-				2E24F635A5AA8A760C9BF8D607450BDF /* Sources */,
-				89CC1C67315EB765ED39D61E6A100BFA /* Frameworks */,
-				B7B3828D40D00318E26E263E80301C09 /* Headers */,
+				9BC9C654471855EFDDD7D5785EE73CDF /* Sources */,
+				5086FF6F80B1E3FFF53D7D1AE295251D /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2645FE2AB73879C14E118C143231EA96 /* PBXTargetDependency */,
+				6F8E9B7F59361ED413B6A3E01A3B0DF5 /* PBXTargetDependency */,
+			);
+			name = "Pods-Dietskan";
+			productName = "Pods-Dietskan";
+			productReference = DDD4D76E33BE84392D86938EAAA042EE /* libPods-Dietskan.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CBF52350ADDE3655DB43208A9F290EE6 /* QRCodeReaderViewController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 705CD8E0A8A2D6B65F7FE99FDF89B2F1 /* Build configuration list for PBXNativeTarget "QRCodeReaderViewController" */;
+			buildPhases = (
+				00F3A1C7FFDD8A2A2AFF81E2A09D4C24 /* Sources */,
+				2BE044C1AB1834CCC15AF4003A826DB7 /* Frameworks */,
+				4333CDDC5364D0CF313B7E62AD73BFF3 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -302,24 +380,24 @@
 			);
 			name = QRCodeReaderViewController;
 			productName = QRCodeReaderViewController;
-			productReference = 781711D00D1E6C51EC0D49F34E26B0FC /* libQRCodeReaderViewController.a */;
+			productReference = 44979DBFF47758AD636FC050A7490C02 /* libQRCodeReaderViewController.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		9ABAD2797BB9BDD377CB2200FA9DE1E0 /* Pods-Dietskan */ = {
+		FE2F1D7B9D9FCEA148517E4657B243F4 /* MBProgressHUD */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BEF8FBEBB58FE9BF7D351C8D4859016 /* Build configuration list for PBXNativeTarget "Pods-Dietskan" */;
+			buildConfigurationList = F2F5671C4613023EE94A2E62DA06031D /* Build configuration list for PBXNativeTarget "MBProgressHUD" */;
 			buildPhases = (
-				BDCCDD0D301861E6411011FCE2352C64 /* Sources */,
-				2479A6842B1A43961386BB1253A6DC13 /* Frameworks */,
+				098439AB598DDF1AF51146A2E3E2E562 /* Sources */,
+				E81C08F5CCC0A5FBFF4559E2173164C7 /* Frameworks */,
+				EF1C003613925663F17E023C73AF519C /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				69A8DCAE11EC394076DCEAA5A6BE03AD /* PBXTargetDependency */,
 			);
-			name = "Pods-Dietskan";
-			productName = "Pods-Dietskan";
-			productReference = 2412CEA044D788D2BEBDD1A846C18B70 /* libPods-Dietskan.a */;
+			name = MBProgressHUD;
+			productName = MBProgressHUD;
+			productReference = F4824A13886ED011FE5D6755DF7FC740 /* libMBProgressHUD.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -339,70 +417,86 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4105AF9C84A49DB06E2EEF4E32DF83CB /* Products */;
+			productRefGroup = F9BA8E7229749277CE5BE1252E9A8A23 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9ABAD2797BB9BDD377CB2200FA9DE1E0 /* Pods-Dietskan */,
-				585EF507963F8CBA8DD49A82096D29D0 /* QRCodeReaderViewController */,
+				FE2F1D7B9D9FCEA148517E4657B243F4 /* MBProgressHUD */,
+				AFC75A519B1EED93A3F0EAC641E6637E /* Pods-Dietskan */,
+				CBF52350ADDE3655DB43208A9F290EE6 /* QRCodeReaderViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2E24F635A5AA8A760C9BF8D607450BDF /* Sources */ = {
+		00F3A1C7FFDD8A2A2AFF81E2A09D4C24 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6077553A560642443423EBA212F40E /* QRCameraSwitchButton.m in Sources */,
-				44DE7E79854A87B0DCD5C787293780A3 /* QRCodeReader.m in Sources */,
-				E9ED0266327C7C5B776926AEE01218BF /* QRCodeReaderView.m in Sources */,
-				E4B4FC559DAEEBF1201BA6AD5C28DA25 /* QRCodeReaderViewController-dummy.m in Sources */,
-				E00A14F49388678DA0C4B93173A53F1E /* QRCodeReaderViewController.m in Sources */,
-				8B95E2D792D17EB095301B80A20C4FAA /* QRToggleTorchButton.m in Sources */,
+				FB42FC2AF3C88E84092E70F9ACC2C739 /* QRCameraSwitchButton.m in Sources */,
+				260C63ADEC6B043A50224AFDA5B2B04F /* QRCodeReader.m in Sources */,
+				A134B95777219F1925DCF397C4CFAB9B /* QRCodeReaderView.m in Sources */,
+				330A4B9406471A0004E8F359D8C8F659 /* QRCodeReaderViewController-dummy.m in Sources */,
+				978ECA3A9DC81AC00C02FCF2A6667E10 /* QRCodeReaderViewController.m in Sources */,
+				A13FB711B62D03B574E68091088A6879 /* QRToggleTorchButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BDCCDD0D301861E6411011FCE2352C64 /* Sources */ = {
+		098439AB598DDF1AF51146A2E3E2E562 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AE565644125C6B4DB6EEECCF03A28BA8 /* Pods-Dietskan-dummy.m in Sources */,
+				FC214077677D4F02E03C6C85F774E028 /* MBProgressHUD-dummy.m in Sources */,
+				82FC12F67E83874B93592218E9FB4CA0 /* MBProgressHUD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9BC9C654471855EFDDD7D5785EE73CDF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2776A3EAD7BD4746157FDC03AE422E9 /* Pods-Dietskan-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		69A8DCAE11EC394076DCEAA5A6BE03AD /* PBXTargetDependency */ = {
+		2645FE2AB73879C14E118C143231EA96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = MBProgressHUD;
+			target = FE2F1D7B9D9FCEA148517E4657B243F4 /* MBProgressHUD */;
+			targetProxy = C148780CDBFC466469838F8E90BD4D05 /* PBXContainerItemProxy */;
+		};
+		6F8E9B7F59361ED413B6A3E01A3B0DF5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = QRCodeReaderViewController;
-			target = 585EF507963F8CBA8DD49A82096D29D0 /* QRCodeReaderViewController */;
-			targetProxy = 80A3A880DA1F0E9791B76D5EF27D6309 /* PBXContainerItemProxy */;
+			target = CBF52350ADDE3655DB43208A9F290EE6 /* QRCodeReaderViewController */;
+			targetProxy = D8C4A25CC477A87741AF361EC7A90114 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		233CA7204B392F166D73D4EEE80658BB /* Debug */ = {
+		1F1DCE74980303898CB8238C0E8709EE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D34A404AE472E808A1FB9D8428C52298 /* Pods-Dietskan.debug.xcconfig */;
+			baseConfigurationReference = 631704AC8F3677FC542D211823B15074 /* MBProgressHUD.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
 		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -446,69 +540,6 @@
 			};
 			name = Debug;
 		};
-		4F8B44008BECCAD032001F499B7D8199 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B7E5A1293AFAE5920CE83E366D5BBC1F /* Pods-Dietskan.release.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		74E54662382ED6649D421D482657725D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92ED38AF25406775D83086E4ECB2C7D9 /* QRCodeReaderViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReaderViewController/QRCodeReaderViewController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
-		95DD972EB22F993B20105A77EC4B946B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 92ED38AF25406775D83086E4ECB2C7D9 /* QRCodeReaderViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReaderViewController/QRCodeReaderViewController-prefix.pch";
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
 		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -547,6 +578,111 @@
 			};
 			name = Release;
 		};
+		C14E31B42496EF5C34C9BF2D27E11E2C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 631704AC8F3677FC542D211823B15074 /* MBProgressHUD.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/MBProgressHUD/MBProgressHUD-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CFEE8D169010A65F29BEE9698D0F4F21 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335DA19E2D1A95A83304BFBD54BEBEC1 /* QRCodeReaderViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReaderViewController/QRCodeReaderViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		D254F7399BBFEE1AAE485BEFB2D8DC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 335DA19E2D1A95A83304BFBD54BEBEC1 /* QRCodeReaderViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/QRCodeReaderViewController/QRCodeReaderViewController-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DE97AA1EAEE12CD97BBA4B162DF080C7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7E5A1293AFAE5920CE83E366D5BBC1F /* Pods-Dietskan.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EC030D4C5DAE0C433DBEFE08C72E5E78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D34A404AE472E808A1FB9D8428C52298 /* Pods-Dietskan.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -559,20 +695,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BEF8FBEBB58FE9BF7D351C8D4859016 /* Build configuration list for PBXNativeTarget "Pods-Dietskan" */ = {
+		47D8137AF0208D694A7DA61B8BDC0587 /* Build configuration list for PBXNativeTarget "Pods-Dietskan" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				233CA7204B392F166D73D4EEE80658BB /* Debug */,
-				4F8B44008BECCAD032001F499B7D8199 /* Release */,
+				EC030D4C5DAE0C433DBEFE08C72E5E78 /* Debug */,
+				DE97AA1EAEE12CD97BBA4B162DF080C7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		69BC2E25699FAF27763EF36BC5AA8B67 /* Build configuration list for PBXNativeTarget "QRCodeReaderViewController" */ = {
+		705CD8E0A8A2D6B65F7FE99FDF89B2F1 /* Build configuration list for PBXNativeTarget "QRCodeReaderViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				95DD972EB22F993B20105A77EC4B946B /* Debug */,
-				74E54662382ED6649D421D482657725D /* Release */,
+				D254F7399BBFEE1AAE485BEFB2D8DC35 /* Debug */,
+				CFEE8D169010A65F29BEE9698D0F4F21 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2F5671C4613023EE94A2E62DA06031D /* Build configuration list for PBXNativeTarget "MBProgressHUD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C14E31B42496EF5C34C9BF2D27E11E2C /* Debug */,
+				1F1DCE74980303898CB8238C0E8709EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
