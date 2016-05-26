@@ -79,12 +79,12 @@ loadMetadataFailedWithError:(NSError *)error {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"SimpleTableItem";
+    static NSString *simpleTableIdentifier = @"historyTableCell";
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    HistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[HistoryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
     HistoryData *hd = tableData[indexPath.row];
@@ -94,8 +94,11 @@ loadMetadataFailedWithError:(NSError *)error {
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
     dateString = [formatter stringFromDate:hd.date];
-    
-    cell.textLabel.text = [NSString stringWithFormat:@"ScanId: %@ DateTime: %@", hd.scan_id, dateString];
+   
+   cell.mealTypeLabel.text = @"Lunch";
+   cell.dateTimeLabel.text = [NSString stringWithFormat:@"%@", dateString];
+   cell.scanIdLabel.text = [NSString stringWithFormat:@"%@", hd.scan_id];
+
     return cell;
 }
 

@@ -59,6 +59,8 @@
 		930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */; };
 		930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */; };
 		933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */; };
+		9357A9E61CF77C0100C2E649 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9357A9E41CF77C0100C2E649 /* HistoryTableViewCell.m */; };
+		9357A9E71CF77C0100C2E649 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9357A9E51CF77C0100C2E649 /* HistoryTableViewCell.xib */; };
 		937783BB1CEF752300FAEBD5 /* InitLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937783B91CEF752300FAEBD5 /* InitLoginViewController.m */; };
 		937783BC1CEF752300FAEBD5 /* InitLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937783BA1CEF752300FAEBD5 /* InitLoginViewController.xib */; };
 		937783C01CEF763400FAEBD5 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 937783BE1CEF763400FAEBD5 /* ProfileViewController.m */; };
@@ -172,6 +174,9 @@
 		930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxLoginViewController.m; sourceTree = "<group>"; };
 		930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropBoxLoginViewController.xib; sourceTree = "<group>"; };
 		933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryUIViewController.xib; sourceTree = "<group>"; };
+		9357A9E31CF77C0100C2E649 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryTableViewCell.h; path = ../HistoryTableViewCell.h; sourceTree = "<group>"; };
+		9357A9E41CF77C0100C2E649 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTableViewCell.m; path = ../HistoryTableViewCell.m; sourceTree = "<group>"; };
+		9357A9E51CF77C0100C2E649 /* HistoryTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HistoryTableViewCell.xib; path = ../HistoryTableViewCell.xib; sourceTree = "<group>"; };
 		937783B81CEF752300FAEBD5 /* InitLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InitLoginViewController.h; sourceTree = "<group>"; };
 		937783B91CEF752300FAEBD5 /* InitLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InitLoginViewController.m; sourceTree = "<group>"; };
 		937783BA1CEF752300FAEBD5 /* InitLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InitLoginViewController.xib; sourceTree = "<group>"; };
@@ -337,6 +342,9 @@
 		3CA523821CE1735E00D75D8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				9357A9E31CF77C0100C2E649 /* HistoryTableViewCell.h */,
+				9357A9E41CF77C0100C2E649 /* HistoryTableViewCell.m */,
+				9357A9E51CF77C0100C2E649 /* HistoryTableViewCell.xib */,
 				930D49FE1CEAC6CC00556D09 /* DropBoxLoginViewController.h */,
 				930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */,
 				930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */,
@@ -494,6 +502,7 @@
 				43BB38C9199D2A51009D7AB2 /* calibration.png in Resources */,
 				93C5CBEC1CE58AF900461B5A /* SettingsButton.png in Resources */,
 				93C5CBDB1CE58AF900461B5A /* DesignLogo.png in Resources */,
+				9357A9E71CF77C0100C2E649 /* HistoryTableViewCell.xib in Resources */,
 				93C5CBE51CE58AF900461B5A /* MealSelectButton.png in Resources */,
 				930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */,
 				93C5CBEE1CE58AF900461B5A /* WhiteBar_TextEntry.png in Resources */,
@@ -612,6 +621,7 @@
 				930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */,
 				937783BB1CEF752300FAEBD5 /* InitLoginViewController.m in Sources */,
 				2D4DE5AC199BB90400F69F56 /* CustomShaders.mm in Sources */,
+				9357A9E61CF77C0100C2E649 /* HistoryTableViewCell.m in Sources */,
 				937783C01CEF763400FAEBD5 /* ProfileViewController.m in Sources */,
 				3C47ED171CF64736007F641B /* HistoryData.m in Sources */,
 				6F03CB961862832600518C22 /* main.m in Sources */,
