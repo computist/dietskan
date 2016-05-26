@@ -30,8 +30,13 @@
    [self presentViewController:v animated:YES completion:nil];
 }
 - (IBAction)historyClick:(UIButton *)sender {
-   HistoryUIViewController *v = [[HistoryUIViewController alloc] initWithNibName:@"HistoryUIViewController" bundle:nil];
-   [self presentViewController:v animated:YES completion:nil];
+     if ([[DBSession sharedSession] isLinked]) {
+         HistoryUIViewController *v = [[HistoryUIViewController alloc] initWithNibName:@"HistoryUIViewController" bundle:nil];
+         [self presentViewController:v animated:YES completion:nil];
+     } else {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Link your dropbox account in setting before scanning." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         [alert show];
+     }
 }
 - (IBAction)settingsClick:(UIButton *)sender {
    DropBoxLoginViewController *v = [[DropBoxLoginViewController alloc] initWithNibName:@"DropBoxLoginViewController" bundle:nil];
@@ -84,8 +89,6 @@
 - (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
 {
     [self dismissViewControllerAnimated:YES completion:^{
-//        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"QRCodeReader" message:result delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
-//        [alert show];
         ViewController *v = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
         v->scan_id = result;
         [self presentViewController:v animated:YES completion:nil];
