@@ -58,6 +58,14 @@
 		7EAD26B3198B47DA00638C9C /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EAD26B2198B47DA00638C9C /* libz.dylib */; };
 		930D4A011CEAC6CC00556D09 /* DropBoxLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */; };
 		930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */; };
+		933DB3611CFB75C200A1122F /* BlueProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB3591CFB75C200A1122F /* BlueProfile.png */; };
+		933DB3621CFB75C200A1122F /* CyanProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB35A1CFB75C200A1122F /* CyanProfile.png */; };
+		933DB3631CFB75C200A1122F /* GrayProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB35B1CFB75C200A1122F /* GrayProfile.png */; };
+		933DB3641CFB75C200A1122F /* GreenProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB35C1CFB75C200A1122F /* GreenProfile.png */; };
+		933DB3651CFB75C200A1122F /* LimeProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB35D1CFB75C200A1122F /* LimeProfile.png */; };
+		933DB3661CFB75C200A1122F /* OrangeProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB35E1CFB75C200A1122F /* OrangeProfile.png */; };
+		933DB3671CFB75C200A1122F /* RedProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB35F1CFB75C200A1122F /* RedProfile.png */; };
+		933DB3681CFB75C200A1122F /* YellowProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 933DB3601CFB75C200A1122F /* YellowProfile.png */; };
 		933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */; };
 		9357A9E61CF77C0100C2E649 /* HistoryTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9357A9E41CF77C0100C2E649 /* HistoryTableViewCell.m */; };
 		9357A9E71CF77C0100C2E649 /* HistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9357A9E51CF77C0100C2E649 /* HistoryTableViewCell.xib */; };
@@ -69,27 +77,20 @@
 		938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */; };
 		93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB41CE58AF900461B5A /* BackButton.png */; };
 		93C5CBD41CE58AF900461B5A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB51CE58AF900461B5A /* bg.png */; };
-		93C5CBD51CE58AF900461B5A /* BlueProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB61CE58AF900461B5A /* BlueProfile.png */; };
 		93C5CBD61CE58AF900461B5A /* CameraFeed_Window.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB71CE58AF900461B5A /* CameraFeed_Window.png */; };
 		93C5CBD71CE58AF900461B5A /* CheckMark.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB81CE58AF900461B5A /* CheckMark.png */; };
-		93C5CBD81CE58AF900461B5A /* CyanProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB91CE58AF900461B5A /* CyanProfile.png */; };
 		93C5CBD91CE58AF900461B5A /* DataSelectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBBA1CE58AF900461B5A /* DataSelectButton.png */; };
 		93C5CBDA1CE58AF900461B5A /* DeleteText_Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBBB1CE58AF900461B5A /* DeleteText_Icon.png */; };
 		93C5CBDB1CE58AF900461B5A /* DesignLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBBC1CE58AF900461B5A /* DesignLogo.png */; };
 		93C5CBDC1CE58AF900461B5A /* DropBox_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBBD1CE58AF900461B5A /* DropBox_button.png */; };
-		93C5CBDD1CE58AF900461B5A /* GrayProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBBE1CE58AF900461B5A /* GrayProfile.png */; };
 		93C5CBDE1CE58AF900461B5A /* GreenButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBBF1CE58AF900461B5A /* GreenButton.png */; };
 		93C5CBDF1CE58AF900461B5A /* GreenButton2.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC01CE58AF900461B5A /* GreenButton2.png */; };
 		93C5CBE01CE58AF900461B5A /* GreenButton3.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC11CE58AF900461B5A /* GreenButton3.png */; };
-		93C5CBE11CE58AF900461B5A /* GreenProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC21CE58AF900461B5A /* GreenProfile.png */; };
 		93C5CBE21CE58AF900461B5A /* HistoryButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC31CE58AF900461B5A /* HistoryButton.png */; };
-		93C5CBE31CE58AF900461B5A /* LimeProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC41CE58AF900461B5A /* LimeProfile.png */; };
 		93C5CBE41CE58AF900461B5A /* LogIn_Frame.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC51CE58AF900461B5A /* LogIn_Frame.png */; };
 		93C5CBE51CE58AF900461B5A /* MealSelectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC61CE58AF900461B5A /* MealSelectButton.png */; };
-		93C5CBE61CE58AF900461B5A /* OrangeProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC71CE58AF900461B5A /* OrangeProfile.png */; };
 		93C5CBE71CE58AF900461B5A /* ProfileButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC81CE58AF900461B5A /* ProfileButton.png */; };
 		93C5CBE81CE58AF900461B5A /* ProfileSelectButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBC91CE58AF900461B5A /* ProfileSelectButton.png */; };
-		93C5CBE91CE58AF900461B5A /* RedProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBCA1CE58AF900461B5A /* RedProfile.png */; };
 		93C5CBEA1CE58AF900461B5A /* SearchIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBCB1CE58AF900461B5A /* SearchIcon.png */; };
 		93C5CBEB1CE58AF900461B5A /* SearchTextBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBCC1CE58AF900461B5A /* SearchTextBar.png */; };
 		93C5CBEC1CE58AF900461B5A /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBCD1CE58AF900461B5A /* SettingsButton.png */; };
@@ -97,7 +98,6 @@
 		93C5CBEE1CE58AF900461B5A /* WhiteBar_TextEntry.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBCF1CE58AF900461B5A /* WhiteBar_TextEntry.png */; };
 		93C5CBEF1CE58AF900461B5A /* WhiteBar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD01CE58AF900461B5A /* WhiteBar2.png */; };
 		93C5CBF01CE58AF900461B5A /* WhiteProfileBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */; };
-		93C5CBF11CE58AF900461B5A /* YellowProfile.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD21CE58AF900461B5A /* YellowProfile.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -173,6 +173,14 @@
 		930D49FE1CEAC6CC00556D09 /* DropBoxLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DropBoxLoginViewController.h; sourceTree = "<group>"; };
 		930D49FF1CEAC6CC00556D09 /* DropBoxLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DropBoxLoginViewController.m; sourceTree = "<group>"; };
 		930D4A001CEAC6CC00556D09 /* DropBoxLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DropBoxLoginViewController.xib; sourceTree = "<group>"; };
+		933DB3591CFB75C200A1122F /* BlueProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueProfile.png; sourceTree = "<group>"; };
+		933DB35A1CFB75C200A1122F /* CyanProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CyanProfile.png; sourceTree = "<group>"; };
+		933DB35B1CFB75C200A1122F /* GrayProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrayProfile.png; sourceTree = "<group>"; };
+		933DB35C1CFB75C200A1122F /* GreenProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenProfile.png; sourceTree = "<group>"; };
+		933DB35D1CFB75C200A1122F /* LimeProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LimeProfile.png; sourceTree = "<group>"; };
+		933DB35E1CFB75C200A1122F /* OrangeProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeProfile.png; sourceTree = "<group>"; };
+		933DB35F1CFB75C200A1122F /* RedProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedProfile.png; sourceTree = "<group>"; };
+		933DB3601CFB75C200A1122F /* YellowProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowProfile.png; sourceTree = "<group>"; };
 		933E59DD1CE9A31300B70FA3 /* HistoryUIViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryUIViewController.xib; sourceTree = "<group>"; };
 		9357A9E31CF77C0100C2E649 /* HistoryTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HistoryTableViewCell.h; path = ../HistoryTableViewCell.h; sourceTree = "<group>"; };
 		9357A9E41CF77C0100C2E649 /* HistoryTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HistoryTableViewCell.m; path = ../HistoryTableViewCell.m; sourceTree = "<group>"; };
@@ -188,27 +196,20 @@
 		938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FinalLogo-DietSkan.png"; sourceTree = "<group>"; };
 		93C5CBB41CE58AF900461B5A /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		93C5CBB51CE58AF900461B5A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
-		93C5CBB61CE58AF900461B5A /* BlueProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BlueProfile.png; sourceTree = "<group>"; };
 		93C5CBB71CE58AF900461B5A /* CameraFeed_Window.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraFeed_Window.png; sourceTree = "<group>"; };
 		93C5CBB81CE58AF900461B5A /* CheckMark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CheckMark.png; sourceTree = "<group>"; };
-		93C5CBB91CE58AF900461B5A /* CyanProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CyanProfile.png; sourceTree = "<group>"; };
 		93C5CBBA1CE58AF900461B5A /* DataSelectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DataSelectButton.png; sourceTree = "<group>"; };
 		93C5CBBB1CE58AF900461B5A /* DeleteText_Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DeleteText_Icon.png; sourceTree = "<group>"; };
 		93C5CBBC1CE58AF900461B5A /* DesignLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DesignLogo.png; sourceTree = "<group>"; };
 		93C5CBBD1CE58AF900461B5A /* DropBox_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DropBox_button.png; sourceTree = "<group>"; };
-		93C5CBBE1CE58AF900461B5A /* GrayProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GrayProfile.png; sourceTree = "<group>"; };
 		93C5CBBF1CE58AF900461B5A /* GreenButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenButton.png; sourceTree = "<group>"; };
 		93C5CBC01CE58AF900461B5A /* GreenButton2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenButton2.png; sourceTree = "<group>"; };
 		93C5CBC11CE58AF900461B5A /* GreenButton3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenButton3.png; sourceTree = "<group>"; };
-		93C5CBC21CE58AF900461B5A /* GreenProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GreenProfile.png; sourceTree = "<group>"; };
 		93C5CBC31CE58AF900461B5A /* HistoryButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HistoryButton.png; sourceTree = "<group>"; };
-		93C5CBC41CE58AF900461B5A /* LimeProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LimeProfile.png; sourceTree = "<group>"; };
 		93C5CBC51CE58AF900461B5A /* LogIn_Frame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LogIn_Frame.png; sourceTree = "<group>"; };
 		93C5CBC61CE58AF900461B5A /* MealSelectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MealSelectButton.png; sourceTree = "<group>"; };
-		93C5CBC71CE58AF900461B5A /* OrangeProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = OrangeProfile.png; sourceTree = "<group>"; };
 		93C5CBC81CE58AF900461B5A /* ProfileButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileButton.png; sourceTree = "<group>"; };
 		93C5CBC91CE58AF900461B5A /* ProfileSelectButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ProfileSelectButton.png; sourceTree = "<group>"; };
-		93C5CBCA1CE58AF900461B5A /* RedProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = RedProfile.png; sourceTree = "<group>"; };
 		93C5CBCB1CE58AF900461B5A /* SearchIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchIcon.png; sourceTree = "<group>"; };
 		93C5CBCC1CE58AF900461B5A /* SearchTextBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SearchTextBar.png; sourceTree = "<group>"; };
 		93C5CBCD1CE58AF900461B5A /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsButton.png; sourceTree = "<group>"; };
@@ -216,7 +217,6 @@
 		93C5CBCF1CE58AF900461B5A /* WhiteBar_TextEntry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteBar_TextEntry.png; sourceTree = "<group>"; };
 		93C5CBD01CE58AF900461B5A /* WhiteBar2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteBar2.png; sourceTree = "<group>"; };
 		93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteProfileBar.png; sourceTree = "<group>"; };
-		93C5CBD21CE58AF900461B5A /* YellowProfile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = YellowProfile.png; sourceTree = "<group>"; };
 		93C5CBF21CE5910700461B5A /* Dietskan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dietskan.entitlements; sourceTree = "<group>"; };
 		BEA86CC39AA8B2A48C3CF687 /* Pods-Dietskan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dietskan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dietskan/Pods-Dietskan.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -342,6 +342,14 @@
 		3CA523821CE1735E00D75D8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				933DB3591CFB75C200A1122F /* BlueProfile.png */,
+				933DB35A1CFB75C200A1122F /* CyanProfile.png */,
+				933DB35B1CFB75C200A1122F /* GrayProfile.png */,
+				933DB35C1CFB75C200A1122F /* GreenProfile.png */,
+				933DB35D1CFB75C200A1122F /* LimeProfile.png */,
+				933DB35E1CFB75C200A1122F /* OrangeProfile.png */,
+				933DB35F1CFB75C200A1122F /* RedProfile.png */,
+				933DB3601CFB75C200A1122F /* YellowProfile.png */,
 				9357A9E31CF77C0100C2E649 /* HistoryTableViewCell.h */,
 				9357A9E41CF77C0100C2E649 /* HistoryTableViewCell.m */,
 				9357A9E51CF77C0100C2E649 /* HistoryTableViewCell.xib */,
@@ -395,27 +403,20 @@
 			children = (
 				93C5CBB41CE58AF900461B5A /* BackButton.png */,
 				93C5CBB51CE58AF900461B5A /* bg.png */,
-				93C5CBB61CE58AF900461B5A /* BlueProfile.png */,
 				93C5CBB71CE58AF900461B5A /* CameraFeed_Window.png */,
 				93C5CBB81CE58AF900461B5A /* CheckMark.png */,
-				93C5CBB91CE58AF900461B5A /* CyanProfile.png */,
 				93C5CBBA1CE58AF900461B5A /* DataSelectButton.png */,
 				93C5CBBB1CE58AF900461B5A /* DeleteText_Icon.png */,
 				93C5CBBC1CE58AF900461B5A /* DesignLogo.png */,
 				93C5CBBD1CE58AF900461B5A /* DropBox_button.png */,
-				93C5CBBE1CE58AF900461B5A /* GrayProfile.png */,
 				93C5CBBF1CE58AF900461B5A /* GreenButton.png */,
 				93C5CBC01CE58AF900461B5A /* GreenButton2.png */,
 				93C5CBC11CE58AF900461B5A /* GreenButton3.png */,
-				93C5CBC21CE58AF900461B5A /* GreenProfile.png */,
 				93C5CBC31CE58AF900461B5A /* HistoryButton.png */,
-				93C5CBC41CE58AF900461B5A /* LimeProfile.png */,
 				93C5CBC51CE58AF900461B5A /* LogIn_Frame.png */,
 				93C5CBC61CE58AF900461B5A /* MealSelectButton.png */,
-				93C5CBC71CE58AF900461B5A /* OrangeProfile.png */,
 				93C5CBC81CE58AF900461B5A /* ProfileButton.png */,
 				93C5CBC91CE58AF900461B5A /* ProfileSelectButton.png */,
-				93C5CBCA1CE58AF900461B5A /* RedProfile.png */,
 				93C5CBCB1CE58AF900461B5A /* SearchIcon.png */,
 				93C5CBCC1CE58AF900461B5A /* SearchTextBar.png */,
 				93C5CBCD1CE58AF900461B5A /* SettingsButton.png */,
@@ -423,7 +424,6 @@
 				93C5CBCF1CE58AF900461B5A /* WhiteBar_TextEntry.png */,
 				93C5CBD01CE58AF900461B5A /* WhiteBar2.png */,
 				93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */,
-				93C5CBD21CE58AF900461B5A /* YellowProfile.png */,
 				43BB38C8199D2A51009D7AB2 /* calibration.png */,
 				938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */,
 				435307C31872825B00B04481 /* Default-568h@2x.png */,
@@ -505,15 +505,16 @@
 				9357A9E71CF77C0100C2E649 /* HistoryTableViewCell.xib in Resources */,
 				93C5CBE51CE58AF900461B5A /* MealSelectButton.png in Resources */,
 				930D4A021CEAC6CC00556D09 /* DropBoxLoginViewController.xib in Resources */,
+				933DB3611CFB75C200A1122F /* BlueProfile.png in Resources */,
 				93C5CBEE1CE58AF900461B5A /* WhiteBar_TextEntry.png in Resources */,
 				93C5CBD41CE58AF900461B5A /* bg.png in Resources */,
 				93C5CBED1CE58AF900461B5A /* TimeSelectButton.png in Resources */,
-				93C5CBDD1CE58AF900461B5A /* GrayProfile.png in Resources */,
 				93C5CBE41CE58AF900461B5A /* LogIn_Frame.png in Resources */,
-				93C5CBF11CE58AF900461B5A /* YellowProfile.png in Resources */,
+				933DB3671CFB75C200A1122F /* RedProfile.png in Resources */,
 				933E59DE1CE9A31300B70FA3 /* HistoryUIViewController.xib in Resources */,
 				93C5CBE71CE58AF900461B5A /* ProfileButton.png in Resources */,
 				93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */,
+				933DB3621CFB75C200A1122F /* CyanProfile.png in Resources */,
 				93C5CBE21CE58AF900461B5A /* HistoryButton.png in Resources */,
 				93C5CBD61CE58AF900461B5A /* CameraFeed_Window.png in Resources */,
 				93C5CBE81CE58AF900461B5A /* ProfileSelectButton.png in Resources */,
@@ -521,27 +522,26 @@
 				93C5CBDA1CE58AF900461B5A /* DeleteText_Icon.png in Resources */,
 				93C5CBEA1CE58AF900461B5A /* SearchIcon.png in Resources */,
 				93C5CBDE1CE58AF900461B5A /* GreenButton.png in Resources */,
-				93C5CBD81CE58AF900461B5A /* CyanProfile.png in Resources */,
-				93C5CBE11CE58AF900461B5A /* GreenProfile.png in Resources */,
+				933DB3631CFB75C200A1122F /* GrayProfile.png in Resources */,
 				435307C81872825B00B04481 /* Default-Landscape@2x~ipad.png in Resources */,
 				93C5CBEB1CE58AF900461B5A /* SearchTextBar.png in Resources */,
 				93C5CBD91CE58AF900461B5A /* DataSelectButton.png in Resources */,
 				1F300615186E3B8F00405D34 /* Images.xcassets in Resources */,
 				2AB955C4184E573A003DA089 /* MeshView_iPad.xib in Resources */,
 				3CA5238B1CE17A5D00D75D8F /* MainUIView.xib in Resources */,
+				933DB3651CFB75C200A1122F /* LimeProfile.png in Resources */,
 				2D23E7CF1A37B785006E1F98 /* doneButton@2x.png in Resources */,
-				93C5CBE61CE58AF900461B5A /* OrangeProfile.png in Resources */,
-				93C5CBD51CE58AF900461B5A /* BlueProfile.png in Resources */,
 				93C5CBD71CE58AF900461B5A /* CheckMark.png in Resources */,
 				93C5CBE01CE58AF900461B5A /* GreenButton3.png in Resources */,
 				937783BC1CEF752300FAEBD5 /* InitLoginViewController.xib in Resources */,
-				93C5CBE31CE58AF900461B5A /* LimeProfile.png in Resources */,
 				2D23E7D11A37B78E006E1F98 /* resetScanButton@2x.png in Resources */,
 				93C5CBDF1CE58AF900461B5A /* GreenButton2.png in Resources */,
-				93C5CBE91CE58AF900461B5A /* RedProfile.png in Resources */,
 				937783C11CEF763400FAEBD5 /* ProfileViewController.xib in Resources */,
 				2D23E7CD1A37B77D006E1F98 /* startScanButton@2x.png in Resources */,
+				933DB3681CFB75C200A1122F /* YellowProfile.png in Resources */,
 				93C5CBF01CE58AF900461B5A /* WhiteProfileBar.png in Resources */,
+				933DB3661CFB75C200A1122F /* OrangeProfile.png in Resources */,
+				933DB3641CFB75C200A1122F /* GreenProfile.png in Resources */,
 				93C5CBEF1CE58AF900461B5A /* WhiteBar2.png in Resources */,
 				438C049C18723EB10062E958 /* ViewController_iPad.xib in Resources */,
 				435307C91872825B00B04481 /* Default@2x.png in Resources */,
