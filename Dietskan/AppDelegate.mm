@@ -8,7 +8,11 @@
 #import "ViewController.h"
 #import "MainViewController.h"
 #import "InitLoginViewController.h"
+#import <DropboxSDK/DropboxSDK.h>
+#import "DropBoxLoginViewController.h"
 
+DropBoxLoginViewController *dropBoxLoginViewController;
+ViewController *scannerViewController;
 
 @implementation AppDelegate
 
@@ -51,9 +55,36 @@
     InitLoginViewController *mainView = [[InitLoginViewController alloc] initWithNibName:@"InitLoginViewController" bundle:nil];
     self.window.rootViewController = mainView;
     [self.window makeKeyAndVisible];
-    
+   
+   DBSession *dbSession = [[DBSession alloc]
+   initWithAppKey:@"2a75kzausyx0gg4"
+   appSecret:@"f857m2529150lge"
+   root:kDBRootAppFolder]; // either kDBRootAppFolder or kDBRootDropbox
+   [DBSession setSharedSession:dbSession];
+   
     return YES;
 }
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url
+  sourceApplication:(NSString *)source annotation:(id)annotation {
+   if ([[DBSession sharedSession] handleOpenURL:url]) {
+      if ([[DBSession sharedSession] isLinked]) {
+         NSLog(@"App linked successfully!");
+         // At this point you can start making API calls
+          if (dropBoxLoginViewController != nil) {
+              [dropBoxLoginViewController.linkButton setTitle:@"Unlink" forState:normal];
+          }
+          [dropBoxLoginViewController dismissViewControllerAnimated:false completion:nil];
+      }
+      return YES;
+   }
+    if (dropBoxLoginViewController != nil) {
+        [dropBoxLoginViewController.linkButton setTitle:@"Link" forState:normal];
+    }
+   // Add whatever other url handling code your app requires here
+   return NO;
+}
+
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {

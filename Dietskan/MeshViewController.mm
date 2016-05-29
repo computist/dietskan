@@ -14,6 +14,10 @@
 #include <vector>
 #include <cmath>
 
+#import "ViewController.h"
+
+extern ViewController *scannerViewController;
+
 // Local Helper Functions
 namespace
 {
@@ -87,17 +91,14 @@ namespace
                                                                   action:@selector(dismissView)];
     self.navigationItem.leftBarButtonItem = backButton;
     
-    UIBarButtonItem *emailButton = [[UIBarButtonItem alloc] initWithTitle:@"Email"
-                                                                   style:UIBarButtonItemStylePlain
-                                                                  target:self
-                                                                  action:@selector(emailMesh)];
-    self.navigationItem.rightBarButtonItem = emailButton;
+    UIBarButtonItem *saveButton = [[UIBarButtonItem alloc] initWithTitle:@"Save"
+                                                                    style:UIBarButtonItemStylePlain
+                                                                   target:self
+                                                                   action:@selector(saveMesh)];
+    
+    self.navigationItem.rightBarButtonItem = saveButton;
     
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-        self.title = @"Structure Sensor Scanner";
-    }
     
     return self;
 }
@@ -149,6 +150,10 @@ namespace
                                     forState:UIControlStateNormal];
     
     [self setupGestureRecognizer];
+    
+    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+    self.restClient.delegate = self;
+    
 }
 
 - (void)setLabel:(UILabel*)label enabled:(BOOL)enabled {
@@ -181,6 +186,8 @@ namespace
     
     self.displayControl.selectedSegmentIndex = 1;
     _renderer->setRenderingMode( MeshRenderer::RenderingModeLightedGray );
+    
+    self.title = [NSString stringWithFormat:@"Scan for %@", scan_id];
 }
 
 - (void)didReceiveMemoryWarning
@@ -232,6 +239,7 @@ namespace
     [self dismissViewControllerAnimated:YES completion:^{
         if([self.delegate respondsToSelector:@selector(meshViewDidDismiss)])
             [self.delegate meshViewDidDismiss];
+        
     }];
 }
 
@@ -365,12 +373,12 @@ namespace
     if (!self.mailViewController)
     {
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The email could not be sent."
-            message:@"Please make sure an email account is properly setup on this device."
-            preferredStyle:UIAlertControllerStyleAlert];
+                                                                       message:@"Please make sure an email account is properly setup on this device."
+                                                                preferredStyle:UIAlertControllerStyleAlert];
         
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-            style:UIAlertActionStyleDefault
-            handler:^(UIAlertAction * action) { }];
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) { }];
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -379,14 +387,25 @@ namespace
     }
     
     self.mailViewController.mailComposeDelegate = self;
-    
+   
+   //Add date and time to file names
+   NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+   [formatter setDateFormat:@"MM-dd-yyyy_hh:mm:ss"];
+   NSDate *currDate = [NSDate date];
+   NSString *stringFromDate = [formatter stringFromDate:currDate];
+   
+   
     if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
         self.mailViewController.modalPresentationStyle = UIModalPresentationFormSheet;
     
     // Setup paths and filenames.
     NSString* cacheDirectory = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES ) objectAtIndex:0];
-    NSString* zipFilename = @"Model.zip";
-    NSString* screenshotFilename = @"Preview.jpg";
+    //NSString* zipFilename = @"Model.zip";
+    //NSString* screenshotFilename = @"Preview.jpg";
+   NSString *zipTemp = [@"Model-" stringByAppendingString: stringFromDate];
+   NSString *zipFilename = [zipTemp stringByAppendingString:@".zip"];
+   NSString *screenshotTemp = [@"Preview-" stringByAppendingString: stringFromDate];
+   NSString *screenshotFilename = [screenshotTemp stringByAppendingString:@".jpg"];
     
     NSString *zipPath = [cacheDirectory stringByAppendingPathComponent:zipFilename];
     NSString *screenshotPath =[cacheDirectory stringByAppendingPathComponent:screenshotFilename];
@@ -394,9 +413,9 @@ namespace
     // Take a screenshot and save it to disk.
     [self prepareScreenShot:screenshotPath];
     
-    [self.mailViewController setSubject:@"3D Model"];
+    [self.mailViewController setSubject:[@"DietSkan food item captured at " stringByAppendingString: stringFromDate]];
     
-    NSString *messageBody = @"This model was captured with the open source Scanner sample app in the Structure SDK.\n\nCheck it out!\n\nMore info about the Structure SDK: http://structure.io/developers";
+    NSString *messageBody = @"Here is your model captured using the DietSkan app. \n\nMore info at http://www.dietskan.com\n\n-The DietSkan team\ninfo@dietskan.com";
     
     [self.mailViewController setMessageBody:messageBody isHTML:NO];
     
@@ -411,12 +430,12 @@ namespace
         self.mailViewController = nil;
         
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The email could not be sent."
-            message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
-            preferredStyle:UIAlertControllerStyleAlert];
-
+                                                                       message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        
         UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
-            style:UIAlertActionStyleDefault
-            handler:^(UIAlertAction * action) { }];
+                                                                style:UIAlertActionStyleDefault
+                                                              handler:^(UIAlertAction * action) { }];
         
         [alert addAction:defaultAction];
         [self presentViewController:alert animated:YES completion:nil];
@@ -431,6 +450,80 @@ namespace
     [self.mailViewController addAttachmentData:[NSData dataWithContentsOfFile:zipPath] mimeType:@"application/zip" fileName:zipFilename];
     
     [self presentViewController:self.mailViewController animated:YES completion:^(){}];
+}
+
+- (void)saveMesh
+{
+    HUD = [MBProgressHUD showHUDAddedTo:self.view animated:true];
+    HUD.labelText = @"Saving to dropbox";
+    
+    // Setup paths and filenames.
+    NSString* cacheDirectory = [NSSearchPathForDirectoriesInDomains( NSDocumentDirectory, NSUserDomainMask, YES ) objectAtIndex:0];
+    
+    NSDateFormatter *formatter;
+    NSString        *dateString;
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy_MM_dd_HH_mm"];
+    dateString = [formatter stringFromDate:[NSDate date]];
+    
+    NSString* zipFilename = [NSString stringWithFormat:@"Scan_%@_%@.zip", scan_id, dateString];
+    NSString* screenshotFilename = [NSString stringWithFormat:@"Preview_%@_%@.jpg", scan_id, dateString];
+    
+    NSString *zipPath = [cacheDirectory stringByAppendingPathComponent:zipFilename];
+    NSString *screenshotPath =[cacheDirectory stringByAppendingPathComponent:screenshotFilename];
+    
+    // Take a screenshot and save it to disk.
+    [self prepareScreenShot:screenshotPath];
+    
+    // Request a zipped OBJ file, potentially with embedded MTL and texture.
+    NSDictionary* options = @{ kSTMeshWriteOptionFileFormatKey: @(STMeshWriteOptionFileFormatObjFileZip) };
+    
+    NSError* error;
+    STMesh* meshToSend = _mesh;
+    BOOL success = [meshToSend writeToFile:zipPath options:options error:&error];
+    if (!success)
+    {
+        [HUD hide:true];
+        
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"The mesh could not be saved."
+            message: [NSString stringWithFormat:@"Exporting failed: %@.",[error localizedDescription]]
+            preferredStyle:UIAlertControllerStyleAlert];
+
+        UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK"
+            style:UIAlertActionStyleDefault
+            handler:^(UIAlertAction * action) { }];
+        
+        [alert addAction:defaultAction];
+        [self presentViewController:alert animated:YES completion:nil];
+        
+        return;
+    }
+
+    // Upload file to Dropbox
+    NSString *destDir = @"/Scan";
+    upload_count = 0;
+    [self.restClient uploadFile:zipFilename toPath:destDir withParentRev:nil fromPath:zipPath];
+    [self.restClient uploadFile:screenshotFilename toPath:destDir withParentRev:nil fromPath:screenshotPath];
+}
+
+- (void)restClient:(DBRestClient *)client uploadedFile:(NSString *)destPath
+              from:(NSString *)srcPath metadata:(DBMetadata *)metadata {
+    upload_count++;
+    if (upload_count == 2) {
+        HUD.mode = MBProgressHUDModeText;
+        HUD.labelText = @"Success";
+        [HUD hide:true afterDelay:1];
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self dismissView];
+            [scannerViewController dismissViewControllerAnimated:false completion:nil];
+        });
+    }
+}
+
+- (void)restClient:(DBRestClient *)client uploadFileFailedWithError:(NSError *)error {
+    [HUD hide:true];
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Failed" message:[NSString stringWithFormat:@"File upload failed with error: %@", error] delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 #pragma mark - Rendering

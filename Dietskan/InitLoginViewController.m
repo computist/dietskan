@@ -18,9 +18,20 @@ NSString *passcode = @"123456";
 @implementation InitLoginViewController
 
 - (IBAction)loginButton:(UIButton *)sender {
+    [self loginAction];
+}
+
+- (void) loginAction {
     if ([_passcodeTextField.text isEqualToString:passcode]){ //1{
-           MainViewController *v = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
-            [self presentViewController:v animated:YES completion:nil];
+        MainViewController *v = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
+        [self presentViewController:v animated:YES completion:nil];
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"Incorrect password"
+                                                       delegate:self
+                                              cancelButtonTitle:@"Ok"
+                                              otherButtonTitles:nil,nil];
+        [alert show];
     }
 }
 
@@ -28,6 +39,18 @@ NSString *passcode = @"123456";
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [_passcodeTextField becomeFirstResponder];
+}
+
+-(BOOL) textFieldShouldReturn:(UITextField *)textField{
+    
+    [self loginAction];
+    return YES;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

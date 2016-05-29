@@ -7,6 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DropBoxLoginViewController">
             <connections>
+                <outlet property="linkButton" destination="5QS-oV-K3g" id="9wI-MP-SXt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -44,44 +45,6 @@
                         <constraint firstAttribute="width" constant="200" id="dVf-CF-GfP"/>
                     </constraints>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Name (optional)" minimumFontSize="18" background="WhiteBar_TextEntry.png" disabledBackground="WhiteBar_TextEntry.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l6s-Wk-STz">
-                    <rect key="frame" x="287" y="400" width="450" height="47"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="450" id="ELI-Eb-izz"/>
-                        <constraint firstAttribute="height" constant="47" id="Ey0-fu-sSw"/>
-                    </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Email" minimumFontSize="18" background="WhiteBar_TextEntry.png" disabledBackground="WhiteBar_TextEntry.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Wdf-7e-CLC">
-                    <rect key="frame" x="287" y="470" width="450" height="47"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="47" id="gx8-5b-sLa"/>
-                    </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder=" Password" minimumFontSize="18" background="WhiteBar_TextEntry.png" disabledBackground="WhiteBar_TextEntry.png" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dae-qA-N6t">
-                    <rect key="frame" x="287" y="540" width="450" height="47"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="47" id="X50-ed-emQ"/>
-                    </constraints>
-                    <nil key="textColor"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                    <textInputTraits key="textInputTraits"/>
-                </textField>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-oV-K3g">
-                    <rect key="frame" x="400" y="640" width="225" height="45"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="225" id="9yU-KI-1Wo"/>
-                    </constraints>
-                    <state key="normal" title="Link" backgroundImage="GreenButton2.png"/>
-                    <state key="highlighted" backgroundImage="LogIn_Frame.png">
-                        <color key="titleColor" red="0.40784313729999999" green="0.67843137249999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                    </state>
-                </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DropBox_button.png" translatesAutoresizingMaskIntoConstraints="NO" id="O4k-OE-HfG">
                     <rect key="frame" x="388" y="227" width="60" height="60"/>
                     <constraints>
@@ -98,44 +61,37 @@
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ym1-tq-MzW">
-                    <rect key="frame" x="865" y="100" width="125" height="35"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QS-oV-K3g">
+                    <rect key="frame" x="400" y="471" width="225" height="45"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="35" id="MYF-zQ-rdA"/>
-                        <constraint firstAttribute="width" constant="125" id="Xip-ca-Zsn"/>
+                        <constraint firstAttribute="width" constant="225" id="9yU-KI-1Wo"/>
+                        <constraint firstAttribute="height" constant="45" id="bc2-hU-Ysk"/>
                     </constraints>
-                    <state key="normal" title="Admin" backgroundImage="LogIn_Frame.png">
-                        <color key="titleColor" red="0.40000000000000002" green="0.68235294117647061" blue="0.14901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Link" backgroundImage="GreenButton2.png"/>
+                    <state key="highlighted" backgroundImage="LogIn_Frame.png">
+                        <color key="titleColor" red="0.40784313729999999" green="0.67843137249999996" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
+                    <connections>
+                        <action selector="didPressLink:" destination="-1" eventType="touchUpInside" id="cHT-dw-QdW"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="5QS-oV-K3g" secondAttribute="bottom" constant="83" id="56a-gE-iZ8"/>
-                <constraint firstItem="Wdf-7e-CLC" firstAttribute="leading" secondItem="dae-qA-N6t" secondAttribute="leading" id="5dG-71-qbc"/>
+                <constraint firstAttribute="bottom" secondItem="5QS-oV-K3g" secondAttribute="bottom" constant="252" id="56a-gE-iZ8"/>
                 <constraint firstItem="O4k-OE-HfG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="388" id="7VR-Hv-Pk6"/>
-                <constraint firstAttribute="bottom" secondItem="dae-qA-N6t" secondAttribute="bottom" constant="181" id="9BI-kt-GlF"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="DXk-Uo-Fec"/>
-                <constraint firstItem="5QS-oV-K3g" firstAttribute="top" secondItem="dae-qA-N6t" secondAttribute="bottom" constant="53" id="Fol-b6-dKw"/>
-                <constraint firstItem="l6s-Wk-STz" firstAttribute="leading" secondItem="Wdf-7e-CLC" secondAttribute="leading" id="Gex-xk-fIv"/>
-                <constraint firstItem="5QS-oV-K3g" firstAttribute="centerX" secondItem="dae-qA-N6t" secondAttribute="centerX" id="JSf-Sz-hxl"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="n2p-S8-UQh" secondAttribute="centerX" id="L0P-yt-YtK"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="ML0-cM-FGa"/>
-                <constraint firstItem="Wdf-7e-CLC" firstAttribute="trailing" secondItem="dae-qA-N6t" secondAttribute="trailing" id="Mhf-LV-toZ"/>
-                <constraint firstItem="ym1-tq-MzW" firstAttribute="top" secondItem="P5d-dP-Tcp" secondAttribute="bottom" constant="31" id="NFT-C0-BsB"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="top" secondItem="P5d-dP-Tcp" secondAttribute="top" id="O9E-pa-Lon"/>
-                <constraint firstItem="dae-qA-N6t" firstAttribute="top" secondItem="Wdf-7e-CLC" secondAttribute="bottom" constant="23" id="OdQ-qm-llZ"/>
-                <constraint firstItem="Wdf-7e-CLC" firstAttribute="top" secondItem="l6s-Wk-STz" secondAttribute="bottom" constant="23" id="Vkj-ER-6C3"/>
-                <constraint firstItem="l6s-Wk-STz" firstAttribute="centerX" secondItem="SrO-YD-GRo" secondAttribute="centerX" id="VvA-fh-LKg"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="P5d-dP-Tcp" secondAttribute="centerX" id="W5l-Ki-Joa"/>
                 <constraint firstItem="O4k-OE-HfG" firstAttribute="top" secondItem="aSN-dF-Yu7" secondAttribute="top" id="YLd-Ja-ir5"/>
+                <constraint firstItem="5QS-oV-K3g" firstAttribute="centerX" secondItem="n2p-S8-UQh" secondAttribute="centerX" id="YhJ-pB-2Ml"/>
                 <constraint firstItem="O4k-OE-HfG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="227" id="a4U-ze-KFC"/>
-                <constraint firstItem="l6s-Wk-STz" firstAttribute="trailing" secondItem="Wdf-7e-CLC" secondAttribute="trailing" id="aHc-2H-qXP"/>
                 <constraint firstItem="O4k-OE-HfG" firstAttribute="bottom" secondItem="aSN-dF-Yu7" secondAttribute="bottom" id="ayY-ML-2rK"/>
                 <constraint firstAttribute="bottom" secondItem="n2p-S8-UQh" secondAttribute="bottom" constant="-7" id="cSK-7m-cr2"/>
                 <constraint firstItem="n2p-S8-UQh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="25" id="pXx-07-04g"/>
                 <constraint firstItem="SrO-YD-GRo" firstAttribute="centerX" secondItem="P5d-dP-Tcp" secondAttribute="centerX" id="t76-Lq-Bq8"/>
-                <constraint firstAttribute="trailing" secondItem="ym1-tq-MzW" secondAttribute="trailing" constant="34" id="vlQ-LW-pxK"/>
                 <constraint firstItem="P5d-dP-Tcp" firstAttribute="leading" secondItem="n2p-S8-UQh" secondAttribute="leading" id="ycC-9u-ZNE"/>
                 <constraint firstItem="aSN-dF-Yu7" firstAttribute="leading" secondItem="O4k-OE-HfG" secondAttribute="trailing" constant="8" symbolic="YES" id="z1W-Z0-NXj"/>
                 <constraint firstItem="P5d-dP-Tcp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zCd-Ot-Dhs"/>
@@ -150,7 +106,6 @@
         <image name="FinalLogo-DietSkan.png" width="700" height="158"/>
         <image name="GreenButton2.png" width="608" height="118"/>
         <image name="LogIn_Frame.png" width="608" height="118"/>
-        <image name="WhiteBar_TextEntry.png" width="1156" height="118"/>
         <image name="bg.png" width="2048" height="2732"/>
     </resources>
 </document>

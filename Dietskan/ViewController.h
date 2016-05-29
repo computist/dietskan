@@ -187,6 +187,9 @@ struct DisplayData
 
 @interface ViewController : UIViewController <STBackgroundTaskDelegate, MeshViewDelegate, UIPopoverControllerDelegate, UIGestureRecognizerDelegate>
 {
+@public
+    NSString *scan_id;
+    
     // Structure Sensor controller.
     STSensorController *_sensorController;
     STStreamConfig _structureStreamConfig;
@@ -235,6 +238,7 @@ struct DisplayData
 @property (weak, nonatomic) IBOutlet UISwitch *enableHighResolutionColorSwitch;
 @property (weak, nonatomic) IBOutlet UIView *enableNewTrackerView;
 
+@property (weak, nonatomic) IBOutlet UILabel *scanForLabel;
 - (IBAction)enableNewTrackerSwitchChanged:(id)sender;
 - (IBAction)enableHighResolutionColorSwitchChanged:(id)sender;
 - (IBAction)scanButtonPressed:(id)sender;

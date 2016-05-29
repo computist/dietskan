@@ -13,6 +13,11 @@
 #import "ProfileViewController.h"
 #import "appDelegate.h"
 
+#import "QRCodeReaderViewController.h"
+#import "QRCodeReader.h"
+
+#import <DropboxSDK/DropboxSDK.h>
+
 @interface MainViewController ()
 
 @end
@@ -25,8 +30,13 @@
    [self presentViewController:v animated:YES completion:nil];
 }
 - (IBAction)historyClick:(UIButton *)sender {
-   HistoryUIViewController *v = [[HistoryUIViewController alloc] initWithNibName:@"HistoryUIViewController" bundle:nil];
-   [self presentViewController:v animated:YES completion:nil];
+     if ([[DBSession sharedSession] isLinked]) {
+         HistoryUIViewController *v = [[HistoryUIViewController alloc] initWithNibName:@"HistoryUIViewController" bundle:nil];
+         [self presentViewController:v animated:YES completion:nil];
+     } else {
+         UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Link your dropbox account in setting before scanning." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+         [alert show];
+     }
 }
 - (IBAction)settingsClick:(UIButton *)sender {
    DropBoxLoginViewController *v = [[DropBoxLoginViewController alloc] initWithNibName:@"DropBoxLoginViewController" bundle:nil];
@@ -34,8 +44,34 @@
 }
 
 - (IBAction)scanClick:(UIButton *)sender {
-    ViewController *v = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
-    [self presentViewController:v animated:YES completion:nil];
+    if ([[DBSession sharedSession] isLinked]) {
+        if ([QRCodeReader supportsMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]]) {
+            static QRCodeReaderViewController *vc = nil;
+            static dispatch_once_t onceToken;
+            
+            dispatch_once(&onceToken, ^{
+                QRCodeReader *reader = [QRCodeReader readerWithMetadataObjectTypes:@[AVMetadataObjectTypeQRCode]];
+                vc                   = [QRCodeReaderViewController readerWithCancelButtonTitle:@"Cancel" codeReader:reader startScanningAtLoad:YES showSwitchCameraButton:YES showTorchButton:YES];
+                vc.modalPresentationStyle = UIModalPresentationFormSheet;
+            });
+            vc.delegate = self;
+            
+            [vc setCompletionWithBlock:^(NSString *resultAsString) {
+                NSLog(@"Completion with result: %@", resultAsString);
+            }];
+            
+            [self presentViewController:vc animated:YES completion:NULL];
+        }
+        else {
+            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Reader not supported by the current device" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            
+            [alert show];
+        }
+    } else {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Link your dropbox account in setting before scanning." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        
+        [alert show];
+    }
 }
 
 - (void)viewDidLoad {
@@ -46,6 +82,22 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - QRCodeReader Delegate Methods
+
+- (void)reader:(QRCodeReaderViewController *)reader didScanResult:(NSString *)result
+{
+    [self dismissViewControllerAnimated:YES completion:^{
+        ViewController *v = [[ViewController alloc] initWithNibName:@"ViewController_iPad" bundle:nil];
+        v->scan_id = result;
+        [self presentViewController:v animated:YES completion:nil];
+    }];
+}
+
+- (void)readerDidCancel:(QRCodeReaderViewController *)reader
+{
+    [self dismissViewControllerAnimated:YES completion:NULL];
 }
 
 /*

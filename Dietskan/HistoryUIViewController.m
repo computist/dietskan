@@ -13,18 +13,94 @@
 @end
 
 @implementation HistoryUIViewController
+
+NSMutableArray *tableData;
+static NSString *cellIdentifier = @"historyTableCell";
+
 - (IBAction)backClick:(UIButton *)sender {
    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    tableData = [NSMutableArray new];
     // Do any additional setup after loading the view from its nib.
+    self.tableView.delegate = self;
+    self.tableView.dataSource = self;
+    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+    self.restClient.delegate = self;
+    
+    UINib *cellNib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier: cellIdentifier];
+    
+    [self.restClient loadMetadata:@"/Scan"];
+}
+
+- (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
+    if (metadata.isDirectory) {
+        [tableData removeAllObjects];
+        NSLog(@"Folder '%@' contains:", metadata.path);
+        for (DBMetadata *file in metadata.contents) {
+            if ([file.filename hasSuffix:@".zip"]) {
+                
+                NSArray *chunks = [[file.filename stringByDeletingPathExtension] componentsSeparatedByString: @"_"];
+                if (chunks.count == 7) {
+                    HistoryData *hd = [HistoryData new];
+                    hd.scan_id = chunks[1];
+                    NSArray *arr = [NSArray arrayWithObjects:chunks[2], chunks[3], chunks[4], chunks[5], chunks[6], nil];
+                    NSString *dateString = [arr componentsJoinedByString:@"_"];
+                    
+                    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+                    [dateFormat setDateFormat:@"yyyy_MM_dd_HH_mm"];
+                    hd.date = [dateFormat dateFromString:dateString];
+                    
+                    [tableData addObject:hd];
+                }
+                
+            }
+        }
+        [self.tableView reloadData];
+    }
+}
+
+- (void)restClient:(DBRestClient *)client
+loadMetadataFailedWithError:(NSError *)error {
+    NSLog(@"Error loading metadata: %@", error);
+    [tableData removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [tableData count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    HistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    HistoryData *hd = tableData[indexPath.row];
+    NSDateFormatter *formatter;
+    NSString        *dateString;
+    formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+    dateString = [formatter stringFromDate:hd.date];
+   
+    cell.mealTypeLabel.text = @"Lunch";
+    cell.dateTimeLabel.text = [NSString stringWithFormat:@"%@", dateString];
+    cell.scanIdLabel.text = [NSString stringWithFormat:@"%@", hd.scan_id];
+
+    return cell;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*

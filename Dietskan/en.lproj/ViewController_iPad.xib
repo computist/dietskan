@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -14,6 +14,7 @@
                 <outlet property="enableNewTrackerView" destination="1xv-UX-ymg" id="G2F-h3-Cqh"/>
                 <outlet property="resetButton" destination="ten-ab-OVy" id="dXj-nh-sEg"/>
                 <outlet property="scanButton" destination="J7F-Wp-rfI" id="aLf-vV-7Hc"/>
+                <outlet property="scanForLabel" destination="Fcs-EN-g8X" id="aC2-kf-xuh"/>
                 <outlet property="trackingLostLabel" destination="8b4-Zl-yJD" id="SjG-FG-iZW"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
@@ -23,6 +24,14 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="itZ-Tk-aHu">
+                    <rect key="frame" x="890" y="551" width="100" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="Back" backgroundImage="GreenButton.png"/>
+                    <connections>
+                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="ucX-po-L8Z"/>
+                    </connections>
+                </button>
                 <label hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please Connect Structure Sensor" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6ly-If-uZh" userLabel="Label - App Status Message">
                     <rect key="frame" x="0.0" y="246" width="1024" height="285"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -138,14 +147,14 @@ Try to re-align or press reset.</string>
                         <action selector="resetButtonPressed:" destination="-1" eventType="touchUpInside" id="suT-EL-8hh"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="itZ-Tk-aHu">
-                    <rect key="frame" x="883" y="539" width="100" height="30"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Scan for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fcs-EN-g8X">
+                    <rect key="frame" x="247" y="38" width="229" height="33"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="Back" backgroundImage="GreenButton.png"/>
-                    <connections>
-                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="ucX-po-L8Z"/>
-                    </connections>
-                </button>
+                    <color key="backgroundColor" red="0.40000000000000002" green="0.67843137254901964" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <gestureRecognizers/>

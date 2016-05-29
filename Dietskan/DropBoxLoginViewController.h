@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface DropBoxLoginViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *linkButton;
 
 @end

@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <DropboxSDK/DropboxSDK.h>
+#import "HistoryData.h"
+#import "HistoryTableViewCell.h"
 
-@interface HistoryUIViewController : UIViewController
+@interface HistoryUIViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DBRestClientDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, strong) DBRestClient *restClient;
 
 @end
