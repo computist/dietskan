@@ -15,6 +15,7 @@
 @implementation HistoryUIViewController
 
 NSMutableArray *tableData;
+static NSString *cellIdentifier = @"historyTableCell";
 
 - (IBAction)backClick:(UIButton *)sender {
    [self dismissViewControllerAnimated:YES completion:nil];
@@ -28,6 +29,9 @@ NSMutableArray *tableData;
     self.tableView.dataSource = self;
     self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
     self.restClient.delegate = self;
+    
+    UINib *cellNib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
+    [self.tableView registerNib:cellNib forCellReuseIdentifier: cellIdentifier];
     
     [self.restClient loadMetadata:@"/Scan"];
 }
@@ -79,25 +83,18 @@ loadMetadataFailedWithError:(NSError *)error {
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *simpleTableIdentifier = @"historyTableCell";
-    
-    HistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-    
-    if (cell == nil) {
-        cell = [[HistoryTableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-    }
+    HistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
     
     HistoryData *hd = tableData[indexPath.row];
-    
     NSDateFormatter *formatter;
     NSString        *dateString;
     formatter = [[NSDateFormatter alloc] init];
     [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
     dateString = [formatter stringFromDate:hd.date];
    
-   cell.mealTypeLabel.text = @"Lunch";
-   cell.dateTimeLabel.text = [NSString stringWithFormat:@"%@", dateString];
-   cell.scanIdLabel.text = [NSString stringWithFormat:@"%@", hd.scan_id];
+    cell.mealTypeLabel.text = @"Lunch";
+    cell.dateTimeLabel.text = [NSString stringWithFormat:@"%@", dateString];
+    cell.scanIdLabel.text = [NSString stringWithFormat:@"%@", hd.scan_id];
 
     return cell;
 }
