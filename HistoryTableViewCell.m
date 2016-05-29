@@ -9,6 +9,8 @@
 #import "HistoryTableViewCell.h"
 
 @implementation HistoryTableViewCell
+- (IBAction)checkMarkPressed:(UIButton *)sender {
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

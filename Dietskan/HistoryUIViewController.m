@@ -15,6 +15,8 @@
 @implementation HistoryUIViewController
 
 NSMutableArray *tableData;
+NSArray *profileColorThumbnails;
+
 static NSString *cellIdentifier = @"historyTableCell";
 
 - (IBAction)backClick:(UIButton *)sender {
@@ -22,95 +24,113 @@ static NSString *cellIdentifier = @"historyTableCell";
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    tableData = [NSMutableArray new];
-    // Do any additional setup after loading the view from its nib.
-    self.tableView.delegate = self;
-    self.tableView.dataSource = self;
-    self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
-    self.restClient.delegate = self;
-    
-    UINib *cellNib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
-    [self.tableView registerNib:cellNib forCellReuseIdentifier: cellIdentifier];
-    
-    [self.restClient loadMetadata:@"/Scan"];
+   [super viewDidLoad];
+   tableData = [NSMutableArray new];
+   // Do any additional setup after loading the view from its nib.
+   self.tableView.delegate = self;
+   self.tableView.dataSource = self;
+   self.restClient = [[DBRestClient alloc] initWithSession:[DBSession sharedSession]];
+   self.restClient.delegate = self;
+   
+   UINib *cellNib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
+   [self.tableView registerNib:cellNib forCellReuseIdentifier: cellIdentifier];
+   
+   [self.restClient loadMetadata:@"/Scan"];
+   
+   
 }
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
-    if (metadata.isDirectory) {
-        [tableData removeAllObjects];
-        NSLog(@"Folder '%@' contains:", metadata.path);
-        for (DBMetadata *file in metadata.contents) {
-            if ([file.filename hasSuffix:@".zip"]) {
-                
-                NSArray *chunks = [[file.filename stringByDeletingPathExtension] componentsSeparatedByString: @"_"];
-                if (chunks.count == 7) {
-                    HistoryData *hd = [HistoryData new];
-                    hd.scan_id = chunks[1];
-                    NSArray *arr = [NSArray arrayWithObjects:chunks[2], chunks[3], chunks[4], chunks[5], chunks[6], nil];
-                    NSString *dateString = [arr componentsJoinedByString:@"_"];
-                    
-                    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-                    [dateFormat setDateFormat:@"yyyy_MM_dd_HH_mm"];
-                    hd.date = [dateFormat dateFromString:dateString];
-                    
-                    [tableData addObject:hd];
-                }
-                
+   if (metadata.isDirectory) {
+      [tableData removeAllObjects];
+      NSLog(@"Folder '%@' contains:", metadata.path);
+      for (DBMetadata *file in metadata.contents) {
+         if ([file.filename hasSuffix:@".zip"]) {
+            
+            NSArray *chunks = [[file.filename stringByDeletingPathExtension] componentsSeparatedByString: @"_"];
+            if (chunks.count == 7) {
+               HistoryData *hd = [HistoryData new];
+               hd.scan_id = chunks[1];
+               NSArray *arr = [NSArray arrayWithObjects:chunks[2], chunks[3], chunks[4], chunks[5], chunks[6], nil];
+               NSString *dateString = [arr componentsJoinedByString:@"_"];
+               
+               NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+               [dateFormat setDateFormat:@"yyyy_MM_dd_HH_mm"];
+               hd.date = [dateFormat dateFromString:dateString];
+               
+               [tableData addObject:hd];
             }
-        }
-        [self.tableView reloadData];
-    }
+            
+         }
+      }
+      [self.tableView reloadData];
+   }
 }
 
 - (void)restClient:(DBRestClient *)client
 loadMetadataFailedWithError:(NSError *)error {
-    NSLog(@"Error loading metadata: %@", error);
-    [tableData removeAllObjects];
+   NSLog(@"Error loading metadata: %@", error);
+   [tableData removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+   [super didReceiveMemoryWarning];
+   // Dispose of any resources that can be recreated.
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+   return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [tableData count];
+   return [tableData count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    HistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
-    HistoryData *hd = tableData[indexPath.row];
-    NSDateFormatter *formatter;
-    NSString        *dateString;
-    formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
-    dateString = [formatter stringFromDate:hd.date];
+   profileColorThumbnails = [NSArray arrayWithObjects:@"BlueProfile.png", @"GreenProfile.png", @"RedProfile.png", @"YellowProfile.png",
+                            @"CyanProfile.png", @"LimeProfile.png", @"OrangeProfile.png", @"GrayProfile.png", nil];
+   HistoryTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
    
-    cell.mealTypeLabel.text = @"Lunch";
-    cell.dateTimeLabel.text = [NSString stringWithFormat:@"%@", dateString];
-    cell.scanIdLabel.text = [NSString stringWithFormat:@"%@", hd.scan_id];
-
-    return cell;
+   HistoryData *hd = tableData[indexPath.row];
+   NSDateFormatter *formatter;
+   NSString        *dateString;
+   formatter = [[NSDateFormatter alloc] init];
+   [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+   dateString = [formatter stringFromDate:hd.date];
+   
+   NSString *HH = [dateString substringWithRange:NSMakeRange(11, 2)];
+   if (HH.integerValue < 11) {
+      cell.mealTypeLabel.text = @"Breakfast";
+   } else if (HH.integerValue >= 11 && HH.integerValue < 16) {
+      cell.mealTypeLabel.text = @"Lunch";
+   } else {
+      cell.mealTypeLabel.text = @"Dinner";
+   }
+//   cell.mealTypeLabel.text = @"Lunch";
+   cell.dateTimeLabel.text = [NSString stringWithFormat:@"%@", dateString];
+   cell.scanIdLabel.text = [NSString stringWithFormat:@"%@", hd.scan_id];
+   
+   cell.profileColorImageView.image = [UIImage imageNamed:[profileColorThumbnails objectAtIndex:(indexPath.row%8)]];
+   
+   return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+   [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 /*
-#pragma mark - Navigation
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+   return 64;
 }
-*/
 
 @end
