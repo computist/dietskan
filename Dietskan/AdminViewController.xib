@@ -50,21 +50,21 @@
                     </subviews>
                 </stackView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalLogo-DietSkan.png" translatesAutoresizingMaskIntoConstraints="NO" id="RES-QX-8aE">
-                    <rect key="frame" x="412" y="8" width="200" height="44"/>
+                    <rect key="frame" x="412" y="0.0" width="200" height="44"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Old Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-h2-0FG">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-h2-0FG">
                     <rect key="frame" x="412" y="209" width="200" height="30"/>
                     <color key="textColor" white="0.0" alpha="0.37319924645390073" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="New Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-l3-3gJ">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-l3-3gJ">
                     <rect key="frame" x="412" y="318" width="200" height="30"/>
                     <color key="textColor" white="0.0" alpha="0.37" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm New Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSO-xZ-10E">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSO-xZ-10E">
                     <rect key="frame" x="412" y="364" width="200" height="30"/>
                     <color key="textColor" white="0.0" alpha="0.37" colorSpace="calibratedWhite"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -76,8 +76,8 @@
                 <constraint firstItem="1i0-gO-EkE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9cc-iL-W3N"/>
                 <constraint firstAttribute="bottom" secondItem="1i0-gO-EkE" secondAttribute="bottom" constant="724" id="GTc-JK-eVL"/>
                 <constraint firstItem="1i0-gO-EkE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cAA-5n-UGK"/>
-                <constraint firstItem="RES-QX-8aE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="neh-GH-xJx"/>
-                <constraint firstAttribute="bottom" secondItem="RES-QX-8aE" secondAttribute="bottom" constant="716" id="oGW-Bb-JLd"/>
+                <constraint firstItem="RES-QX-8aE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="neh-GH-xJx"/>
+                <constraint firstAttribute="bottom" secondItem="RES-QX-8aE" secondAttribute="bottom" constant="724" id="oGW-Bb-JLd"/>
                 <constraint firstAttribute="trailing" secondItem="1i0-gO-EkE" secondAttribute="trailing" id="tf5-tB-72q"/>
                 <constraint firstItem="RES-QX-8aE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="412" id="wxb-bk-osA"/>
                 <constraint firstAttribute="trailing" secondItem="RES-QX-8aE" secondAttribute="trailing" constant="412" id="xPy-pm-b3D"/>

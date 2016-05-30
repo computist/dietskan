@@ -75,6 +75,8 @@
 		937783C11CEF763400FAEBD5 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 937783BF1CEF763400FAEBD5 /* ProfileViewController.xib */; };
 		938DD03B1CE983620065DDD6 /* HistoryUIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 938DD0391CE983620065DDD6 /* HistoryUIViewController.m */; };
 		938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */ = {isa = PBXBuildFile; fileRef = 938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */; };
+		93A8EB8D1CFBCA25005C7DAC /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93A8EB8A1CFBCA25005C7DAC /* AdminViewController.m */; };
+		93A8EB8E1CFBCA25005C7DAC /* AdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93A8EB8B1CFBCA25005C7DAC /* AdminViewController.xib */; };
 		93C5CBD31CE58AF900461B5A /* BackButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB41CE58AF900461B5A /* BackButton.png */; };
 		93C5CBD41CE58AF900461B5A /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB51CE58AF900461B5A /* bg.png */; };
 		93C5CBD61CE58AF900461B5A /* CameraFeed_Window.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBB71CE58AF900461B5A /* CameraFeed_Window.png */; };
@@ -102,7 +104,7 @@
 
 /* Begin PBXFileReference section */
 		1F300614186E3B8F00405D34 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		1F9EAEFB1AB16E060077D63C /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = ../Frameworks/Structure.framework; sourceTree = "<group>"; };
+		1F9EAEFB1AB16E060077D63C /* Structure.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Structure.framework; path = Dietskan/Structure.framework; sourceTree = "<group>"; };
 		23032D2A4C69825542D950C3 /* Pods-Dietskan.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dietskan.release.xcconfig"; path = "Pods/Target Support Files/Pods-Dietskan/Pods-Dietskan.release.xcconfig"; sourceTree = "<group>"; };
 		2A0BA2D2184ECE0C008FBE2E /* MeshRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeshRenderer.h; sourceTree = "<group>"; };
 		2A0BA3E318500398008FBE2E /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
@@ -194,6 +196,9 @@
 		938DD0381CE983620065DDD6 /* HistoryUIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HistoryUIViewController.h; sourceTree = "<group>"; };
 		938DD0391CE983620065DDD6 /* HistoryUIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HistoryUIViewController.m; sourceTree = "<group>"; };
 		938DD03F1CE98ED30065DDD6 /* FinalLogo-DietSkan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FinalLogo-DietSkan.png"; sourceTree = "<group>"; };
+		93A8EB891CFBCA25005C7DAC /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
+		93A8EB8A1CFBCA25005C7DAC /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
+		93A8EB8B1CFBCA25005C7DAC /* AdminViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminViewController.xib; sourceTree = "<group>"; };
 		93C5CBB41CE58AF900461B5A /* BackButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = BackButton.png; sourceTree = "<group>"; };
 		93C5CBB51CE58AF900461B5A /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
 		93C5CBB71CE58AF900461B5A /* CameraFeed_Window.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CameraFeed_Window.png; sourceTree = "<group>"; };
@@ -342,6 +347,9 @@
 		3CA523821CE1735E00D75D8F /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				93A8EB891CFBCA25005C7DAC /* AdminViewController.h */,
+				93A8EB8A1CFBCA25005C7DAC /* AdminViewController.m */,
+				93A8EB8B1CFBCA25005C7DAC /* AdminViewController.xib */,
 				933DB3591CFB75C200A1122F /* BlueProfile.png */,
 				933DB35A1CFB75C200A1122F /* CyanProfile.png */,
 				933DB35B1CFB75C200A1122F /* GrayProfile.png */,
@@ -546,6 +554,7 @@
 				438C049C18723EB10062E958 /* ViewController_iPad.xib in Resources */,
 				435307C91872825B00B04481 /* Default@2x.png in Resources */,
 				6F03CB911862832600518C22 /* Splash.png in Resources */,
+				93A8EB8E1CFBCA25005C7DAC /* AdminViewController.xib in Resources */,
 				93C5CBDC1CE58AF900461B5A /* DropBox_button.png in Resources */,
 				938DD0401CE98ED30065DDD6 /* FinalLogo-DietSkan.png in Resources */,
 				435307C71872825B00B04481 /* Default-568h@2x.png in Resources */,
@@ -629,6 +638,7 @@
 				2AEF46231A1288B600CAF953 /* ViewController+Camera.mm in Sources */,
 				3CA5238A1CE17A5D00D75D8F /* MainViewController.mm in Sources */,
 				6F8BE660199EED0C00E10C10 /* CalibrationOverlay.mm in Sources */,
+				93A8EB8D1CFBCA25005C7DAC /* AdminViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
