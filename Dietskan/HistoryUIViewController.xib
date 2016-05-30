@@ -47,6 +47,9 @@
                                         <action selector="backClick:" destination="-1" eventType="touchUpInside" id="hGa-Zo-ZPO"/>
                                     </connections>
                                 </button>
+                                <connections>
+                                    <action selector="backClick:" destination="-1" id="mBZ-wh-5Yf"/>
+                                </connections>
                             </barButtonItem>
                         </navigationItem>
                     </items>
@@ -100,10 +103,11 @@
                     </constraints>
                     <textInputTraits key="textInputTraits"/>
                 </searchBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-as-Lxg">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" rowHeight="64" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-as-Lxg">
                     <rect key="frame" x="162" y="190" width="700" height="468"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <color key="separatorColor" red="0.40000000000000002" green="0.68235294120000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

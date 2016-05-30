@@ -15,80 +15,89 @@
             <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-Pa-ptk">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg.png" translatesAutoresizingMaskIntoConstraints="NO" id="GmK-Pa-ptk">
                     <rect key="frame" x="0.0" y="18" width="1024" height="750"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="1i0-gO-EkE">
-                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EaL-BH-zhl">
-                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                            <subviews>
-                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="l9R-q2-cTY">
-                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                    <subviews>
-                                        <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VH-GQ-usa">
-                                            <rect key="frame" x="0.0" y="0.0" width="1024" height="44"/>
-                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <items>
-                                                <navigationItem id="gyo-5q-6bb">
-                                                    <barButtonItem key="leftBarButtonItem" style="done" id="7vA-be-p9Y">
-                                                        <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eAE-PM-626">
-                                                            <rect key="frame" x="20" y="0.0" width="50" height="44"/>
-                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                            <state key="normal" backgroundImage="BackButton.png"/>
-                                                        </button>
-                                                    </barButtonItem>
-                                                </navigationItem>
-                                            </items>
-                                        </navigationBar>
-                                    </subviews>
-                                </stackView>
-                            </subviews>
-                        </stackView>
-                    </subviews>
-                </stackView>
+                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VH-GQ-usa">
+                    <rect key="frame" x="0.0" y="18" width="1024" height="44"/>
+                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <items>
+                        <navigationItem id="gyo-5q-6bb">
+                            <barButtonItem key="leftBarButtonItem" style="done" id="7vA-be-p9Y">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" id="eAE-PM-626">
+                                    <rect key="frame" x="20" y="0.0" width="50" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" backgroundImage="BackButton.png"/>
+                                    <connections>
+                                        <action selector="backClick:" destination="-1" eventType="touchUpInside" id="w8g-Ua-u0f"/>
+                                    </connections>
+                                </button>
+                                <connections>
+                                    <action selector="backClick:" destination="-1" id="WMJ-qf-S8d"/>
+                                </connections>
+                            </barButtonItem>
+                        </navigationItem>
+                    </items>
+                </navigationBar>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FinalLogo-DietSkan.png" translatesAutoresizingMaskIntoConstraints="NO" id="RES-QX-8aE">
-                    <rect key="frame" x="412" y="0.0" width="200" height="44"/>
+                    <rect key="frame" x="412" y="18" width="200" height="44"/>
                 </imageView>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-h2-0FG">
-                    <rect key="frame" x="412" y="209" width="200" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Old Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PlG-h2-0FG">
+                    <rect key="frame" x="362" y="209" width="300" height="30"/>
                     <color key="textColor" white="0.0" alpha="0.37319924645390073" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-l3-3gJ">
-                    <rect key="frame" x="412" y="318" width="200" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bp6-l3-3gJ">
+                    <rect key="frame" x="362" y="318" width="300" height="30"/>
                     <color key="textColor" white="0.0" alpha="0.37" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSO-xZ-10E">
-                    <rect key="frame" x="412" y="364" width="200" height="30"/>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NSO-xZ-10E">
+                    <rect key="frame" x="362" y="364" width="300" height="30"/>
                     <color key="textColor" white="0.0" alpha="0.37" colorSpace="calibratedWhite"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ERz-va-pZt">
+                    <rect key="frame" x="412" y="434" width="200" height="40"/>
+                    <state key="normal" title="Update" backgroundImage="GreenButton.png"/>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="1i0-gO-EkE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9cc-iL-W3N"/>
-                <constraint firstAttribute="bottom" secondItem="1i0-gO-EkE" secondAttribute="bottom" constant="724" id="GTc-JK-eVL"/>
-                <constraint firstItem="1i0-gO-EkE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="cAA-5n-UGK"/>
-                <constraint firstItem="RES-QX-8aE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="neh-GH-xJx"/>
-                <constraint firstAttribute="bottom" secondItem="RES-QX-8aE" secondAttribute="bottom" constant="724" id="oGW-Bb-JLd"/>
-                <constraint firstAttribute="trailing" secondItem="1i0-gO-EkE" secondAttribute="trailing" id="tf5-tB-72q"/>
+                <constraint firstItem="NSO-xZ-10E" firstAttribute="top" secondItem="Bp6-l3-3gJ" secondAttribute="bottom" constant="16" id="4aP-Wz-k86"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="centerX" secondItem="RES-QX-8aE" secondAttribute="centerX" id="549-fM-T5H"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5Dl-fN-FxL"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="top" secondItem="2VH-GQ-usa" secondAttribute="top" id="8Ir-TD-6lk"/>
+                <constraint firstAttribute="bottom" secondItem="GmK-Pa-ptk" secondAttribute="bottom" id="9Kh-vx-2iM"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="centerX" secondItem="PlG-h2-0FG" secondAttribute="centerX" id="BkM-bl-lWN"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="centerX" secondItem="Bp6-l3-3gJ" secondAttribute="centerX" id="ByG-hu-kf8"/>
+                <constraint firstItem="Bp6-l3-3gJ" firstAttribute="top" secondItem="PlG-h2-0FG" secondAttribute="bottom" constant="79" id="FIZ-Q3-tDU"/>
+                <constraint firstItem="Bp6-l3-3gJ" firstAttribute="leading" secondItem="NSO-xZ-10E" secondAttribute="leading" id="HCr-NE-NsR"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="top" secondItem="RES-QX-8aE" secondAttribute="top" id="J03-DF-76P"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="centerX" secondItem="NSO-xZ-10E" secondAttribute="centerX" id="TAt-bY-NT6"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="trailing" secondItem="2VH-GQ-usa" secondAttribute="trailing" id="VRQ-Ff-a10"/>
+                <constraint firstItem="PlG-h2-0FG" firstAttribute="leading" secondItem="Bp6-l3-3gJ" secondAttribute="leading" id="aTx-5a-rAi"/>
+                <constraint firstItem="PlG-h2-0FG" firstAttribute="leading" secondItem="RES-QX-8aE" secondAttribute="leading" constant="-50" id="i3f-Yg-4UV"/>
+                <constraint firstItem="PlG-h2-0FG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="209" id="mhV-2B-Fkw"/>
+                <constraint firstItem="RES-QX-8aE" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="18" id="neh-GH-xJx"/>
+                <constraint firstAttribute="bottom" secondItem="RES-QX-8aE" secondAttribute="bottom" constant="706" id="oGW-Bb-JLd"/>
+                <constraint firstItem="GmK-Pa-ptk" firstAttribute="leading" secondItem="2VH-GQ-usa" secondAttribute="leading" id="pb2-cG-BIr"/>
                 <constraint firstItem="RES-QX-8aE" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="412" id="wxb-bk-osA"/>
                 <constraint firstAttribute="trailing" secondItem="RES-QX-8aE" secondAttribute="trailing" constant="412" id="xPy-pm-b3D"/>
             </constraints>
             <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <point key="canvasLocation" x="425" y="425"/>
         </view>
     </objects>
     <resources>
         <image name="BackButton.png" width="103" height="92"/>
         <image name="FinalLogo-DietSkan.png" width="700" height="158"/>
+        <image name="GreenButton.png" width="532" height="102"/>
         <image name="bg.png" width="2048" height="2732"/>
     </resources>
 </document>

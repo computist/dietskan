@@ -26,7 +26,7 @@
 
 
 - (IBAction)profileClick:(UIButton *)sender {
-   ProfileViewController *v = [[ProfileViewController alloc] initWithNibName:@"ProfileViewController" bundle:nil];
+   ProfileViewController *v = [[ProfileViewController alloc] initWithNibName:@"AdminViewController" bundle:nil];
    [self presentViewController:v animated:YES completion:nil];
 }
 - (IBAction)historyClick:(UIButton *)sender {
