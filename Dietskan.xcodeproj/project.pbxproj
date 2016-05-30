@@ -100,6 +100,8 @@
 		93C5CBEE1CE58AF900461B5A /* WhiteBar_TextEntry.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBCF1CE58AF900461B5A /* WhiteBar_TextEntry.png */; };
 		93C5CBEF1CE58AF900461B5A /* WhiteBar2.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD01CE58AF900461B5A /* WhiteBar2.png */; };
 		93C5CBF01CE58AF900461B5A /* WhiteProfileBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */; };
+		C64AF7AC1CFBC9EE00FA46F8 /* AdminViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C64AF7AA1CFBC9EE00FA46F8 /* AdminViewController.m */; };
+		C64AF7AD1CFBC9EE00FA46F8 /* AdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C64AF7AB1CFBC9EE00FA46F8 /* AdminViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -224,6 +226,9 @@
 		93C5CBD11CE58AF900461B5A /* WhiteProfileBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WhiteProfileBar.png; sourceTree = "<group>"; };
 		93C5CBF21CE5910700461B5A /* Dietskan.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Dietskan.entitlements; sourceTree = "<group>"; };
 		BEA86CC39AA8B2A48C3CF687 /* Pods-Dietskan.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Dietskan.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Dietskan/Pods-Dietskan.debug.xcconfig"; sourceTree = "<group>"; };
+		C64AF7A91CFBC9EE00FA46F8 /* AdminViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdminViewController.h; sourceTree = "<group>"; };
+		C64AF7AA1CFBC9EE00FA46F8 /* AdminViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AdminViewController.m; sourceTree = "<group>"; };
+		C64AF7AB1CFBC9EE00FA46F8 /* AdminViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AdminViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
