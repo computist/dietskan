@@ -74,6 +74,7 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
+                <outlet property="checkmarkImage" destination="dFf-O4-aOm" id="Vv1-eX-wPG"/>
                 <outlet property="dateTimeLabel" destination="KoI-2L-kYS" id="k5v-e2-hz1"/>
                 <outlet property="mealTypeLabel" destination="5uA-za-jLa" id="WqZ-Ww-Paf"/>
                 <outlet property="profileColorImageView" destination="kUY-3R-Ncl" id="VjI-w5-sQN"/>

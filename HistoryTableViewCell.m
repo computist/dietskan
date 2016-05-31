@@ -9,12 +9,12 @@
 #import "HistoryTableViewCell.h"
 
 @implementation HistoryTableViewCell
-- (IBAction)checkMarkPressed:(UIButton *)sender {
-}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+    self.checked = false;
+    [self.checkmarkImage setHidden:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

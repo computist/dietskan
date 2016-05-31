@@ -116,6 +116,13 @@ loadMetadataFailedWithError:(NSError *)error {
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    HistoryTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    cell.checked = !cell.checked;
+    if (cell.checked) {
+        [cell.checkmarkImage setHidden:NO];
+    } else {
+        [cell.checkmarkImage setHidden:YES];
+    }
    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 

@@ -13,5 +13,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *scanIdLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dateTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mealTypeLabel;
-
+@property (weak, nonatomic) IBOutlet UIImageView *checkmarkImage;
+@property bool checked;
 @end
