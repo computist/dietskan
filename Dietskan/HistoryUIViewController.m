@@ -22,6 +22,40 @@ static NSString *cellIdentifier = @"historyTableCell";
 - (IBAction)backClick:(UIButton *)sender {
    [self dismissViewControllerAnimated:YES completion:nil];
 }
+- (IBAction)sendClick:(UIButton *)sender {
+}
+- (IBAction)removeClick:(UIButton *)sender {
+    NSMutableIndexSet *deleteArray = [[NSMutableIndexSet alloc] init];
+    
+    for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:0]; ++i)
+    {
+        HistoryTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        if (cell.checked) {
+            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+            [dateFormat setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+            NSDate *date = [dateFormat dateFromString:cell.dateTimeLabel.text];
+            if (date == nil) {
+                continue;
+            }
+            NSDateFormatter *formatter;
+            NSString        *dateString;
+            formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+            dateString = [formatter stringFromDate:date];
+            if (dateString == nil){
+                continue;
+            }
+            
+            [self.restClient deletePath:[NSString stringWithFormat:@"/Scan/%@/Scan_%@_%@.zip", cell.scanIdLabel.text, cell.scanIdLabel.text, dateString]];
+            [self.restClient deletePath:[NSString stringWithFormat:@"/Scan/%@/Preview_%@_%@.jpg", cell.scanIdLabel.text, cell.scanIdLabel.text, dateString]];
+            [deleteArray addIndex:i];
+        }
+    }
+    
+    [tableData removeObjectsAtIndexes:deleteArray];
+    [self.tableView reloadData];
+    //
+}
 
 - (void)viewDidLoad {
    [super viewDidLoad];
