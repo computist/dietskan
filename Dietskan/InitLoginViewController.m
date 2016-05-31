@@ -9,7 +9,6 @@
 
 #import "InitLoginViewController.h"
 
-NSString *passcode = @"123456";
 
 @interface InitLoginViewController ()
 
@@ -22,6 +21,15 @@ NSString *passcode = @"123456";
 }
 
 - (void) loginAction {
+    NSString *passcode = [[NSUserDefaults standardUserDefaults] stringForKey:@"passcode"];
+    if (passcode == nil) {
+        NSLog(@"No passcode");
+        passcode = @"123456";
+        [[NSUserDefaults standardUserDefaults] setValue:passcode forKey:@"passcode"];
+        [[NSUserDefaults standardUserDefaults] synchronize];
+        NSLog(@"%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"passcode"]);
+    }
+    
     if ([_passcodeTextField.text isEqualToString:passcode]){ //1{
         MainViewController *v = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
         [self presentViewController:v animated:YES completion:nil];

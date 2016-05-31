@@ -12,6 +12,7 @@
 #import "HistoryUIViewController.h"
 #import "ProfileViewController.h"
 #import "appDelegate.h"
+#import "AdminViewController.h"
 
 #import "QRCodeReaderViewController.h"
 #import "QRCodeReader.h"
@@ -26,7 +27,7 @@
 
 
 - (IBAction)profileClick:(UIButton *)sender {
-   ProfileViewController *v = [[ProfileViewController alloc] initWithNibName:@"AdminViewController" bundle:nil];
+   AdminViewController *v = [[AdminViewController alloc] initWithNibName:@"AdminViewController" bundle:nil];
    [self presentViewController:v animated:YES completion:nil];
 }
 - (IBAction)historyClick:(UIButton *)sender {
