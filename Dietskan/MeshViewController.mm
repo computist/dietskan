@@ -463,7 +463,7 @@ namespace
     NSDateFormatter *formatter;
     NSString        *dateString;
     formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yyyy_MM_dd_HH_mm"];
+    [formatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
     dateString = [formatter stringFromDate:[NSDate date]];
     
     NSString* zipFilename = [NSString stringWithFormat:@"Scan_%@_%@.zip", scan_id, dateString];
@@ -500,7 +500,7 @@ namespace
     }
 
     // Upload file to Dropbox
-    NSString *destDir = @"/Scan";
+    NSString *destDir = [NSString stringWithFormat:@"/Scan/%@", scan_id];
     upload_count = 0;
     [self.restClient uploadFile:zipFilename toPath:destDir withParentRev:nil fromPath:zipPath];
     [self.restClient uploadFile:screenshotFilename toPath:destDir withParentRev:nil fromPath:screenshotPath];

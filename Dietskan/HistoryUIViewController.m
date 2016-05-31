@@ -35,32 +35,32 @@ static NSString *cellIdentifier = @"historyTableCell";
    UINib *cellNib = [UINib nibWithNibName:@"HistoryTableViewCell" bundle:nil];
    [self.tableView registerNib:cellNib forCellReuseIdentifier: cellIdentifier];
    
+    [tableData removeAllObjects];
    [self.restClient loadMetadata:@"/Scan"];
-   
    
 }
 
 - (void)restClient:(DBRestClient *)client loadedMetadata:(DBMetadata *)metadata {
    if (metadata.isDirectory) {
-      [tableData removeAllObjects];
+      
       NSLog(@"Folder '%@' contains:", metadata.path);
       for (DBMetadata *file in metadata.contents) {
-         if ([file.filename hasSuffix:@".zip"]) {
-            
-            NSArray *chunks = [[file.filename stringByDeletingPathExtension] componentsSeparatedByString: @"_"];
-            if (chunks.count == 7) {
-               HistoryData *hd = [HistoryData new];
-               hd.scan_id = chunks[1];
-               NSArray *arr = [NSArray arrayWithObjects:chunks[2], chunks[3], chunks[4], chunks[5], chunks[6], nil];
-               NSString *dateString = [arr componentsJoinedByString:@"_"];
-               
-               NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-               [dateFormat setDateFormat:@"yyyy_MM_dd_HH_mm"];
-               hd.date = [dateFormat dateFromString:dateString];
-               
-               [tableData addObject:hd];
-            }
-            
+         if ([file isDirectory]) {
+             [self.restClient loadMetadata:[NSString stringWithFormat:@"/Scan/%@", file.filename]];
+         } else if ([file.filename hasSuffix:@".zip"]) {
+             NSArray *chunks = [[file.filename stringByDeletingPathExtension] componentsSeparatedByString: @"_"];
+             if (chunks.count == 8) {
+                 HistoryData *hd = [HistoryData new];
+                 hd.scan_id = chunks[1];
+                 NSArray *arr = [NSArray arrayWithObjects:chunks[2], chunks[3], chunks[4], chunks[5], chunks[6], chunks[7], nil];
+                 NSString *dateString = [arr componentsJoinedByString:@"_"];
+                 
+                 NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+                 [dateFormat setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+                 hd.date = [dateFormat dateFromString:dateString];
+                 
+                 [tableData addObject:hd];
+             }
          }
       }
       [self.tableView reloadData];
@@ -95,7 +95,7 @@ loadMetadataFailedWithError:(NSError *)error {
    NSDateFormatter *formatter;
    NSString        *dateString;
    formatter = [[NSDateFormatter alloc] init];
-   [formatter setDateFormat:@"yyyy/MM/dd HH:mm"];
+   [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
    dateString = [formatter stringFromDate:hd.date];
    
    NSString *HH = [dateString substringWithRange:NSMakeRange(11, 2)];
