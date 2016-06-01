@@ -16,7 +16,7 @@
 #include <sys/types.h>
 #include <sys/sysctl.h>
 
-extern ViewController *scannerViewController;
+extern bool needDismissView;
 
 #pragma mark - Utilities
 
@@ -97,9 +97,14 @@ namespace // anonymous namespace for local functions.
     if ([self currentStateNeedsSensor])
         [self connectToStructureSensorAndStartStreaming];
     
-    _scanForLabel.text = [NSString stringWithFormat:@"Scan for %@", scan_id];
-    
-    scannerViewController = self;
+    self.scanForLabel.text = [NSString stringWithFormat:@"Scan for %@", scan_id];
+    needDismissView = false;
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    if (needDismissView) {
+        [self dismissViewControllerAnimated:NO completion:nil];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -111,7 +116,7 @@ namespace // anonymous namespace for local functions.
     
     [self setupGLViewport];
 
-    [self updateAppStatusMessage];
+//    [self updateAppStatusMessage];
     
     // We will connect to the sensor when we receive appDidBecomeActive.
 }

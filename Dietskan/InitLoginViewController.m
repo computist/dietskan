@@ -30,7 +30,7 @@
         NSLog(@"%@", [[NSUserDefaults standardUserDefaults] stringForKey:@"passcode"]);
     }
     
-    if ([_passcodeTextField.text isEqualToString:passcode]){ //1{
+    if ([self.passcodeTextField.text isEqualToString:passcode]){ //1{
         MainViewController *v = [[MainViewController alloc] initWithNibName:@"MainUIView" bundle:nil];
         [self presentViewController:v animated:YES completion:nil];
     } else {
@@ -41,6 +41,7 @@
                                               otherButtonTitles:nil,nil];
         [alert show];
     }
+    self.passcodeTextField.text = @"";
 }
 
 - (void)viewDidLoad {
@@ -50,7 +51,8 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    [_passcodeTextField becomeFirstResponder];
+    self.passcodeTextField.text = @"";
+    [self.passcodeTextField becomeFirstResponder];
 }
 
 -(BOOL) textFieldShouldReturn:(UITextField *)textField{

@@ -16,7 +16,7 @@
 
 #import "ViewController.h"
 
-extern ViewController *scannerViewController;
+extern bool needDismissView;
 
 // Local Helper Functions
 namespace
@@ -515,7 +515,7 @@ namespace
         [HUD hide:true afterDelay:1];
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             [self dismissView];
-            [scannerViewController dismissViewControllerAnimated:false completion:nil];
+            needDismissView = true;
         });
     }
 }

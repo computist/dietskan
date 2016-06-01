@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "QRCodeReaderDelegate.h"
-
+@class ViewController;
 @interface MainViewController : UIViewController <QRCodeReaderDelegate>
+
+@property (strong, nonatomic) ViewController *viewController;
 
 @end

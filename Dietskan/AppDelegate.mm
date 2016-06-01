@@ -12,7 +12,7 @@
 #import "DropBoxLoginViewController.h"
 
 DropBoxLoginViewController *dropBoxLoginViewController;
-ViewController *scannerViewController;
+bool needDismissView;
 
 @implementation AppDelegate
 
@@ -20,11 +20,11 @@ ViewController *scannerViewController;
 {
     // STWirelessLog is very helpful for debugging while your Structure Sensor is plugged in.
     // See SDK documentation for how to start a listener on your computer.
-//    NSError* error = nil;
-//    NSString *remoteLogHost = @"192.168.1.1";
-//    [STWirelessLog broadcastLogsToWirelessConsoleAtAddress:remoteLogHost usingPort:4999 error:&error];
-//    if (error)
-//        NSLog(@"Oh no! Can't start wireless log: %@", [error localizedDescription]);
+    NSError* error = nil;
+    NSString *remoteLogHost = @"192.168.1.1";
+    [STWirelessLog broadcastLogsToWirelessConsoleAtAddress:remoteLogHost usingPort:4999 error:&error];
+    if (error)
+        NSLog(@"Oh no! Can't start wireless log: %@", [error localizedDescription]);
 
     /*  iOS 9.2+ introduced unexpected behavior: every time a Structure Sensor is
      plugged in to iOS, iOS will launch all Structure SDK apps in the background.
@@ -41,6 +41,7 @@ ViewController *scannerViewController;
      sample apps peacefully exit without causing a crash report.  This also
      has other benefits, such as not using memory.  Note that Structure SDK does
      not support connecting to Structure Sensor if the app is in the background. */
+
     if ([UIApplication sharedApplication].applicationState == UIApplicationStateBackground) {
         NSLog(@"iOS launched %@ in the background.  This app is not designed to be launched in the background so it will exit peacefully.",
               [[NSBundle mainBundle] objectForInfoDictionaryKey:@"CFBundleDisplayName"]);
@@ -96,6 +97,7 @@ ViewController *scannerViewController;
 {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later. 
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [self.window.rootViewController dismissViewControllerAnimated:NO completion:nil];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application
