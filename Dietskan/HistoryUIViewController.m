@@ -14,15 +14,101 @@
 
 @implementation HistoryUIViewController
 
+int checkCnt;
 NSMutableArray *tableData;
+NSMutableArray *allTableData;
 NSArray *profileColorThumbnails;
 
 static NSString *cellIdentifier = @"historyTableCell";
 
+- (void) sort: (int)index {
+    tableData = [[tableData sortedArrayUsingComparator:^NSComparisonResult(HistoryData *h1, HistoryData *h2){
+        if (index == 0) {
+            // sort by scan id
+            return [h1.scan_id compare:h2.scan_id];
+        } else if (index == 1) {
+            // sort by meal
+            NSDateFormatter *formatter;
+            NSString        *dateString;
+            int h1t, h2t;
+            formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+            dateString = [formatter stringFromDate:h1.date];
+            
+            NSString *HH = [dateString substringWithRange:NSMakeRange(11, 2)];
+            if (HH.integerValue < 11) {
+                h1t = 0;
+            } else if (HH.integerValue >= 11 && HH.integerValue < 16) {
+                h1t = 1;
+            } else {
+                h1t = 2;
+            }
+            
+            dateString = [formatter stringFromDate:h2.date];
+            
+            HH = [dateString substringWithRange:NSMakeRange(11, 2)];
+            if (HH.integerValue < 11) {
+                h2t = 0;
+            } else if (HH.integerValue >= 11 && HH.integerValue < 16) {
+                h2t = 1;
+            } else {
+                h2t = 2;
+            }
+            
+            return h1t <= h2t;
+        } else if (index == 2) {
+            // sort by date
+            NSDateFormatter *formatter;
+            NSString        *dateString;
+            NSArray *h1arr;
+            NSArray *h2arr;
+            formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+            dateString = [formatter stringFromDate:h1.date];
+            h1arr = [dateString componentsSeparatedByString: @"_"];
+            
+            dateString = [formatter stringFromDate:h2.date];
+            h2arr = [dateString componentsSeparatedByString: @"_"];
+            
+            NSArray *arr = [NSArray arrayWithObjects:h1arr[0], h1arr[1], h1arr[2], nil];
+            NSString *h1t =[arr componentsJoinedByString:@"_"];
+            arr = [NSArray arrayWithObjects:h2arr[0], h2arr[1], h2arr[2], nil];
+            NSString *h2t =[arr componentsJoinedByString:@"_"];
+            return [h1t compare:h2t];
+            
+        } else {
+            // sort by time
+            NSDateFormatter *formatter;
+            NSString        *dateString;
+            NSArray *h1arr;
+            NSArray *h2arr;
+            formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+            dateString = [formatter stringFromDate:h1.date];
+            h1arr = [dateString componentsSeparatedByString: @"_"];
+            
+            dateString = [formatter stringFromDate:h2.date];
+            h2arr = [dateString componentsSeparatedByString: @"_"];
+            
+            NSArray *arr = [NSArray arrayWithObjects:h1arr[3], h1arr[4], h1arr[5], nil];
+            NSString *h1t =[arr componentsJoinedByString:@"_"];
+            arr = [NSArray arrayWithObjects:h2arr[3], h2arr[4], h2arr[5], nil];
+            NSString *h2t =[arr componentsJoinedByString:@"_"];
+            return [h1t compare:h2t];
+        }
+        
+        
+    }] mutableCopy];
+    
+    [self.tableView reloadData];
+}
+
+- (IBAction)sortFilterChange:(UISegmentedControl *)sender {
+    [self sort:(int)sender.selectedSegmentIndex];
+}
+
 - (IBAction)backClick:(UIButton *)sender {
    [self dismissViewControllerAnimated:YES completion:nil];
-}
-- (IBAction)sendClick:(UIButton *)sender {
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -58,6 +144,7 @@ static NSString *cellIdentifier = @"historyTableCell";
         }
         
         [tableData removeObjectsAtIndexes:deleteArray];
+        [allTableData removeObjectsAtIndexes:deleteArray];
         [self.tableView reloadData];
     }
     if (buttonIndex == 1) {
@@ -67,16 +154,25 @@ static NSString *cellIdentifier = @"historyTableCell";
 }
 
 - (IBAction)removeClick:(UIButton *)sender {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete" message:@"Do you really want to delete all those files checked?." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
-    [alert show];
-    
-    
-    
+    if (checkCnt > 0) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete" message:[NSString stringWithFormat:@"Do you really want to delete %d files checked?.", checkCnt] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+        [alert show];
+    }
+}
+- (IBAction)clearSelectClick:(UIButton *)sender {
+    for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:0]; ++i)
+    {
+        HistoryTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+        cell.checked = false;
+        [cell.checkmarkImage setHidden:YES];
+    }
+    checkCnt = 0;
 }
 
 - (void)viewDidLoad {
    [super viewDidLoad];
    tableData = [NSMutableArray new];
+    allTableData = [NSMutableArray new];
    // Do any additional setup after loading the view from its nib.
    self.tableView.delegate = self;
    self.tableView.dataSource = self;
@@ -87,7 +183,9 @@ static NSString *cellIdentifier = @"historyTableCell";
    [self.tableView registerNib:cellNib forCellReuseIdentifier: cellIdentifier];
    
     [tableData removeAllObjects];
+    [allTableData removeAllObjects];
    [self.restClient loadMetadata:@"/Scan"];
+    checkCnt = 0;
    
 }
 
@@ -111,6 +209,7 @@ static NSString *cellIdentifier = @"historyTableCell";
                  hd.date = [dateFormat dateFromString:dateString];
                  
                  [tableData addObject:hd];
+                 [allTableData addObject:hd];
              }
          }
       }
@@ -118,10 +217,71 @@ static NSString *cellIdentifier = @"historyTableCell";
    }
 }
 
+-(void) search:(NSString *)searchText {
+    if (![searchText isEqualToString:@""]) {
+        [tableData removeAllObjects];
+        for (HistoryData *h in allTableData) {
+            if ([h.scan_id containsString:searchText]) {
+                [tableData addObject:h];
+                continue;
+            }
+            NSDateFormatter *formatter;
+            NSString        *dateString;
+            formatter = [[NSDateFormatter alloc] init];
+            [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+            dateString = [formatter stringFromDate:h.date];
+            NSString *mealType;
+            NSString *HH = [dateString substringWithRange:NSMakeRange(11, 2)];
+            if (HH.integerValue < 11) {
+                mealType = @"Breakfast";
+            } else if (HH.integerValue >= 11 && HH.integerValue < 16) {
+                mealType = @"Lunch";
+            } else {
+                mealType = @"Dinner";
+            }
+            if ([mealType containsString:searchText]) {
+                [tableData addObject:h];
+                continue;
+            }
+            if ([dateString containsString:searchText]) {
+                [tableData addObject:h];
+                continue;
+            }
+        }
+        [self sort: (int)self.sortSegmentedControl.selectedSegmentIndex];
+        [self.tableView reloadData];
+    } else {
+        [tableData removeAllObjects];
+        for (HistoryData *h in allTableData) {
+            [tableData addObject:h];
+        }
+        [self sort: (int)self.sortSegmentedControl.selectedSegmentIndex];
+        [self.tableView reloadData];
+    }
+
+}
+
+- (void) searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self search:searchBar.text];
+}
+
+- (void) searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    [self search:searchBar.text];
+}
+
+-(void)searchBarTextDidEndEditing:(UISearchBar *)searchBar {
+    [self search:searchBar.text];
+}
+
+-(void) touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+}
+
 - (void)restClient:(DBRestClient *)client
 loadMetadataFailedWithError:(NSError *)error {
-   NSLog(@"Error loading metadata: %@", error);
-   [tableData removeAllObjects];
+    NSLog(@"Error loading metadata: %@", error);
+    [tableData removeAllObjects];
+    [allTableData removeAllObjects];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -170,8 +330,10 @@ loadMetadataFailedWithError:(NSError *)error {
     HistoryTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.checked = !cell.checked;
     if (cell.checked) {
+        checkCnt++;
         [cell.checkmarkImage setHidden:NO];
     } else {
+        checkCnt--;
         [cell.checkmarkImage setHidden:YES];
     }
    [tableView deselectRowAtIndexPath:indexPath animated:YES];
