@@ -11,7 +11,7 @@
 #import "HistoryData.h"
 #import "HistoryTableViewCell.h"
 
-@interface HistoryUIViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DBRestClientDelegate>
+@interface HistoryUIViewController : UIViewController <UITableViewDelegate, UITableViewDataSource, DBRestClientDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 @property (nonatomic, strong) DBRestClient *restClient;

@@ -24,37 +24,54 @@ static NSString *cellIdentifier = @"historyTableCell";
 }
 - (IBAction)sendClick:(UIButton *)sender {
 }
-- (IBAction)removeClick:(UIButton *)sender {
-    NSMutableIndexSet *deleteArray = [[NSMutableIndexSet alloc] init];
-    
-    for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:0]; ++i)
-    {
-        HistoryTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
-        if (cell.checked) {
-            NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
-            [dateFormat setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
-            NSDate *date = [dateFormat dateFromString:cell.dateTimeLabel.text];
-            if (date == nil) {
-                continue;
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0) {
+        // OK
+        NSLog(@"OK clicked");
+        NSMutableIndexSet *deleteArray = [[NSMutableIndexSet alloc] init];
+        
+        for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:0]; ++i)
+        {
+            HistoryTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
+            if (cell.checked) {
+                NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+                [dateFormat setDateFormat:@"yyyy/MM/dd HH:mm:ss"];
+                NSDate *date = [dateFormat dateFromString:cell.dateTimeLabel.text];
+                if (date == nil) {
+                    continue;
+                }
+                NSDateFormatter *formatter;
+                NSString        *dateString;
+                formatter = [[NSDateFormatter alloc] init];
+                [formatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
+                dateString = [formatter stringFromDate:date];
+                if (dateString == nil){
+                    continue;
+                }
+                
+                [self.restClient deletePath:[NSString stringWithFormat:@"/Scan/%@/Scan_%@_%@.zip", cell.scanIdLabel.text, cell.scanIdLabel.text, dateString]];
+                [self.restClient deletePath:[NSString stringWithFormat:@"/Scan/%@/Preview_%@_%@.jpg", cell.scanIdLabel.text, cell.scanIdLabel.text, dateString]];
+                [deleteArray addIndex:i];
             }
-            NSDateFormatter *formatter;
-            NSString        *dateString;
-            formatter = [[NSDateFormatter alloc] init];
-            [formatter setDateFormat:@"yyyy_MM_dd_HH_mm_ss"];
-            dateString = [formatter stringFromDate:date];
-            if (dateString == nil){
-                continue;
-            }
-            
-            [self.restClient deletePath:[NSString stringWithFormat:@"/Scan/%@/Scan_%@_%@.zip", cell.scanIdLabel.text, cell.scanIdLabel.text, dateString]];
-            [self.restClient deletePath:[NSString stringWithFormat:@"/Scan/%@/Preview_%@_%@.jpg", cell.scanIdLabel.text, cell.scanIdLabel.text, dateString]];
-            [deleteArray addIndex:i];
         }
+        
+        [tableData removeObjectsAtIndexes:deleteArray];
+        [self.tableView reloadData];
     }
+    if (buttonIndex == 1) {
+        // cancel
+        NSLog(@"Cancel clicked");
+    }
+}
+
+- (IBAction)removeClick:(UIButton *)sender {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Delete" message:@"Do you really want to delete all those files checked?." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:@"Cancel", nil];
+    [alert show];
     
-    [tableData removeObjectsAtIndexes:deleteArray];
-    [self.tableView reloadData];
-    //
+    
+    
 }
 
 - (void)viewDidLoad {
