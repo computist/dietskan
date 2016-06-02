@@ -146,6 +146,8 @@ static NSString *cellIdentifier = @"historyTableCell";
         [tableData removeObjectsAtIndexes:deleteArray];
         [allTableData removeObjectsAtIndexes:deleteArray];
         [self.tableView reloadData];
+        
+        [self clearSelect];
     }
     if (buttonIndex == 1) {
         // cancel
@@ -159,7 +161,8 @@ static NSString *cellIdentifier = @"historyTableCell";
         [alert show];
     }
 }
-- (IBAction)clearSelectClick:(UIButton *)sender {
+
+- (void) clearSelect {
     for (NSInteger i = 0; i < [self.tableView numberOfRowsInSection:0]; ++i)
     {
         HistoryTableViewCell *cell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:i inSection:0]];
@@ -167,6 +170,10 @@ static NSString *cellIdentifier = @"historyTableCell";
         [cell.checkmarkImage setHidden:YES];
     }
     checkCnt = 0;
+}
+
+- (IBAction)clearSelectClick:(UIButton *)sender {
+    [self clearSelect];
 }
 
 - (void)viewDidLoad {
@@ -323,6 +330,13 @@ loadMetadataFailedWithError:(NSError *)error {
    
    cell.profileColorImageView.image = [UIImage imageNamed:[profileColorThumbnails objectAtIndex:(indexPath.row%8)]];
    
+    if (cell.checked) {
+        [cell.checkmarkImage setHidden:NO];
+    } else {
+        
+        [cell.checkmarkImage setHidden:YES];
+    }
+    
    return cell;
 }
 
